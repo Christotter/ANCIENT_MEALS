@@ -1,0 +1,45 @@
+
+    <%# <div class="row mt-4 d-flex justify-content-around">
+      <div class="gm-show-card w-75"> %>
+
+
+
+
+<div class="container">
+  <%# Row for recipe title %>
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="recipe-name"><%= @recipe.name %></h1>
+    </div>
+  </div>
+  <%# Row for column categories %>
+  <div class="row">
+    <div class="col-lg-4">
+      <h3 class="recipe-by">By <%= @recipe.user.name %></h3>
+    </div>
+    <div class="col-lg-4">
+      <h3 class="recipe-ingredients">Ingredients: </h3>
+    </div>
+    <div class="col-lg-4">
+      <h3 class="recipe-prep">Preparation: </h3>
+    </div>
+  </div>
+  <%# Row for content %>
+  <div class="row">
+    <div class="col-4 recipe-information">
+      <p class="recipe-prep">Preptime: <%= @recipe.prep_time %></p>
+      <p class="recipe-prep">Era: <%= @recipe.era %></p>
+      <p class="recipe-prep">Country: <%= @recipe.country %></p>
+      <p class="recipe-prep">Rating: <%= @recipe.rating %></p>
+      <br>Picture of tasty old food
+    </div>
+
+    <div class="col-4 recipe-ingredients">
+      Ingredients bla bla bla
+    </div>
+
+    <div class="col-4 recipe-preparation">
+      Instructions for recipe bla bla bla
+    </div>
+  </div>
+</div>
