@@ -10,11 +10,11 @@ require 'faker'
 
 require "open-uri"
 puts "Cleaning db..."
-#Recipe.destroy_all
-#Ingredient.destroy_all
-#User.destroy_all
-#User_Favorite.destroy_all
-#Recipes_Ingredients.destroy_all
+Recipe.destroy_all
+Ingredient.destroy_all
+User.destroy_all
+UserFavorite.destroy_all
+RecipesIngredient.destroy_all
 
 #Create random 6 users
 puts "creating users"
@@ -47,6 +47,7 @@ recipe_1.instructions = "Cabbage should be sliced with the sharpest possible iro
     and add just a little bit of silphium. Incidentally, you can eat this as a meze."
 recipe_1.rating = 4.8
 recipe_1.prep_time = 0
+recipe_1.user = users[0]
 recipe_1.save!
 
 # recipe 2
@@ -62,6 +63,7 @@ recipe_2.instructions = "If using frozen prawns, ensure that they are well defro
     Serve as a ﬁrst course with a crusty loaf of bread and a simple salad."
 recipe_2.rating = 4.5
 recipe_2.prep_time = 0
+recipe_2.user = users[1]
 recipe_2.save!
 
 # recipe 3
@@ -75,6 +77,7 @@ recipe_3.instructions = "Mix the water, flour, and salt together slowly. Then kn
     eat the bread with a raw onion!"
 recipe_3.rating = 4.7
 recipe_3.prep_time = 0
+recipe_3.user = users[2]
 recipe_3.save!
 
 # recipe 4
@@ -87,6 +90,7 @@ recipe_4.instructions = "Mix the ﬂour, water and one tablespoon of honey toget
     Serve all four pancakes hot with the remainder of the honey poured over and sprinkled with sesame seeds."
 recipe_4.rating = 4.9
 recipe_4.prep_time = 0
+recipe_4.user = users[3]
 recipe_4.save!
 
 # recipe 5
@@ -99,6 +103,7 @@ recipe_5.instructions = "Libum to be made as follows: 2 lb cheese well crushed i
     Make a loaf of this, with leaves under it, and cook slowly in a hot ﬁre under a brick."
 recipe_5.rating = 5.0
 recipe_5.prep_time = '25 minutes'
+recipe_5.user = users[4]
 recipe_5.save!
 
 # recipe 6
@@ -113,6 +118,7 @@ Test the oil for temperature with a little of the mixture – if it rises and co
 garnish with a little warmed honey over the fritters and sprinkle them with either poppy seeds or freshly ground pepper."
 recipe_6.rating = 4.4
 recipe_6.prep_time = 0
+recipe_6.user = users[5]
 recipe_6.save!
 
 # recipe = name, era, country, instructions, rating, prep_time
