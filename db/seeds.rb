@@ -126,7 +126,7 @@ puts "Recipes: "
 puts recipe_1.name
 puts recipe_2.name
 puts recipe_3.name
-puts recipe_4.name
+
 puts recipe_5.name
 puts recipe_6.name
 
@@ -135,3 +135,58 @@ puts "Users: "
 users.each do |user|
   puts user.name
 end
+
+# Ingredients:
+flour = Ingredient.create!(name: "flour")
+water = Ingredient.create!(name: "water")
+salt = Ingredient.create!(name: "salt")
+cabbage = Ingredient.create!(name: "cabbage")
+coriander = Ingredient.create!(name: "coriander")
+rue = Ingredient.create!(name: "rue")
+powder = Ingredient.create!(name: "powder")
+prawns = Ingredient.create!(name: "prawns")
+olive_oil = Ingredient.create!(name: "olive oil ")
+fish_sauce = Ingredient.create!(name: "ﬁsh sauce")
+honey = Ingredient.create!(name: "honey")
+oil = Ingredient.create!(name: "oil")
+seeds = Ingredient.create!(name: "seeds")
+cheese = Ingredient.create!(name: "cheese")
+egg = Ingredient.create!(name: "egg")
+bay_leaves = Ingredient.create!(name: "bay leaves")
+black_pepper = Ingredient.create!(name: "black pepper")
+
+
+# Let's create Recipes Ingredients
+RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
+RecipesIngredient.create!(recipe: recipe_1, ingredient: coriander)
+RecipesIngredient.create!(recipe: recipe_1, ingredient: powder)
+RecipesIngredient.create!(recipe: recipe_1, ingredient: rue)
+RecipesIngredient.create!(recipe: recipe_1, ingredient: salt)
+
+RecipesIngredient.create!(recipe: recipe_2, ingredient: prawns)
+RecipesIngredient.create!(recipe: recipe_2, ingredient: olive_oil)
+RecipesIngredient.create!(recipe: recipe_2, ingredient: fish_sauce)
+
+RecipesIngredient.create!(recipe: recipe_3, ingredient: flour)
+RecipesIngredient.create!(recipe: recipe_3, ingredient: water)
+RecipesIngredient.create!(recipe: recipe_3, ingredient: salt)
+
+RecipesIngredient.create!(recipe: recipe_4, ingredient: flour)
+RecipesIngredient.create!(recipe: recipe_4, ingredient: water)
+RecipesIngredient.create!(recipe: recipe_4, ingredient: honey)
+RecipesIngredient.create!(recipe: recipe_4, ingredient: oil)
+RecipesIngredient.create!(recipe: recipe_4, ingredient: seeds)
+
+RecipesIngredient.create!(recipe: recipe_5, ingredient: flour)
+RecipesIngredient.create!(recipe: recipe_5, ingredient: cheese)
+RecipesIngredient.create!(recipe: recipe_5, ingredient: egg)
+RecipesIngredient.create!(recipe: recipe_5, ingredient: bay_leaves)
+RecipesIngredient.create!(recipe: recipe_5, ingredient: honey)
+
+RecipesIngredient.create!(recipe: recipe_6, ingredient: flour)
+RecipesIngredient.create!(recipe: recipe_6, ingredient: water)
+RecipesIngredient.create!(recipe: recipe_6, ingredient: olive_oil)
+RecipesIngredient.create!(recipe: recipe_6, ingredient: black_pepper)
+RecipesIngredient.create!(recipe: recipe_6, ingredient: honey)
+
+puts RecipesIngredient.all
