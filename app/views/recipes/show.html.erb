@@ -14,32 +14,36 @@
   </div>
   <%# Row for column categories %>
   <div class="row">
-    <div class="col-lg-4">
-      <h3 class="recipe-by">By <%= @recipe.user.name %></h3>
+    <div class="col-lg-3">
+      <p class="recipe-by">By <%= @recipe.user.name %></p>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
       <h3 class="recipe-ingredients">Ingredients: </h3>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-6">
       <h3 class="recipe-prep">Preparation: </h3>
     </div>
   </div>
   <%# Row for content %>
   <div class="row">
-    <div class="col-4 recipe-information">
-      <p class="recipe-prep">Preptime: <%= @recipe.prep_time %></p>
-      <p class="recipe-prep">Era: <%= @recipe.era %></p>
-      <p class="recipe-prep">Country: <%= @recipe.country %></p>
-      <p class="recipe-prep">Rating: <%= @recipe.rating %></p>
-      <br>Picture of tasty old food
+    <div class="col-3 recipe-information">
+      <p class="recipe-prep-time">Preptime: <%= @recipe.prep_time %></p>
+      <p class="recipe-era">Era: <%= @recipe.era %></p>
+      <p class="recipe-country">Country: <%= @recipe.country %></p>
+      <p class="recipe-rating">Rating: <%= @recipe.rating.to_i.times do  %>
+        <i class="fas fa-carrot"></i>
+      <% end %></p>
+      <p class="recipe-rate">Rate this recipe (LINK)</p>
+      <p class="recipe-add-cookbook">Add to your cookbook (LINK)</p>
+      <br>--- Picture of tasty old food ---
     </div>
 
-    <div class="col-4 recipe-ingredients">
+    <div class="col-3 recipe-ingredients">
       Ingredients bla bla bla
     </div>
 
-    <div class="col-4 recipe-preparation">
-      Instructions for recipe bla bla bla
+    <div class="col-6 recipe-preparation">
+      <%= @recipe.instructions %>
     </div>
   </div>
 </div>
