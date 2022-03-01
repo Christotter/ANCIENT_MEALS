@@ -2,9 +2,15 @@
 <div class="container">
   <div class="row mt-4">
     <% @recipes.each do |recipe|%>
-      <%= recipe.era %>
-      <%= recipe.name %>
-      <%= recipe.instructions %>
+      <div class="mt-5">
+        <%= recipe.era %>
+      </div>
+      <div class="mt-5">
+        <%= recipe.name %>
+      </div>
+      <div>
+        <%= recipe.instructions %>
+      </div>
     <% end %>
   </div>
 </div>
