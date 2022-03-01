@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-
 require "open-uri"
+
 puts "Cleaning db..."
 Recipe.destroy_all
 Ingredient.destroy_all
@@ -16,7 +16,7 @@ User.destroy_all
 UserFavorite.destroy_all
 RecipesIngredient.destroy_all
 
-#Create random 6 users
+# Create random 6 users
 puts "creating users"
 users = []
 (1..6).each do |i|
@@ -126,7 +126,7 @@ puts "Recipes: "
 puts recipe_1.name
 puts recipe_2.name
 puts recipe_3.name
-
+puts recipe_4.name
 puts recipe_5.name
 puts recipe_6.name
 
@@ -154,7 +154,6 @@ cheese = Ingredient.create!(name: "cheese")
 egg = Ingredient.create!(name: "egg")
 bay_leaves = Ingredient.create!(name: "bay leaves")
 black_pepper = Ingredient.create!(name: "black pepper")
-
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
@@ -190,3 +189,26 @@ RecipesIngredient.create!(recipe: recipe_6, ingredient: black_pepper)
 RecipesIngredient.create!(recipe: recipe_6, ingredient: honey)
 
 puts RecipesIngredient.all
+
+# User favorites
+UserFavorite.create!(user: users[0], recipe: recipe_1)
+UserFavorite.create!(user: users[0], recipe: recipe_3)
+UserFavorite.create!(user: users[0], recipe: recipe_5)
+
+UserFavorite.create!(user: users[1], recipe: recipe_1)
+UserFavorite.create!(user: users[1], recipe: recipe_2)
+
+UserFavorite.create!(user: users[2], recipe: recipe_2)
+UserFavorite.create!(user: users[2], recipe: recipe_4)
+UserFavorite.create!(user: users[2], recipe: recipe_6)
+
+UserFavorite.create!(user: users[3], recipe: recipe_4)
+
+UserFavorite.create!(user: users[4], recipe: recipe_1)
+UserFavorite.create!(user: users[4], recipe: recipe_3)
+UserFavorite.create!(user: users[4], recipe: recipe_6)
+
+UserFavorite.create!(user: users[5], recipe: recipe_5)
+UserFavorite.create!(user: users[5], recipe: recipe_6)
+
+puts UserFavorite.all
