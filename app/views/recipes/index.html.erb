@@ -1,1 +1,10 @@
-<h1>Ancient Recipes</h1>
+<h1 class="text-center mt-3">Our Recipes</h1>
+<div class="container">
+  <div class="row mt-4">
+    <% @recipes.each do |recipe|%>
+      <%= recipe.era %>
+      <%= recipe.country %>
+      <%= recipe.instructions %>
+    <% end %>
+  </div>
+</div>
