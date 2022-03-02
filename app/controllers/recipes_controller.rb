@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
 
   def index
     if params[:query]
-      @recipes = Recipe.joins(:user).where('instructions ILIKE ?', "%#{params[:query]}%")
+      @recipes = Recipe.joins(:user).where('instructions ILIKE :search_query OR country ILIKE :search_query OR recipes.name ILIKE :search_query', search_query: "%#{params[:query]}%")
     else
       @recipes = Recipe.all
     end
