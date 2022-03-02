@@ -3,24 +3,17 @@
 <div class="container">
   <div class="row mt-4">
     <div class="class col-6 border">
-      <div class="class banner bg-white" style="height:300px">
-        <h1 class="text-center">BANNER WITH BUTTONS/SEARCH BAR</h1>
-      </div>
       <div class="recipe-list mt-3">
         <% @recipes.each do |recipe|%>
           <%= link_to recipe_path(recipe), class: "recipe-link" do %>
           <hr />
-          <div class="mb-1 mt-2 text-center">
+          <div class="mb-1 mt-2">
             <%= recipe.name %>
+            <br>
+            <%= recipe.user.name %>
           </div>
-          <div class="mb-1 mt-2">
-            <%= recipe.era %>
-          </div>
-          <div class="mb-1 mt-2">
+          <div class="mb-1 mt-2 text-end">
             <%= recipe.country %>
-          </div>
-          <div>
-            <%= recipe.instructions %>
           </div>
           <% end %>
         <% end %>
