@@ -1,7 +1,23 @@
+   <!-- You can copy this forms-->
+
     <!--Search Form - dropdown with ingredients -->
-    <select multiple name="ingredients" data-controller="select2">
-      <option value=""></option>
-      <% Ingredient.all.each do |ing|  %>
-        <option value="<%= ing.id %>"><%= ing.name %></option>
-      <% end %>
-    </select>
+      <form action="/recipes" method="get">
+      <select multiple name="ingredients[]" data-controller="select2">
+        <option value=""></option>
+        <% Ingredient.all.each do |ing|  %>
+          <option value="<%= ing.id %>"><%= ing.name %></option>
+        <% end %>
+      </select>
+      <button type="submit" class="search-button">Go</button>
+      </form>
+
+
+
+    <!-- Search Form -->
+    <div class="topnav search-bar">
+      <a class="active " href="#home"></a>
+      <form action="/recipes" method="get">
+        <input type="text" name='query' class="search" placeholder="Search.." value="<%= params[:query] %>">
+        <button type="submit" class="search-button">Go</button>
+      </form>
+    </div>
