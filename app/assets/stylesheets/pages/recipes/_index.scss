@@ -18,3 +18,14 @@
   top: 20px;
       }
 }
+
+.alignment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  p {
+    opacity: 0.6;
+  }
+}
