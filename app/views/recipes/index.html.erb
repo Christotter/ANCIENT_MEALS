@@ -6,6 +6,16 @@
     <div class="col-6 border">
       <div class="lali">
         <!--Search Form - dropdown with ingredients -->
+        <form action="/recipes" method="get">
+        <select multiple name="ingredients[]" data-controller="select2">
+          <option value=""></option>
+          <% Ingredient.all.each do |ing|  %>
+            <option value="<%= ing.id %>"><%= ing.name %></option>
+          <% end %>
+        </select>
+        <button type="submit" class="search-button">Go</button>
+        </form>
+
 
       </div>
       <div class="recipe-list mt-1">
