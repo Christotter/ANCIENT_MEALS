@@ -11,13 +11,13 @@
   background-color: #221E1E;
   display: flex;
   justify-content: center;
-  align-items: center;
-
+  height: 100%;
+  // align-items: center;
   img {
-    position: absolute;
-    margin: 0 auto;
-    resize: both;
-      }
+    margin: 50px 0;
+    position: sticky;
+    top: 50px;
+  }
 }
 
 .alignment-container {
@@ -28,10 +28,10 @@
 
   p {
     opacity: 0.6;
-    
+
   }
 }
 
-.lali {
+/*.lali {
   height: 200px;
-}
+} */
