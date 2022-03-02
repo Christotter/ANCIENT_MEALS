@@ -1,0 +1,30 @@
+<h1 class="text-center mt-3">Ancient Recipes</h1>
+
+<div class="container">
+  <div class="row mt-3">
+    <div class="class col-6 border">
+      <div class="recipe-list mt-1">
+        <% @recipes.each do |recipe|%>
+          <%= link_to recipe_path(recipe), class: "recipe-link" do %>
+          <hr />
+          <div class="mb-1 mt-2">
+            <%= recipe.name %>
+            <br>
+            <div class="class alignment-container">
+              <%= recipe.user.name %>
+              <div class="class text-end">
+                <%= recipe.country %>
+              </div>
+            </div>
+          </div>
+          <div class="mb-1 mt-2 text-end">
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+      <div class="background-class col-6 ml-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/World_blank_map.png" alt="vertical photo">
+      </div>
+  </div>
+</div>

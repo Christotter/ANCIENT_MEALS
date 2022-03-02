@@ -1,0 +1,20 @@
+.recipe-link {
+  text-decoration: none;
+  color: black;
+}
+
+.recipe-link:hover {
+  color: black;
+}
+
+.background-class {
+  background-color: #221E1E;
+
+  img {
+  width:100%;
+  height: 700px;
+  object-fit: cover;
+  position: sticky;
+  top: 20px;
+      }
+}
