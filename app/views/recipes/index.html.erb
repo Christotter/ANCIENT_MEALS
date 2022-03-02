@@ -7,9 +7,9 @@
       <div class="lali">
         <!--Search Form - dropdown with ingredients -->
         <select multiple name="ingredients" data-controller="select2">
-          <option value=""></option>
+          <option value="" class="search-bar"></option>
           <% Ingredient.all.each do |ing|  %>
-            <option value="<%= ing.id %>"><%= ing.name %></option>
+            <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
         <% end %>
         </select>
       </div>

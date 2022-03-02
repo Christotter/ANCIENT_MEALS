@@ -32,6 +32,12 @@
   }
 }
 
-/*.lali {
-  height: 200px;
-} */
+.lali {
+  display: flex;
+}
+
+.search-bar {
+  border-radius: 11px;
+  border: 1px solid black;
+  width: 20px;
+}
