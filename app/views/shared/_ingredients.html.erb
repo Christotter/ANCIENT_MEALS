@@ -1,0 +1,7 @@
+    <!--Search Form - dropdown with ingredients -->
+    <select multiple name="ingredients" data-controller="select2">
+      <option value=""></option>
+      <% Ingredient.all.each do |ing|  %>
+        <option value="<%= ing.id %>"><%= ing.name %></option>
+      <% end %>
+    </select>

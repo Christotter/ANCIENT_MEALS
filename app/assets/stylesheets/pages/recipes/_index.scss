@@ -1,0 +1,37 @@
+.recipe-link {
+  text-decoration: none;
+  color: black;
+}
+
+.recipe-link:hover {
+  color: black;
+}
+
+.background-class {
+  background-color: #221E1E;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  // align-items: center;
+  img {
+    margin: 50px 0;
+    position: sticky;
+    top: 50px;
+  }
+}
+
+.alignment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  p {
+    opacity: 0.6;
+
+  }
+}
+
+/*.lali {
+  height: 200px;
+} */

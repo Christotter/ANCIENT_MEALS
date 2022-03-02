@@ -1,31 +1,41 @@
-<h1 class="text-center mt-3">Our Recipes</h1>
+<h1 class="text-center mt-3">Ancient Recipes</h1>
+
 
 <div class="container">
-  <div class="row mt-4">
-    <div class="class col-7 border">
-      <div class="class banner bg-white" style="height:300px">
-        <h1 class="text-center">BANNER WITH BUTTONS/SEARCH BAR</h1>
+  <div class="row mt-3">
+    <div class="col-6 border">
+      <div class="lali">
+        <!--Search Form - dropdown with ingredients -->
+        <select multiple name="ingredients" data-controller="select2">
+          <option value=""></option>
+          <% Ingredient.all.each do |ing|  %>
+            <option value="<%= ing.id %>"><%= ing.name %></option>
+        <% end %>
+        </select>
       </div>
-      <div class="recipe-list mt-3">
+      <div class="recipe-list mt-1">
         <% @recipes.each do |recipe|%>
+          <%= link_to recipe_path(recipe), class: "recipe-link" do %>
           <hr />
-          <div class="mb-1 mt-2 text-center">
-            <%= recipe.name %>
+          <div class="alignment-container mb-1 mt-2">
+            <div class="my-auto">
+              <h5><%= recipe.name %></h5>
+              <p class="m-0"><%= recipe.user.name %></p>
+            </div>
+              <p class="m-0"><%= recipe.country %></p>
           </div>
-          <div class="mb-1 mt-2">
-            <%= recipe.era %>
+          <div class="mb-1 mt-2 text-end">
           </div>
-          <div class="mb-1 mt-2">
-            <%= recipe.country %>
-          </div>
-          <div>
-            <%= recipe.instructions %>
-          </div>
+          <% end %>
         <% end %>
       </div>
     </div>
-      <div class="class col-5 ml-3">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/World_blank_map.png" alt="vertical photo" style="width:100%; height: 700px; object-fit: cover; position: sticky; top: 20px;">
+    <div class="col-6 ml-3">
+      <div class="background-class">
+        <div>
+          <%= image_tag "2132321.svg" %>
+        </div>
       </div>
+    </div>
   </div>
 </div>
