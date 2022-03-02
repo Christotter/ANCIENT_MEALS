@@ -19,6 +19,9 @@
 
       </div>
       <div class="recipe-list mt-1">
+        <% if @recipes.empty? %>
+          <p>No results match this search</p>
+        <% end %>
         <% @recipes.each do |recipe|%>
           <%= link_to recipe_path(recipe), class: "recipe-link" do %>
           <hr />
@@ -36,7 +39,7 @@
       </div>
     </div>
     <div class="col-6 ml-3">
-      <div class="background-class">
+      <div class="background-class" >
         <div>
           <%= image_tag "2132321.svg" %>
         </div>
