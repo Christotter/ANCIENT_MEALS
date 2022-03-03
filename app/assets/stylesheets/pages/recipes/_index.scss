@@ -74,12 +74,17 @@
 
 .btn-primary {
   color: #fff;
-  background-color: #0D6EFD;
-  border-color: #0D6EFD;
   margin-top: 15px;
+  border:none;
+  background-color: #F4F4F4;
 }
 
 .select2-selection.select2-selection--multiple.custom-class {
   border-radius: 11px;
   border: 1px solid black;
+  background-color: #F4F4F4;
+}
+
+.btn-primary:hover {
+  background-color: #F4F4F4;
 }
