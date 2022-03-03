@@ -25,9 +25,6 @@
       <p class="recipe-era"><%= f.input :era %></p>
       <p class="recipe-country"><%= f.input :country, as: :string %></p>
 
-      <%= f.input :photo, as: :file %>
-          <%= cl_image_upload_tag(:image_id) %>
-
       <%= f.input :image, as: :file, label: "Select an image" %>
 
       <%= f.submit %>

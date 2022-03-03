@@ -40,7 +40,8 @@
       <p class="recipe-rate">Rate this recipe (LINK)</p>
       <p class="recipe-add-cookbook">Add to your cookbook (LINK)</p>
       <br>--- Picture of tasty old food ---
-      <p class="recipe-image"><%= @recipe.image %></p>
+      <%= cl_image_tag @recipe.image.key %>
+
     </div>
 
     <div class="col-3 recipe-ingredients">
