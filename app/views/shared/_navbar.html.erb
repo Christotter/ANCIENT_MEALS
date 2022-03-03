@@ -1,18 +1,7 @@
 
-<div class="nav-container">
-  <ul class="nav nav-fill">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Ancient Meals</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Recipes</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Login</a>
-    </li>
-  </ul>
+<div class="nav-bar">
+  <div class="div1"> <%= link_to "Ancient Meals", root_path, class: "nav-link text-nowrap" %> </div>
+<div class="div2"> <%= link_to "Recipes", recipes_path, class: "nav-link" %></div>
+<div class="div3"> <%= link_to "About", recipes_path, class: "nav-link" %></div>
+<div class="div4 nav-login"> <%= link_to "Login", root_path, class: "nav-link" %></div>
 </div>
-

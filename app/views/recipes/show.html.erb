@@ -1,5 +1,4 @@
-
-    <%# <div class="row mt-4 d-flex justify-content-around">
+ <%# <div class="row mt-4 d-flex justify-content-around">
       <div class="gm-show-card w-75"> %>
 <h1 class="text-center mt-3">Ancient Recipes</h1>
 
@@ -36,38 +35,15 @@
         <% end %>
       </div>
     </div>
+
     <div class="col-lg-6">
-      <h3 class="recipe-prep">Preparation: </h3>
+      <%= render "show_recipe" %>
+      <!--map-end-->
     </div>
   </div>
   <%# Row for content %>
-  <div class="row">
-    <div class="col-3 recipe-information">
-      <p class="recipe-prep-time">Preptime: <%= @recipe.prep_time %></p>
-      <p class="recipe-era">Era: <%= @recipe.era %></p>
-      <p class="recipe-country">Country: <%= @recipe.country %></p>
-      <p class="recipe-rating">Rating: <% @recipe.rating.to_i.times do  %>
-        <i class="fas fa-carrot"></i>
-      <% end %>
-      <% @blank_stars.times do %>
-        <i id="empty-carrot" class="fas fa-carrot empty"></i>
-      <% end %>
-      </p>
-      <p class="recipe-rate">Rate this recipe (LINK)</p>
-      <p class="recipe-add-cookbook">Add to your cookbook (LINK)</p>
-      <br>--- Picture of tasty old food ---
-      <%= cl_image_tag @recipe.image.key %>
 
-    </div>
 
-    <div class="col-3 recipe-ingredients">
-      <p class="recipe-rating"><% @recipe.ingredients.each do |x| %>
-        <li><%= x.name  %></li>
-      <% end %></p>
-    </div>
-
-    <div class="col-6 recipe-preparation">
-      <%= @recipe.instructions %>
 
       <!--MAP -->
       <div id="map" style="height: 300px; width: 600px"
@@ -80,4 +56,5 @@
     <div class="col-6 ml-3">
       <%= render 'recipes/show_recipe' %>
     </div>
+
   </div>

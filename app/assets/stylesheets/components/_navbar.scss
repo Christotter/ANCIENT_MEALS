@@ -1,4 +1,26 @@
-.nav-container li a {
-  color: $gray;
-  text-decoration: none;
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-left: 20px;
+  }
+
+
+  .nav-link {
+    font-family: $AG-normal;
+    font-weight: 700;
+    text-decoration: none;
+    color: $gray;
+  }
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 4 / 2 / 5; }
+.div3 { grid-area: 1 / 6 / 2 / 7; }
+.div4 { grid-area: 1 / 12 / 2 / 13; }
+
+
+.nav-login a {
+  color: white;
 }

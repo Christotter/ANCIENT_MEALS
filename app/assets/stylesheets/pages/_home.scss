@@ -1,1 +1,57 @@
 // Specific CSS for your home-page
+.homegrid {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+
+.home-image {
+  height: 100%;
+  object-fit: crop;
+}
+
+.homeimg {
+  overflow: hidden;
+  grid-row: 2;
+
+}
+
+.blackrectangle {
+  background-color: black;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+
+}
+
+.title-sq {
+  font-weight: 200;
+  font-size: 2.5rem;
+  margin-top: 35%;
+  color: white;
+  margin-left: 10%;
+}
+
+.title-recipes {
+  font-weight: 400;
+}
+
+
+.looking-glass {
+  align-self: flex-end;
+  margin-left: 5%;
+}
+
+.cocktail{
+  align-self: flex-end;
+}
