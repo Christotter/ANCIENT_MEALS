@@ -31,3 +31,38 @@
 
   }
 }
+/*.lali {
+  height: 200px;
+} */
+.centerbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select2-container {
+  width: 200px;
+  margin: auto;
+}
+
+
+.select2-container--default .select2-selection--multiple {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 11px;
+  cursor: text;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  /* position: relative; */
+  width: 200p;
+  width: 180px;
+  margin-top: 15px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0D6EFD;
+  border-color: #0D6EFD;
+  margin-left: 100px;
+  margin-top: 15px;
+}
