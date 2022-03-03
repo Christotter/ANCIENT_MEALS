@@ -11,23 +11,26 @@
 }
 
 @font-face {
-  font-family: "Andersons Grotesk";
+  font-family: "Andersons Grotesk-light";
   src: font-url('AndersonsGrotesk-Light.otf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Andersons Grotesk";
+  font-family: "Andersons Grotesk-ultrabold";
   src: font-url('AndersonsGrotesk-Ultrabold.otf');
   font-weight: 400;
   font-style: normal;
 }
 
 
-$my-font: "Andersons Grotesk";
+// Custom site fonts:
+$AG-normal: "Andersons Grotesk";
+$AG-ultrabold: "Andersons Grotesk-ultrabold";
+$AG-light: "Andersons Grotesk-light";
 
 
 // Define fonts for body and headers
-$body-font: $my-font, "Helvetica", "sans-serif";
+$body-font: $AG-normal, "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
