@@ -3,6 +3,7 @@
 
 
 // To use a font file (.woff) uncomment following lines
+// regular
 @font-face {
   font-family: "Anderson Grotesk";
   src: font-url('AndersonGrotesk.otf');
@@ -10,6 +11,7 @@
   font-style: normal;
 }
 
+// light
 @font-face {
   font-family: "Anderson Grotesk";
   src: font-url('AndersonGrotesk-Light.otf');
@@ -17,6 +19,7 @@
   font-style: normal;
 }
 
+// thickest
 @font-face {
   font-family: "Anderson Grotesk";
   src: font-url('AndersonGrotesk-Ultrabold.otf');
