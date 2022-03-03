@@ -8,7 +8,7 @@
 }
 
 .background-class {
-  background-color: #221E1E;
+  background-color: $ancient-black;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -95,5 +95,9 @@
 }
 
 .container-recipe-info {
-  margin-top: 40px;
+  margin: 40px 40px 0 40px;
+  background-color: #f2f2f2;
+  position: sticky;
+
+
 }
