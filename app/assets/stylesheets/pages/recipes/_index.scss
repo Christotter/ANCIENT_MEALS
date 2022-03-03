@@ -39,24 +39,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 300px;
+  flex-grow: 1;
+  form {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .select2 {
+    flex-grow: 1;
+    border-radius: 11px;
+  }
+}
+.editing-seachbar {
+  display: flex;
 }
 
 .select2-container {
-  width: 200px;
   margin: auto;
 }
 
 
 .select2-container--default .select2-selection--multiple {
-  background-color: white;
   border: 1px solid black;
   border-radius: 11px;
   cursor: text;
   padding-bottom: 5px;
   padding-right: 5px;
   /* position: relative; */
-  width: 200p;
-  width: 180px;
+  width: 100%;
   margin-top: 15px;
 }
 
@@ -64,6 +76,10 @@
   color: #fff;
   background-color: #0D6EFD;
   border-color: #0D6EFD;
-  margin-left: 100px;
   margin-top: 15px;
+}
+
+.select2-selection.select2-selection--multiple.custom-class {
+  border-radius: 11px;
+  border: 1px solid black;
 }
