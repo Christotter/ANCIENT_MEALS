@@ -51,6 +51,11 @@
 
     <div class="col-6 recipe-preparation">
       <%= @recipe.instructions %>
+
+      <!--MAP -->
+      <div id="map" style="height: 300px; width: 600px" data-controller="mapbox" data-action="click->mapbox#map"></div>
+      </div>
+      <!--map-end-->
+
     </div>
   </div>
-</div>
