@@ -7,7 +7,8 @@ export default class extends Controller {
   connect() {
      $(this.element).select2({
        containerCssClass: "filter-ingredient-select",
-       selectionCssClass: "custom-class"
+       selectionCssClass: "custom-class",
+       placeholder: "Search by ingredient..."
      });
   }
 
