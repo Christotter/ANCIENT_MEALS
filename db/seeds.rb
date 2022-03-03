@@ -48,6 +48,9 @@ recipe_1.instructions = "Cabbage should be sliced with the sharpest possible iro
 recipe_1.rating = 4.8
 recipe_1.prep_time = 0
 recipe_1.user = users[0]
+recipe_1.longitude = 23.727539
+recipe_1.latitude = 37.983810
+recipe_1.country_code = "GRC"
 recipe_1.save!
 
 # recipe 2
@@ -64,6 +67,9 @@ recipe_2.instructions = "If using frozen prawns, ensure that they are well defro
 recipe_2.rating = 4.5
 recipe_2.prep_time = 0
 recipe_2.user = users[1]
+recipe_2.longitude = 12.496366
+recipe_2.latitude = 41.902782
+recipe_2.country_code = "ITA"
 recipe_2.save!
 
 # recipe 3
@@ -78,6 +84,9 @@ recipe_3.instructions = "Mix the water, flour, and salt together slowly. Then kn
 recipe_3.rating = 4.7
 recipe_3.prep_time = 0
 recipe_3.user = users[2]
+recipe_3.longitude = 43.483738
+recipe_3.latitude = 34.5337527
+recipe_3.country_code = "IRN"
 recipe_3.save!
 
 # recipe 4
@@ -91,6 +100,9 @@ recipe_4.instructions = "Mix the ﬂour, water and one tablespoon of honey toget
 recipe_4.rating = 4.9
 recipe_4.prep_time = 0
 recipe_4.user = users[3]
+recipe_4.longitude = 23.727539
+recipe_4.latitude = 37.983810
+recipe_4.country_code = "GRC"
 recipe_4.save!
 
 # recipe 5
@@ -104,6 +116,9 @@ recipe_5.instructions = "Libum to be made as follows: 2 lb cheese well crushed i
 recipe_5.rating = 5.0
 recipe_5.prep_time = '25 minutes'
 recipe_5.user = users[4]
+recipe_5.longitude = 12.496366
+recipe_5.latitude = 41.902782
+recipe_5.country_code = "ITA"
 recipe_5.save!
 
 # recipe 6
@@ -119,6 +134,9 @@ garnish with a little warmed honey over the fritters and sprinkle them with eith
 recipe_6.rating = 4.4
 recipe_6.prep_time = 0
 recipe_6.user = users[5]
+recipe_6.longitude = 23.727539
+recipe_6.latitude = 37.983810
+recipe_6.country_code = "GRC"
 recipe_6.save!
 
 # recipe = name, era, country, instructions, rating, prep_time

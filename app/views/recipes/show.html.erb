@@ -70,7 +70,11 @@
       <%= @recipe.instructions %>
 
       <!--MAP -->
-      <div id="map" style="height: 300px; width: 600px" data-controller="mapbox" data-action="click->mapbox#map"></div>
+      <div id="map" style="height: 300px; width: 600px"
+      data-mapbox-longitude-value="<%=@recipe.longitude %>"
+      data-mapbox-latitude-value="<%=@recipe.latitude %>"
+      data-mapbox-code-value="<%=@recipe.country_code %>"
+      data-controller="mapbox" data-action="click->mapbox#map"></div>
       </div>
       <!--map-end-->
     <div class="col-6 ml-3">

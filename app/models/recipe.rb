@@ -8,4 +8,6 @@ class Recipe < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :instructions, presence: true
   validates :era, presence: true
+  # geocoded_by :country_code
+  # after_validation :geocode, if: :will_save_change_to_country_code?
 end
