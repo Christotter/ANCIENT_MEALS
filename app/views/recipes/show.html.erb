@@ -38,21 +38,13 @@
     </div>
     <div class="col-lg-6">
       <%= render "show_recipe" %>
-      <!--map-end-->
     </div>
   </div>
   <%# Row for content %>
 
 
 
-      <!--MAP -->
-      <div id="map" style="height: 300px; width: 600px"
-      data-mapbox-longitude-value="<%=@recipe.longitude %>"
-      data-mapbox-latitude-value="<%=@recipe.latitude %>"
-      data-mapbox-code-value="<%=@recipe.country_code %>"
-      data-controller="mapbox" data-action="click->mapbox#map"></div>
-      </div>
-      <!--map-end-->
+
     <div class="col-6 ml-3">
       <%= render 'recipes/show_recipe' %>
     </div>
