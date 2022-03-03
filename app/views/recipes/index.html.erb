@@ -3,10 +3,21 @@
 
 <div class="container">
   <div class="row mt-3">
-    <div class="col-6 border">
-      <div class="lali">
-      </div>
+    <div class="col-6">
+        <div class="centerbar">
+            <form action="/recipes" method="get">
+            <select multiple name="ingredients[]" data-controller="select2">
+                  <% Ingredient.all.each do |ing|  %>
+                    <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
+                  <% end %>
+            </select>
+              <button type="submit" class="btn btn-primary">✋</button>
+            </form>
+        </div>
       <div class="recipe-list mt-1">
+        <% if @recipes.empty? %>
+          <p>No results match this search</p>
+        <% end %>
         <% @recipes.each do |recipe|%>
           <%= link_to recipe_path(recipe), class: "recipe-link" do %>
           <hr />
@@ -23,8 +34,12 @@
         <% end %>
       </div>
     </div>
-      <div class="background-class col-6 ml-3">
-        <%= image_tag "2132321.svg" %>
+    <div class="col-6 ml-3">
+      <div class="background-class" >
+        <div>
+          <%= image_tag "2132321.svg" %>
+        </div>
       </div>
+    </div>
   </div>
 </div>

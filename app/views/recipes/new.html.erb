@@ -1,0 +1,44 @@
+<div class="container">
+  <%# Row for recipe title %>
+  <div class="row">
+    <div class="col-lg-12">
+      <%= simple_form_for(@recipe) do |f| %>
+        <h1 class="recipe-name"><%= f.input :name %></h1>
+    </div>
+  </div>
+  <%# Row for column categories %>
+  <div class="row">
+    <div class="col-lg-3">
+      <p class="recipe-by">By username</p>
+    </div>
+    <div class="col-lg-3">
+      <h3 class="recipe-ingredients">Ingredients: </h3>
+    </div>
+    <div class="col-lg-6">
+      <h3 class="recipe-prep">Preparation: </h3>
+    </div>
+  </div>
+  <%# Row for content %>
+  <div class="row">
+    <div class="col-3 recipe-information">
+      <p class="recipe-prep-time"><%= f.input :prep_time %></p>
+      <p class="recipe-era"><%= f.input :era %></p>
+      <p class="recipe-country"><%= f.input :country, as: :string %></p>
+
+      <%= f.input :image, as: :file, label: "Select an image" %>
+
+      <%= f.submit %>
+    </div>
+
+    <div class="col-3 recipe-ingredients">
+      <%= f.simple_fields_for :recipes_ingredients do |recipes_ingredients_form| %>
+        <%= recipes_ingredients_form.input :ingredient_id, collection: Ingredient.all %>
+      <% end %>
+    </div>
+
+    <div class="col-6 recipe-preparation">
+      <%= f.input :instructions %>
+    </div>
+    <% end %>
+  </div>
+</div>
