@@ -25,7 +25,7 @@ export default class extends Controller {
 
       console.log(lon, lat)
 
-    const map = new mapboxgl.Map({
+    this.map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/light-v10",
       center: [lon, lat],
@@ -34,10 +34,10 @@ export default class extends Controller {
     })
 
 
-    map.on('load', () => {
+    this.map.on('load', () => {
      // filterLayers(worldViewOnMapLoad);
 
-     map.addLayer(
+     this.map.addLayer(
       {
         id: 'country-boundaries',
         source: {
@@ -54,7 +54,7 @@ export default class extends Controller {
       'country-label'
     );
 
-    map.setFilter('country-boundaries', [
+    this.map.setFilter('country-boundaries', [
       "in",
       "iso_3166_1_alpha_3",
        code
@@ -135,6 +135,10 @@ export default class extends Controller {
 
 
 
+  }
+
+  disconnect() {
+    this.map.remove()
   }
 
 }
