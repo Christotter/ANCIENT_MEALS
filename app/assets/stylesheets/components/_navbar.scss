@@ -4,6 +4,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   margin-left: 20px;
+  background-color: transparent;
   }
 
   .nav-link {
@@ -17,3 +18,8 @@
 .div2 { grid-area: 1 / 4 / 2 / 5; }
 .div3 { grid-area: 1 / 6 / 2 / 7; }
 .div4 { grid-area: 1 / 12 / 2 / 13; }
+
+
+.nav-login a {
+  color: white;
+}
