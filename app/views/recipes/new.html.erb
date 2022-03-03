@@ -1,13 +1,13 @@
 <div class="container">
   <%# Row for recipe title %>
-  <div class="row justify-content-center pb-5">
+  <div class="row justify-content-center pt-5 pb-5">
     <div class="col-9">
       <%= simple_form_for(@recipe) do |f| %>
         <h1 class="recipe-name"><%= f.input :name %></h1>
   <%# Row for column categories %>
         <div class="row">
           <div class="col-lg-3">
-            <p class="recipe-by">By username</p>
+            <p class="recipe-by">By <%= current_user.name %></p>
           </div>
           <div class="col-lg-3">
             <h3 class="recipe-ingredients">Ingredients: </h3>
