@@ -7,3 +7,14 @@ i {
 .empty {
   color: $silver;
 }
+
+.image-food {
+  width: 300px;
+  max-height: 300px;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  justify-content: space-around;
+  object-fit: cover;
+  flex-shrink: 0;
+}
