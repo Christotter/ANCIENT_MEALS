@@ -39,9 +39,7 @@
       <p class="recipe-ingredients-list"><% @recipe.ingredients.each do |x| %>
         <li><%= x.name.capitalize  %></li>
       <% end %></p>
-      <!--printing window-->
-      <button onclick="window.print()" class="print justify-content-end">Print this page</button>
-      <!--printing window end-->
+
     </div>
     <div class="col-lg-12">
       <h3 class="recipe-prep">Preparation: </h3>
