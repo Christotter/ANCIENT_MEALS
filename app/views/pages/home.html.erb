@@ -2,8 +2,14 @@
   <div></div>
   <div class="homeimg"><%= image_tag "bg_new_1.jpg" , class: "home-image" %></div>
 
+<%# <div class="logo rotate"><%= image_tag "logo.png" , class: "imglogo" </div>  %>
   <div class="blackrectangle">
-    <p class="title-sq">Find Ancient<br> <span class="title-recipes">Recipes</span></p>
+
+
+    <p class="title-sq">Find Ancient<br> <span class="title-recipes">Recipes</span><br>
+    <%= link_to "See more", recipes_path, class: "btn home-btn" %>
+    </p>
+
     <div class="looking-glass"><%= image_tag "looking_glass.svg" , class: "looking-glass-img" %></div>
     <div class="cocktail"><%= image_tag "cocktail.svg" , class: "cocktail-img" %></div>
   </div>
