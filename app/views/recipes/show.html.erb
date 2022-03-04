@@ -10,7 +10,7 @@
                     <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
                   <% end %>
             </select>
-              <button type="submit" class="btn btn-primary">🏺</button>
+              <button type="submit" class="btn btn-primary">🔎</button>
             </form>
         </div>
       <div class="recipe-list mt-1">
@@ -31,6 +31,9 @@
           </div>
           <% end %>
         <% end %>
+         <!--printing window-->
+      <button onclick="window.print()" class="print justify-content-end">Print this page</button>
+      <!--printing window end-->
       </div>
     </div>
 
@@ -38,6 +41,7 @@
     </div>
     <div class="col-lg-6 recipe-container">
       <%= render "show_recipe" %>
+
     </div>
   </div>
   <%# Row for content %>
