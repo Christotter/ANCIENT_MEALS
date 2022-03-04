@@ -26,10 +26,12 @@
 }
 
 .blackrectangle {
+  max-height: 100vh;
   background-color: black;
   grid-row: span 2;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: space-between;
   align-content: center;
 
@@ -52,29 +54,41 @@
 
 
 .looking-glass {
+  display: flex;
+  justify-content: flex-end;
+  justify-self: end;
+  margin-right: 7%;
+
+}
+
+.cocktail {
+  width: 100%;
   align-self: flex-end;
-  flex-shrink: 1;
-  margin-left: 5%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1%;
 }
 
-.cocktail{
-  align-self: flex-end;
-}
+.looking-glass-img {
+  width: 100%;
 
-
-.logo {
-  position: absolute;
-  top: 0;
-  left: 61%;
-  width: 50px;
-  z-index: 0;
 
 }
 
-.imglogo {
-  width: 50px;
-  filter: sepia(0.8);
-}
+
+// .logo {
+//   position: absolute;
+//   top: 0;
+//   left: 61%;
+//   width: 50px;
+//   z-index: 0;
+
+// }
+
+// .imglogo {
+//   width: 50px;
+//   filter: sepia(0.8);
+// }
 
 .home-btn {
   background-color: $ancient-silver;
@@ -86,15 +100,15 @@
 
 
 
-.rotate {
-  animation: rotation 2.5s infinite linear;
-}
+// .rotate {
+//   animation: rotation 2.5s infinite linear;
+// }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// @keyframes rotation {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
