@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Ancient Meals"
+meta_title: "Ancient Meals - Eat like your ancestors!"
+meta_description: "Select the ingredients you have available at home and filter through different eras to create a delicious ancient meal, which your ancients had!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
