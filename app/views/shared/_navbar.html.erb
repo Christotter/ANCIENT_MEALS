@@ -3,5 +3,11 @@
   <div class="div1"> <%= link_to "Ancient Meals", root_path, class: "nav-link text-nowrap" %> </div>
   <div class="div2"> <%= link_to "Recipes", recipes_path, class: "nav-link" %></div>
   <div class="div3"> <%= link_to "Create", new_recipe_path, class: "nav-link text-nowrap" %></div>
-  <div class="div4 nav-login"> <%= link_to "Login", root_path, class: "nav-link" %></div>
+  <div class="div4 nav-link" style="text-decoration: none;">
+    <% if user_signed_in? %>
+     <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+  </div>
 </div>
