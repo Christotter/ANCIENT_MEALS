@@ -43,7 +43,7 @@ p {
   font-family: $AG-normal;
   font-size: 16px;
   font-weight: 200;
-  margin-left: 40px;
+  padding-left: 40px;
   margin-top: -15px;
 }
 
@@ -82,6 +82,16 @@ p {
   p {
     font-size: 14px;
     margin-left: 30px;
+  }
+}
+
+.recipe-origin {
+
+  h3 {
+    font-family: $AG-normal;
+    font-weight: 200;
+    font-size: 18px;
+    margin-left: 20px;
   }
 }
 
@@ -125,4 +135,26 @@ p {
 .print:hover{
   font-weight: bold;
   border-color: $gray;
+}
+
+.img-food{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-add-cookbook a{
+  color: blue;
+}
+
+.recipe-rate a {
+  color: blue;
+}
+
+.recipe-add-cookbook a:hover{
+  color: $ancient-brown;
+}
+
+.recipe-rate a:hover {
+  color: $ancient-brown;
 }

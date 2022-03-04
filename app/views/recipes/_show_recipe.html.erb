@@ -1,4 +1,4 @@
-<div class="container-recipe-info">
+<div class="container-recipe-info container-fluid">
   <%# Row for recipe title %>
   <div class="row">
     <div class="col-lg-12">
@@ -22,11 +22,11 @@
         <i id="empty-carrot" class="fas fa-carrot empty"></i>
       <% end %>
       </p>
-      <p class="recipe-rate"><strong>Rate this recipe (LINK)</strong></p>
-      <p class="recipe-add-cookbook"><strong>Add to your cookbook (LINK)</strong></p>
+      <p class="recipe-rate"><strong><a href="#">Rate this recipe</a></strong></p>
+      <p class="recipe-add-cookbook"><strong><a href="#">Add to your cookbook</a></strong></p>
       <div class="recipe-image">
-        <% if @recipe.image.attached? %>
-            <p class="recipe-image"><%= cl_image_tag @recipe.image.key %></p>
+        <% if @recipe.photo.attached? %>
+            <p class="recipe-image"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
         <% else %>
             <img class="recipe-image" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
         <% end %>
@@ -50,12 +50,13 @@
   <br>
 
   <div class="row">
-    <div class="adjusting-padding-h3">
-      <h3>Origin </h3>
+    <%# <div class="adjusting-padding-h3"> %>
+    <div class="recipe-origin">
+      <h3>Origin: </h3>
     </div>
     </div>
 
-      <!--MAP -->
+      <%# MAP %>
       <div class="container-map-centering">
         <div id="map" style="height: 300px; width: 600px" class="map-centering"
         data-mapbox-longitude-value="<%=@recipe.longitude %>"
@@ -64,7 +65,8 @@
         data-controller="mapbox" data-action="click->mapbox#map"></div>
         </div>
       </div>
-      <!--map-end-->  </div>
+      <%# map-end %>
+      </div>
 
 
 
