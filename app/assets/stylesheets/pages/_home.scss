@@ -1,7 +1,8 @@
 // Specific CSS for your home-page
 .homegrid {
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 4fr;
@@ -15,7 +16,7 @@
 
 .home-image {
   height: 100%;
-  object-fit: crop;
+  object-fit: fill;
 }
 
 .homeimg {
@@ -41,6 +42,7 @@
   color: white;
   margin-left: 10%;
   padding: 0;
+  line-height: 1.1;
 }
 
 .title-recipes {
@@ -51,9 +53,40 @@
 
 .looking-glass {
   align-self: flex-end;
+  flex-shrink: 1;
   margin-left: 5%;
 }
 
 .cocktail{
   align-self: flex-end;
 }
+
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 61%;
+  width: 75px;
+  z-index: 0;
+
+}
+
+.home-btn {
+  background-color: $ancient-silver;
+  color: $ancient-black;
+}
+
+
+
+// .rotate {
+//   animation: rotation 2.5s infinite linear;
+// }
+
+// @keyframes rotation {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
