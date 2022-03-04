@@ -79,6 +79,18 @@ p {
   z-index: -1;
 }
 
+.container-map-centering {
+  display: flex;
+  justify-content: center;
+}
+
+.map-centering {
+  margin-bottom: 20px;
+}
+
+.adjusting-padding-h3 {
+  padding-left: 40px;
+}
 .print{
   border-radius: 15px;
   border-color: $silver;

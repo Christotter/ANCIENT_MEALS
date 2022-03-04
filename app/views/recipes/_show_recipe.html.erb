@@ -50,17 +50,19 @@
   <br>
 
   <div class="row">
-
-    <h3 class="recipe-map">Origin: </h3>
-
+    <div class="adjusting-padding-h3">
+      <h3>Origin: </h3>
+    </div>
     </div>
 
       <!--MAP -->
-      <div id="map" style="height: 300px; width: 600px"
-      data-mapbox-longitude-value="<%=@recipe.longitude %>"
-      data-mapbox-latitude-value="<%=@recipe.latitude %>"
-      data-mapbox-code-value="<%=@recipe.country_code %>"
-      data-controller="mapbox" data-action="click->mapbox#map"></div>
+      <div class="container-map-centering">
+        <div id="map" style="height: 300px; width: 600px" class="map-centering"
+        data-mapbox-longitude-value="<%=@recipe.longitude %>"
+        data-mapbox-latitude-value="<%=@recipe.latitude %>"
+        data-mapbox-code-value="<%=@recipe.country_code %>"
+        data-controller="mapbox" data-action="click->mapbox#map"></div>
+        </div>
       </div>
       <!--map-end-->  </div>
 
