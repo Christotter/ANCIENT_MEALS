@@ -25,8 +25,8 @@
       <p class="recipe-rate"><strong>Rate this recipe (LINK)</strong></p>
       <p class="recipe-add-cookbook"><strong>Add to your cookbook (LINK)</strong></p>
       <div class="recipe-image">
-        <% if @recipe.image.attached? %>
-            <p class="recipe-image"><%= cl_image_tag @recipe.image.key %></p>
+        <% if @recipe.photo.attached? %>
+            <p class="recipe-image"><%= cl_image_tag @recipe.photo.key %></p>
         <% else %>
             <img class="recipe-image" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
         <% end %>
