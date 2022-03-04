@@ -142,3 +142,19 @@ p {
   height: 200px;
   object-fit: cover;
 }
+
+.recipe-add-cookbook a{
+  color: blue;
+}
+
+.recipe-rate a {
+  color: blue;
+}
+
+.recipe-add-cookbook a:hover{
+  color: $ancient-brown;
+}
+
+.recipe-rate a:hover {
+  color: $ancient-brown;
+}
