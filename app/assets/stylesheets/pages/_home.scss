@@ -66,27 +66,34 @@
   position: absolute;
   top: 0;
   left: 61%;
-  width: 75px;
+  width: 50px;
   z-index: 0;
 
+}
+
+.imglogo {
+  width: 50px;;
 }
 
 .home-btn {
   background-color: $ancient-silver;
   color: $ancient-black;
+  font-weight: 400;
+  margin-top: 1rem;
+  border-radius: 7px;
 }
 
 
 
-// .rotate {
-//   animation: rotation 2.5s infinite linear;
-// }
+.rotate {
+  animation: rotation 2.5s infinite linear;
+}
 
-// @keyframes rotation {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
