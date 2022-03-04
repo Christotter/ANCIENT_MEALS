@@ -90,5 +90,17 @@ p {
 
 .adjusting-padding-h3 {
   padding-left: 40px;
+}
+.print{
+  border-radius: 15px;
+  border-color: $silver;
+  color: $ancient-brown;
+  font-weight: lighter;
+  font-family: $AG-normal;
+  max-width:200px;
+}
 
+.print:hover{
+  font-weight: bold;
+  border-color: $gray;
 }

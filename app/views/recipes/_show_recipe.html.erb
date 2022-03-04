@@ -8,8 +8,10 @@
   <%# Row for column categories %>
   <div class="row">
 
+
     <p class="recipe-by">By <%= @recipe.user.name %></p>
     <div class="col-lg-6 recipe-information">
+
       <p class="recipe-prep-time">Preptime: <%= @recipe.prep_time %></p>
       <p class="recipe-era">Era: <%= @recipe.era %></p>
       <p class="recipe-country">Country: <%= @recipe.country %></p>
@@ -31,11 +33,13 @@
       </div>
     </div>
 
+
     <div class="col-lg-6 recipe-ingredients">
       <h4 class="recipe-ingredients">Ingredients: </h4>
       <p class="recipe-ingredients-list"><% @recipe.ingredients.each do |x| %>
         <li><%= x.name.capitalize  %></li>
       <% end %></p>
+
     </div>
     <div class="col-lg-12">
       <h3 class="recipe-prep">Preparation: </h3>
@@ -61,5 +65,7 @@
         </div>
       </div>
       <!--map-end-->  </div>
+
+
 
 </div>
