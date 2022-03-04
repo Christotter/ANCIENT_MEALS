@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   z-index: -1;
+  overflow: hidden
 
 }
 
@@ -76,6 +77,14 @@
 }
 
 
+.home-btn {
+  background-color: $ancient-silver;
+  color: $ancient-black;
+  font-weight: 400;
+  margin-top: 1rem;
+  border-radius: 7px;
+}
+
 // .logo {
 //   position: absolute;
 //   top: 0;
@@ -89,14 +98,6 @@
 //   width: 50px;
 //   filter: sepia(0.8);
 // }
-
-.home-btn {
-  background-color: $ancient-silver;
-  color: $ancient-black;
-  font-weight: 400;
-  margin-top: 1rem;
-  border-radius: 7px;
-}
 
 
 
