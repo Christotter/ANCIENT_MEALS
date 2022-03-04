@@ -230,3 +230,17 @@ UserFavorite.create!(user: users[5], recipe: recipe_5)
 UserFavorite.create!(user: users[5], recipe: recipe_6)
 
 puts UserFavorite.all
+
+# Add photo to recipes
+p1 = URI.open('https://ohmydish.com/wp-content/uploads/2020/01/Greek-cabbage-salad.jpg')
+recipe_1.photo.attach(io: p1, filename: 'cabbage.jpg', content_type: 'image/jpg')
+p2 = URI.open('https://vikalinka.com/wp-content/uploads/2021/05/Honey-Garlic-Shrimp-5-Edit.jpg')
+recipe_2.photo.attach(io: p2, filename: 'prawns.jpg', content_type: 'image/jpg')
+p3 = URI.open('https://www.mygreekdish.com/wp-content/uploads/2020/05/Greek-Bread-recipe-Village-bread-Horiatiko-Psomi-1536x1154.jpeg')
+recipe_3.photo.attach(io: p3, filename: 'ancient-bread.jpg', content_type: 'image/jpg')
+p4 = URI.open('http://cookingantiquity.weebly.com/uploads/2/3/9/6/23964588/9952635.jpeg')
+recipe_4.photo.attach(io: p4, filename: 'pancake.jpg', content_type: 'image/jpg')
+p5 = URI.open('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1833451.jpg')
+recipe_5.photo.attach(io: p5, filename: 'cheesecake.jpg', content_type: 'image/jpg')
+p6 = URI.open('https://cdn.compassclassroom.com/wp-content/uploads/20210226072917/resources_delian_P2180891.jpg')
+recipe_6.photo.attach(io: p6, filename: 'delian-sweets.jpg', content_type: 'image/jpg')
