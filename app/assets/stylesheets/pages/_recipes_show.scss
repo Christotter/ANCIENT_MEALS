@@ -34,19 +34,23 @@ p {
 .recipe-name {
   font-family: $AG-normal;
   font-weight: 400;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .recipe-by {
   font-family: $AG-normal;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 200;
-  padding-left: 20px;
+  margin-left: 40px;
   margin-top: -15px;
 }
 
 .recipe-information {
-  padding-left: 30px;
+  padding-left: 70px;
   padding-top: 30px;
+  font-size: 14px;
   // margin-top: -10px;
 }
 
@@ -54,13 +58,31 @@ p {
   font-family: $AG-normal;
   font-weight: 200;
   padding-left: 30px;
-  margin-top: -5px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .recipe-ingredients-list, li {
   font-family: $AG-normal;
   font-weight: 200;
   padding-left: 30px;
+  margin-top: 0px;
+  font-size: 14px;
+}
+
+.recipe-prep {
+
+  h3 {
+    font-family: $AG-normal;
+    font-weight: 200;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-left: 30px;
+  }
 }
 
 .recipe-map {

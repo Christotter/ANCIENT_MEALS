@@ -95,27 +95,31 @@
 }
 
 .container-recipe-info {
-  margin: -10px 20px 10px 20px;
+  // margin: -10px 20px 10px 20px;
   background-color: #f2f2f2;
   position: sticky;
 
-  p {
-    padding-left: 20px;
-  }
+  // p {
+  //   padding-left: 20px;
+  // }
 
-  h1 {
-    padding-top: 20px;
-  }
+  // h1 {
+  //   padding-top: 20px;
+  // }
 
-  h3 {
-    padding-left: 20px;
-  }
+  // h3 {
+  //   padding-left: 20px;
+  // }
+}
+
+.recipe-container {
+  padding-right: 0px;
 }
 
 .recipe-prep {
   padding-left: 20px;
 }
 
-.container-recipe-info .col-lg-12 {
-  padding-left: 20px;
-}
+// .container-recipe-info .col-lg-12 {
+//   padding-left: 20px;
+// }
