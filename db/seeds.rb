@@ -46,6 +46,11 @@ recipe_17 = Recipe.new
 recipe_18 = Recipe.new
 recipe_19 = Recipe.new
 recipe_20 = Recipe.new
+recipe_21 = Recipe.new
+recipe_22 = Recipe.new
+recipe_23 = Recipe.new
+recipe_24 = Recipe.new
+recipe_25 = Recipe.new
 
 puts "recipes created"
 
@@ -393,6 +398,78 @@ recipe_20.latitude = 2.2137
 recipe_20.country_code = "FRA"
 recipe_20.save!
 
+# recipe 21
+recipe_21.name = "Grave of Small Birds"
+recipe_21.era = "14th century AD"
+recipe_21.country = "Medieval - France"
+recipe_21.instructions = "Place all ingredients in a large pot. Bring to a boil, then simmer until done - about 20 minutes."
+recipe_21.rating = 2.5
+recipe_21.prep_time = "30 min"
+recipe_21.user = users[4]
+recipe_21.longitude = 46.2276
+recipe_21.latitude = 2.2137
+recipe_21.country_code = "FRA"
+recipe_21.save!
+
+# recipe 22
+recipe_21.name = "Cinnamon Soup"
+recipe_21.era = "14th century AD"
+recipe_21.country = "Medieval - France"
+recipe_21.instructions = "Cut chicken into small pieces and sautee in butter until it starts to brown.
+Add remaining ingredients, bring to a boil, and simmer until thick. Serve hot."
+recipe_21.rating = 4.7
+recipe_21.prep_time = "30 to 45 min"
+recipe_21.user = users[0]
+recipe_21.longitude = 46.2276
+recipe_21.latitude = 2.2137
+recipe_21.country_code = "FRA"
+recipe_21.save!
+
+# recipe 23
+recipe_21.name = "Spinach Tart"
+recipe_21.era = "14th century AD"
+recipe_21.country = "Medieval - France"
+recipe_21.instructions = "Wash spinach and parsley, and chop them well.
+Beat eggs in a large bowl, add greens and remaining ingredients, and mix well.
+Pour into pie crust and bake at 350°F until firm - about an hour."
+recipe_21.rating = 4.5
+recipe_21.prep_time = "1h 10 min"
+recipe_21.user = users[1]
+recipe_21.longitude = 46.2276
+recipe_21.latitude = 2.2137
+recipe_21.country_code = "FRA"
+recipe_21.save!
+
+# recipe 24
+recipe_21.name = "Powder Fine"
+recipe_21.era = "14th century AD"
+recipe_21.country = "Medieval - France"
+recipe_21.instructions = "Many medieval recipes call for spice mixtures without detailing the exact spices. While it is tempting to assume that each particular spice mixture had a consistent recipe, there is evidence of substantial variation for different times, regions, budgets, and cooks.
+This recipe is for one of the more commonly called for spice mixtures.
+I strongly encourage altering it to suite your own tastes."
+recipe_21.rating = 5
+recipe_21.prep_time = "3 min"
+recipe_21.user = users[2]
+recipe_21.longitude = 46.2276
+recipe_21.latitude = 2.2137
+recipe_21.country_code = "FRA"
+recipe_21.save!
+
+# recipe 25
+recipe_21.name = "Ova Sponga ex Lacte - Eggs with Honey"
+recipe_21.era = "1st - 2nd century AD"
+recipe_21.country = "Roman"
+recipe_21.instructions = "Beat well the eggs and mix with the milk and a bit of olive oil.
+Pour olive oil in a pan. When it is hot, add a ladle of the egg mixture. Cook the ova spongia until they are done, without turning them.
+Plate the omelettes coating them with honey and dusting with ground pepper."
+recipe_21.rating = 4.5
+recipe_21.prep_time = "10 min"
+recipe_21.user = users[3]
+recipe_21.longitude = 41.8719
+recipe_21.latitude = 12.5674
+recipe_21.country_code = "ITA"
+recipe_21.save!
+
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
 puts recipe_1.name
@@ -415,6 +492,12 @@ puts recipe_17.name
 puts recipe_18.name
 puts recipe_19.name
 puts recipe_20.name
+puts recipe_21.name
+puts recipe_22.name
+puts recipe_23.name
+puts recipe_24.name
+puts recipe_25.name
+
 
 puts " "
 puts "Users: "
@@ -482,6 +565,19 @@ white_rice = Ingredient.create!(name: "white rice")
 almond_milk = Ingredient.create!(name: "almond milk")
 ginger = Ingredient.create!(name: "ginger")
 white_pepper = Ingredient.create!(name: "white pepper")
+chicken_thighs = Ingredient.create!(name: "chicken thighs")
+bacon_pieces = Ingredient.create!(name: "bacon pieces")
+cinnamon = Ingredient.create!(name: "cinnamon")
+cloves = Ingredient.create!(name: "cloves")
+grains_of_paradise = Ingredient.create!(name: "grains of paradise")
+cooked_chicken = Ingredient.create!(name: "cooked chicken")
+chicken_broth = Ingredient.create!(name: "chicken broth")
+spinach = Ingredient.create!(name: "spinach")
+mozzarella = Ingredient.create!(name: "mozzarella")
+parmesan = Ingredient.create!(name: "parmesan")
+chervil = Ingredient.create!(name: "chervil")
+powder_fine = Ingredient.create!(name: "powder fine")
+
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
@@ -610,6 +706,44 @@ RecipesIngredient.create!(recipe: recipe_20, ingredient: salt)
 RecipesIngredient.create!(recipe: recipe_20, ingredient: ginger)
 RecipesIngredient.create!(recipe: recipe_20, ingredient: white_pepper)
 
+RecipesIngredient.create!(recipe: recipe_21, ingredient: chicken_thighs)
+RecipesIngredient.create!(recipe: recipe_21, ingredient: red_wine)
+RecipesIngredient.create!(recipe: recipe_21, ingredient: water)
+RecipesIngredient.create!(recipe: recipe_21, ingredient: bacon_pieces)
+RecipesIngredient.create!(recipe: recipe_21, ingredient: salt)
+RecipesIngredient.create!(recipe: recipe_21, ingredient: pepper)
+RecipesIngredient.create!(recipe: recipe_21, ingredient: ginger)
+
+RecipesIngredient.create!(recipe: recipe_22, ingredient: cooked_chicken)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: butter)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: chicken_broth)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: almonds)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: cinnamon)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: ginger)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: cloves)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: grains_of_paradise)
+RecipesIngredient.create!(recipe: recipe_22, ingredient: salt)
+
+RecipesIngredient.create!(recipe: recipe_23, ingredient: spinach)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: parsley)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: egg)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: mozzarella)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: parmesan)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: chervil)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: fennel)
+RecipesIngredient.create!(recipe: recipe_23, ingredient: powder_fine)
+
+RecipesIngredient.create!(recipe: recipe_24, ingredient: ginger)
+RecipesIngredient.create!(recipe: recipe_24, ingredient: sugar)
+RecipesIngredient.create!(recipe: recipe_24, ingredient: cinnamon)
+RecipesIngredient.create!(recipe: recipe_24, ingredient: cloves)
+RecipesIngredient.create!(recipe: recipe_24, ingredient: grains_of_paradise)
+
+RecipesIngredient.create!(recipe: recipe_25, ingredient: egg)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: milk)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: olive_oil)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: honey)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: black_pepper)
 puts RecipesIngredient.all
 
 # User favorites
@@ -617,11 +751,13 @@ UserFavorite.create!(user: users[0], recipe: recipe_1)
 UserFavorite.create!(user: users[0], recipe: recipe_3)
 UserFavorite.create!(user: users[0], recipe: recipe_5)
 UserFavorite.create!(user: users[0], recipe: recipe_17)
+UserFavorite.create!(user: users[0], recipe: recipe_22)
 
 UserFavorite.create!(user: users[1], recipe: recipe_1)
 UserFavorite.create!(user: users[1], recipe: recipe_2)
 UserFavorite.create!(user: users[1], recipe: recipe_9)
 UserFavorite.create!(user: users[1], recipe: recipe_16)
+UserFavorite.create!(user: users[1], recipe: recipe_23)
 
 UserFavorite.create!(user: users[2], recipe: recipe_2)
 UserFavorite.create!(user: users[2], recipe: recipe_4)
@@ -629,17 +765,21 @@ UserFavorite.create!(user: users[2], recipe: recipe_6)
 UserFavorite.create!(user: users[2], recipe: recipe_8)
 UserFavorite.create!(user: users[2], recipe: recipe_14)
 UserFavorite.create!(user: users[2], recipe: recipe_18)
+UserFavorite.create!(user: users[2], recipe: recipe_24)
+
 
 UserFavorite.create!(user: users[3], recipe: recipe_4)
 UserFavorite.create!(user: users[3], recipe: recipe_7)
 UserFavorite.create!(user: users[3], recipe: recipe_12)
 UserFavorite.create!(user: users[3], recipe: recipe_20)
+UserFavorite.create!(user: users[3], recipe: recipe_25)
 
 UserFavorite.create!(user: users[4], recipe: recipe_1)
 UserFavorite.create!(user: users[4], recipe: recipe_3)
 UserFavorite.create!(user: users[4], recipe: recipe_6)
 UserFavorite.create!(user: users[4], recipe: recipe_10)
 UserFavorite.create!(user: users[4], recipe: recipe_13)
+UserFavorite.create!(user: users[4], recipe: recipe_21)
 
 UserFavorite.create!(user: users[5], recipe: recipe_5)
 UserFavorite.create!(user: users[5], recipe: recipe_6)
@@ -691,3 +831,13 @@ p19 = URI.open('http://1.bp.blogspot.com/-2ZtIdQSrBWs/UCHORXhBA1I/AAAAAAAAA88/r-
 recipe_19.photo.attach(io: p19, filename: 'benes-yfryed', content_type: 'image/jpg')
 p20 = URI.open('https://historydollop.files.wordpress.com/2019/11/847df68c-8b77-444c-b674-8ad631f2541a.jpg')
 recipe_20.photo.attach(io: p20, filename: 'blancmanger', content_type: 'image/jpg')
+p21 = URI.open('https://i.redd.it/wsscoqzikaj81.jpg')
+recipe_21.photo.attach(io: p21, filename: 'grave-of-small-birds', content_type: 'image/jpg')
+p22 = URI.open('https://lotien.files.wordpress.com/2011/06/p11708572.jpg')
+recipe_22.photo.attach(io: p22, filename: 'cinnamon-soup', content_type: 'image/jpg')
+p23 = URI.open('https://i.redd.it/3qybb0h09fh81.jpg')
+recipe_23.photo.attach(io: p23, filename: 'spinach-tart', content_type: 'image/jpg')
+p24 = URI.open('https://i.pinimg.com/564x/3e/50/2f/3e502fe4136fc314940826fb054b0bc1.jpg')
+recipe_24.photo.attach(io: p24, filename: 'powder-fine', content_type: 'image/jpg')
+p25 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2020/05/ova-spongia-piatto.jpg')
+recipe_25.photo.attach(io: p25, filename: 'ova-spongia-ex-lacte', content_type: 'image/jpg')
