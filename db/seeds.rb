@@ -412,63 +412,63 @@ recipe_21.country_code = "FRA"
 recipe_21.save!
 
 # recipe 22
-recipe_21.name = "Cinnamon Soup"
-recipe_21.era = "14th century AD"
-recipe_21.country = "Medieval - France"
-recipe_21.instructions = "Cut chicken into small pieces and sautee in butter until it starts to brown.
+recipe_22.name = "Cinnamon Soup"
+recipe_22.era = "14th century AD"
+recipe_22.country = "Medieval - France"
+recipe_22.instructions = "Cut chicken into small pieces and sautee in butter until it starts to brown.
 Add remaining ingredients, bring to a boil, and simmer until thick. Serve hot."
-recipe_21.rating = 4.7
-recipe_21.prep_time = "30 to 45 min"
-recipe_21.user = users[0]
-recipe_21.longitude = 46.2276
-recipe_21.latitude = 2.2137
-recipe_21.country_code = "FRA"
-recipe_21.save!
+recipe_22.rating = 4.7
+recipe_22.prep_time = "30 to 45 min"
+recipe_22.user = users[0]
+recipe_22.longitude = 46.2276
+recipe_22.latitude = 2.2137
+recipe_22.country_code = "FRA"
+recipe_22.save!
 
 # recipe 23
-recipe_21.name = "Spinach Tart"
-recipe_21.era = "14th century AD"
-recipe_21.country = "Medieval - France"
-recipe_21.instructions = "Wash spinach and parsley, and chop them well.
+recipe_23.name = "Spinach Tart"
+recipe_23.era = "14th century AD"
+recipe_23.country = "Medieval - France"
+recipe_23.instructions = "Wash spinach and parsley, and chop them well.
 Beat eggs in a large bowl, add greens and remaining ingredients, and mix well.
 Pour into pie crust and bake at 350°F until firm - about an hour."
-recipe_21.rating = 4.5
-recipe_21.prep_time = "1h 10 min"
-recipe_21.user = users[1]
-recipe_21.longitude = 46.2276
-recipe_21.latitude = 2.2137
-recipe_21.country_code = "FRA"
-recipe_21.save!
+recipe_23.rating = 4.5
+recipe_23.prep_time = "1h 10 min"
+recipe_23.user = users[1]
+recipe_23.longitude = 46.2276
+recipe_23.latitude = 2.2137
+recipe_23.country_code = "FRA"
+recipe_23.save!
 
 # recipe 24
-recipe_21.name = "Powder Fine"
-recipe_21.era = "14th century AD"
-recipe_21.country = "Medieval - France"
-recipe_21.instructions = "Many medieval recipes call for spice mixtures without detailing the exact spices. While it is tempting to assume that each particular spice mixture had a consistent recipe, there is evidence of substantial variation for different times, regions, budgets, and cooks.
+recipe_24.name = "Powder Fine"
+recipe_24.era = "14th century AD"
+recipe_24.country = "Medieval - France"
+recipe_24.instructions = "Many medieval recipes call for spice mixtures without detailing the exact spices. While it is tempting to assume that each particular spice mixture had a consistent recipe, there is evidence of substantial variation for different times, regions, budgets, and cooks.
 This recipe is for one of the more commonly called for spice mixtures.
 I strongly encourage altering it to suite your own tastes."
-recipe_21.rating = 5
-recipe_21.prep_time = "3 min"
-recipe_21.user = users[2]
-recipe_21.longitude = 46.2276
-recipe_21.latitude = 2.2137
-recipe_21.country_code = "FRA"
-recipe_21.save!
+recipe_24.rating = 5
+recipe_24.prep_time = "3 min"
+recipe_24.user = users[2]
+recipe_24.longitude = 46.2276
+recipe_24.latitude = 2.2137
+recipe_24.country_code = "FRA"
+recipe_24.save!
 
 # recipe 25
-recipe_21.name = "Ova Sponga ex Lacte - Eggs with Honey"
-recipe_21.era = "1st - 2nd century AD"
-recipe_21.country = "Roman"
-recipe_21.instructions = "Beat well the eggs and mix with the milk and a bit of olive oil.
+recipe_25.name = "Ova Sponga ex Lacte - Eggs with Honey"
+recipe_25.era = "1st - 2nd century AD"
+recipe_25.country = "Roman"
+recipe_25.instructions = "Beat well the eggs and mix with the milk and a bit of olive oil.
 Pour olive oil in a pan. When it is hot, add a ladle of the egg mixture. Cook the ova spongia until they are done, without turning them.
 Plate the omelettes coating them with honey and dusting with ground pepper."
-recipe_21.rating = 4.5
-recipe_21.prep_time = "10 min"
-recipe_21.user = users[3]
-recipe_21.longitude = 41.8719
-recipe_21.latitude = 12.5674
-recipe_21.country_code = "ITA"
-recipe_21.save!
+recipe_25.rating = 4.5
+recipe_25.prep_time = "10 min"
+recipe_25.user = users[3]
+recipe_25.longitude = 41.8719
+recipe_25.latitude = 12.5674
+recipe_25.country_code = "ITA"
+recipe_25.save!
 
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
@@ -578,7 +578,6 @@ parmesan = Ingredient.create!(name: "parmesan")
 chervil = Ingredient.create!(name: "chervil")
 powder_fine = Ingredient.create!(name: "powder fine")
 pepper = Ingredient.create!(name: "pepper")
-
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
