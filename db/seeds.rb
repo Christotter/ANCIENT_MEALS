@@ -50,6 +50,7 @@ recipe_21 = Recipe.new
 recipe_22 = Recipe.new
 recipe_23 = Recipe.new
 recipe_24 = Recipe.new
+recipe_25 = Recipe.new
 
 puts "recipes created"
 
@@ -454,6 +455,21 @@ recipe_21.latitude = 2.2137
 recipe_21.country_code = "FRA"
 recipe_21.save!
 
+# recipe 25
+recipe_21.name = "Ova Sponga ex Lacte - Eggs with Honey"
+recipe_21.era = "1st - 2nd century AD"
+recipe_21.country = "Roman"
+recipe_21.instructions = "Beat well the eggs and mix with the milk and a bit of olive oil.
+Pour olive oil in a pan. When it is hot, add a ladle of the egg mixture. Cook the ova spongia until they are done, without turning them.
+Plate the omelettes coating them with honey and dusting with ground pepper."
+recipe_21.rating = 4.5
+recipe_21.prep_time = "10 min"
+recipe_21.user = users[3]
+recipe_21.longitude = 41.8719
+recipe_21.latitude = 12.5674
+recipe_21.country_code = "ITA"
+recipe_21.save!
+
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
 puts recipe_1.name
@@ -480,6 +496,7 @@ puts recipe_21.name
 puts recipe_22.name
 puts recipe_23.name
 puts recipe_24.name
+puts recipe_25.name
 
 
 puts " "
@@ -560,6 +577,7 @@ mozzarella = Ingredient.create!(name: "mozzarella")
 parmesan = Ingredient.create!(name: "parmesan")
 chervil = Ingredient.create!(name: "chervil")
 powder_fine = Ingredient.create!(name: "powder fine")
+
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
@@ -721,6 +739,11 @@ RecipesIngredient.create!(recipe: recipe_24, ingredient: cinnamon)
 RecipesIngredient.create!(recipe: recipe_24, ingredient: cloves)
 RecipesIngredient.create!(recipe: recipe_24, ingredient: grains_of_paradise)
 
+RecipesIngredient.create!(recipe: recipe_25, ingredient: egg)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: milk)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: olive_oil)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: honey)
+RecipesIngredient.create!(recipe: recipe_25, ingredient: black_pepper)
 puts RecipesIngredient.all
 
 # User favorites
@@ -749,6 +772,7 @@ UserFavorite.create!(user: users[3], recipe: recipe_4)
 UserFavorite.create!(user: users[3], recipe: recipe_7)
 UserFavorite.create!(user: users[3], recipe: recipe_12)
 UserFavorite.create!(user: users[3], recipe: recipe_20)
+UserFavorite.create!(user: users[3], recipe: recipe_25)
 
 UserFavorite.create!(user: users[4], recipe: recipe_1)
 UserFavorite.create!(user: users[4], recipe: recipe_3)
@@ -815,3 +839,5 @@ p23 = URI.open('https://i.redd.it/3qybb0h09fh81.jpg')
 recipe_23.photo.attach(io: p23, filename: 'spinach-tart', content_type: 'image/jpg')
 p24 = URI.open('https://i.pinimg.com/564x/3e/50/2f/3e502fe4136fc314940826fb054b0bc1.jpg')
 recipe_24.photo.attach(io: p24, filename: 'powder-fine', content_type: 'image/jpg')
+p25 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2020/05/ova-spongia-piatto.jpg')
+recipe_25.photo.attach(io: p25, filename: 'ova-spongia-ex-lacte', content_type: 'image/jpg')
