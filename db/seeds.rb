@@ -577,6 +577,7 @@ mozzarella = Ingredient.create!(name: "mozzarella")
 parmesan = Ingredient.create!(name: "parmesan")
 chervil = Ingredient.create!(name: "chervil")
 powder_fine = Ingredient.create!(name: "powder fine")
+pepper = Ingredient.create!(name: "pepper")
 
 
 # Let's create Recipes Ingredients
