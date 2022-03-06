@@ -687,7 +687,7 @@ p17 = URI.open('https://i.pinimg.com/originals/48/63/e9/4863e975a70504cd9a8dbd2f
 recipe_17.photo.attach(io: p17, filename: 'frytour-blanched.jpg', content_type: 'image/jpg')
 p18 = URI.open('https://static01.nyt.com/images/2017/01/11/dining/11SOUPS14/11SOUPS14-articleLarge.jpg')
 recipe_18.photo.attach(io: p18, filename: 'chicken-stock', content_type: 'image/jpg')
-p19 = URI.open('hhttp://1.bp.blogspot.com/-2ZtIdQSrBWs/UCHORXhBA1I/AAAAAAAAA88/r-8D4w36pI4/s1600/edit-04327.jpg')
+p19 = URI.open('http://1.bp.blogspot.com/-2ZtIdQSrBWs/UCHORXhBA1I/AAAAAAAAA88/r-8D4w36pI4/s1600/edit-04327.jpg')
 recipe_19.photo.attach(io: p19, filename: 'benes-yfryed', content_type: 'image/jpg')
 p20 = URI.open('https://historydollop.files.wordpress.com/2019/11/847df68c-8b77-444c-b674-8ad631f2541a.jpg')
 recipe_20.photo.attach(io: p20, filename: 'blancmanger', content_type: 'image/jpg')
