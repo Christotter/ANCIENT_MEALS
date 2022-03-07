@@ -28,6 +28,7 @@
         <% if @recipe.photo.attached? %>
             <p class="recipe-image"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
         <% else %>
+            <%# <img class="recipe-image" src="http://res.cloudinary.com/dspxgnggq/image/upload/v1/development/ob2a4mn5xf2jfbtq0p56d8ewewbt" alt="Food"> %>
             <img class="recipe-image" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
         <% end %>
       </div>

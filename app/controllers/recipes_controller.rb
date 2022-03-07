@@ -16,11 +16,9 @@ class RecipesController < ApplicationController
   end
 
   def create
-    # raise
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
-    # raise
-    if @recipe.save
+    if @recipe.save!
       redirect_to recipe_path(@recipe)
     else
       render :new
