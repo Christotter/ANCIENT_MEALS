@@ -52,6 +52,8 @@ recipe_23 = Recipe.new
 recipe_24 = Recipe.new
 recipe_25 = Recipe.new
 recipe_26 = Recipe.new
+recipe_27 = Recipe.new
+recipe_28 = Recipe.new
 
 
 puts "recipes created"
@@ -486,6 +488,35 @@ recipe_26.latitude = 75.0152
 recipe_26.country_code = "PER"
 recipe_26.save!
 
+# recipe 27
+recipe_27.name = "Ancient Roman Mussels"
+recipe_27.era = "1st - 2nd century AD"
+recipe_27.country = "Roman"
+recipe_27.instructions = "Cut the leek without mincing it overly.
+Put the mussels into a hot pot and add the leek, wine, passito, garum, savory, and whole cumin seeds.
+The author suggests to mix it with water. Don’t use too much garum (fish sauce), because usually, mussels are rather salted.
+You can add more at the end of the cooking. In a few minutes, the dish is ready."
+recipe_27.rating = 2.5
+recipe_27.prep_time = "10 min"
+recipe_27.user = users[5]
+recipe_27.longitude = 41.8719
+recipe_27.latitude = 12.5674
+recipe_27.country_code = "ITA"
+recipe_27.save!
+
+# recipe 28
+recipe_28.name = "Cominee"
+recipe_28.era = "13th century AD"
+recipe_28.country = "Medieval - French"
+recipe_28.instructions = "Whisk ingredients together and cook over a low heat until it's just ready to boil. Serve hot."
+recipe_28.rating = 4.5
+recipe_28.prep_time = "10 min"
+recipe_28.user = users[0]
+recipe_28.longitude = 46.2276
+recipe_28.latitude = 2.2137
+recipe_28.country_code = "FRA"
+recipe_28.save!
+
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
 puts recipe_1.name
@@ -514,7 +545,8 @@ puts recipe_23.name
 puts recipe_24.name
 puts recipe_25.name
 puts recipe_26.name
-
+puts recipe_27.name
+puts recipe_28.name
 
 puts " "
 puts "Users: "
@@ -603,7 +635,11 @@ green_onion = Ingredient.create!(name: "green onion")
 cilantro = Ingredient.create!(name: "cilantro")
 lemon_juice = Ingredient.create!(name: "lemon juice")
 cumin = Ingredient.create!(name: "cumin")
-
+mussels = Ingredient.create!(name: "mussels")
+leek = Ingredient.create!(name: "leek")
+savory = Ingredient.create!(name: "savory")
+dry_white_wine = Ingredient.create!(name: "dry white wine")
+passito = Ingredient.create!(name: "passito")
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
@@ -780,6 +816,18 @@ RecipesIngredient.create!(recipe: recipe_26, ingredient: cilantro)
 RecipesIngredient.create!(recipe: recipe_26, ingredient: lemon_juice)
 RecipesIngredient.create!(recipe: recipe_26, ingredient: cumin)
 
+RecipesIngredient.create!(recipe: recipe_27, ingredient: mussels)
+RecipesIngredient.create!(recipe: recipe_27, ingredient: leek)
+RecipesIngredient.create!(recipe: recipe_27, ingredient: savory)
+RecipesIngredient.create!(recipe: recipe_27, ingredient: cumin)
+RecipesIngredient.create!(recipe: recipe_27, ingredient: dry_white_wine)
+RecipesIngredient.create!(recipe: recipe_27, ingredient: passito)
+
+RecipesIngredient.create!(recipe: recipe_28, ingredient: chicken_broth)
+RecipesIngredient.create!(recipe: recipe_28, ingredient: egg_yolks)
+RecipesIngredient.create!(recipe: recipe_28, ingredient: ginger)
+RecipesIngredient.create!(recipe: recipe_28, ingredient: cumin)
+
 puts RecipesIngredient.all
 
 # User favorites
@@ -788,6 +836,7 @@ UserFavorite.create!(user: users[0], recipe: recipe_3)
 UserFavorite.create!(user: users[0], recipe: recipe_5)
 UserFavorite.create!(user: users[0], recipe: recipe_17)
 UserFavorite.create!(user: users[0], recipe: recipe_22)
+UserFavorite.create!(user: users[0], recipe: recipe_28)
 
 UserFavorite.create!(user: users[1], recipe: recipe_1)
 UserFavorite.create!(user: users[1], recipe: recipe_2)
@@ -823,6 +872,7 @@ UserFavorite.create!(user: users[5], recipe: recipe_6)
 UserFavorite.create!(user: users[5], recipe: recipe_11)
 UserFavorite.create!(user: users[5], recipe: recipe_15)
 UserFavorite.create!(user: users[5], recipe: recipe_19)
+UserFavorite.create!(user: users[5], recipe: recipe_27)
 
 
 puts UserFavorite.all
@@ -880,3 +930,7 @@ p25 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2020/05
 recipe_25.photo.attach(io: p25, filename: 'ova-spongia-ex-lacte', content_type: 'image/jpg')
 p26 = URI.open('https://img.sndimg.com/food/image/upload/c_thumb,q_80,w_562,h_316/v1/img/recipes/40/56/picB5Wkvh.jpg')
 recipe_26.photo.attach(io: p26, filename: 'inca-salad', content_type: 'image/jpg')
+p27 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2018/12/Cozze-2.jpg')
+recipe_27.photo.attach(io: p27, filename: 'inca-salad', content_type: 'image/jpg')
+p28 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2018/12/Cozze-2.jpg')
+recipe_28.photo.attach(io: p28, filename: 'inca-salad', content_type: 'image/jpg')
