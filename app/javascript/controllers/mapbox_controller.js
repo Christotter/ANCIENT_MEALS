@@ -30,7 +30,7 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/light-v10",
       center: [lat, lon],
       //center: [23.727539, 37.983810],
-      zoom: 4
+      zoom: 3
     })
 
 
