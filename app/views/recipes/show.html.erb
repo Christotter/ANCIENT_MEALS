@@ -1,18 +1,16 @@
- <%# <div class="row mt-4 d-flex justify-content-around">
-      <div class="gm-show-card w-75"> %>
 <div class="container-fluid">
   <div class="row mt-0">
-    <div class="col-5">
+    <div class="col-5" data-controller="search">
         <div class="centerbar">
             <form action="/recipes" method="get">
-            <select multiple name="ingredients[]" data-controller="select2">
+            <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
                   <% Ingredient.all.each do |ing|  %>
                     <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
                   <% end %>
             </select>
-              <button type="submit" class="btn btn-primary">🔎</button>
             </form>
         </div>
+        <%=render "recipe_list" %>
       <div class="recipe-list mt-1">
         <% if @recipes.empty? %>
           <p>No results match this search</p>
@@ -46,12 +44,5 @@
 
   </div>
   <%# Row for content %>
-
-
-
-
-    <!--<div class="col-6 ml-3">
-
-    </div>-->
 
   </div>
