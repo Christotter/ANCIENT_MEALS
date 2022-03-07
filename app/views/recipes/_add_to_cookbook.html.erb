@@ -1,13 +1,14 @@
+<% if user_signed_in? %>
+  <% if @user_favorite.persisted? %>
+    <%# Link to delete user favorite %>
 
-<% if @user_favorite.persisted? %>
-  <%# Link to delete user favorite %>
-
- <%= link_to("Remove from cookbook", user_favorite_path(@user_favorite), method: :delete) %>
+  <%= link_to("Remove from cookbook", user_favorite_path(@user_favorite), method: :delete) %>
 
 
-<% else %>
-  <%= simple_form_for([@recipe, @user_favorite]) do |f| %>
-    <%# <%= f.input :recipe %>
-    <%= f.button :submit, 'Add to cookbook', class: 'add-favorites' %>
+  <% else %>
+    <%= simple_form_for([@recipe, @user_favorite]) do |f| %>
+      <%# <%= f.input :recipe %>
+      <%= f.button :submit, 'Add to cookbook', class: 'add-favorites' %>
+    <% end %>
   <% end %>
 <% end %>
