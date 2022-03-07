@@ -8,6 +8,8 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @blank_stars = 5 - @recipe.rating.to_i
+    @user_favorite = current_user.user_favorites.find_by(recipe: @recipe)
+    @user_favorite = UserFavorite.new if @user_favorite.nil?
   end
 
   def new

@@ -8,6 +8,15 @@
   <%# Row for column categories %>
   <div class="row">
 
+    <!--Buttons ...Lali-->
+    <div class="m-3">
+
+      <!--printing window-->
+      <button onclick="window.print()" class="print">Print this page</button>
+      <!--printing window end-->
+    </div>
+    <!--Buttons end-->
+
 
     <p class="recipe-by">By <%= @recipe.user.name %></p>
     <div class="col-lg-6 recipe-information">
@@ -23,7 +32,7 @@
       <% end %>
       </p>
       <p class="recipe-rate"><strong><a href="#">Rate this recipe</a></strong></p>
-      <p class="recipe-add-cookbook"><strong><a href="#">Add to your cookbook</a></strong></p>
+      <p class="recipe-add-cookbook"><strong><%= render "add_to_cookbook" %></strong></p>
       <div class="recipe-image">
         <% if @recipe.photo.attached? %>
             <p class="recipe-image"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
