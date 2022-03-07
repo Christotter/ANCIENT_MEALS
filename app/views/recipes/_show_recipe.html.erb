@@ -46,8 +46,8 @@
 
     <div class="col-lg-6 recipe-ingredients">
       <h4 class="recipe-ingredients">Ingredients</h4>
-      <p class="recipe-ingredients-list"><% @recipe.ingredients.each do |x| %>
-        <li><%= x.name.capitalize  %></li>
+      <p class="recipe-ingredients-list"><% @recipe.recipes_ingredients.each do |recipe_ingredient| %>
+        <li><%= recipe_ingredient.ingredient.name.capitalize  %> | <%= recipe_ingredient.quantity %></li>
       <% end %></p>
 
     </div>
