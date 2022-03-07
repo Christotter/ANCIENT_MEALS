@@ -3,7 +3,7 @@ import $ from "jquery";
 
 
 export default class extends Controller {
-  static targets = ["list", "form", "input"]
+  static targets = ["list", "input"]
 
   connect() {
     console.log(this.listTarget)
@@ -11,13 +11,12 @@ export default class extends Controller {
     this.select2Input = $(this.inputTarget)
     // Add jquery event listener to select2 input to call search recipes on change event
 
-    $(this.listTarget).on("click", function(){
-      return listTarget.outerHTML.getElementById(ingredient_id)
+    $(this.select2Input).on("change", () => {
+      this.searchRecipes();
     });
   }
 
-  searchRecipes(event) {
-    event.preventDefault();
+  searchRecipes() {
     // this.select2Input.val() => [1, 2, 4]
     const searchValues = this.select2Input.val().map((value) => {
       return ["ingredients[]", value]
@@ -28,7 +27,6 @@ export default class extends Controller {
       headers: { "Accept": "application/json" } })
         .then((response) => response.json())
         .then(data => {
-          console.log(data);
           this.listTarget.outerHTML = data.recipes_list_html;
         })
 

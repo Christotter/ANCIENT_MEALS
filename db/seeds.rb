@@ -918,7 +918,7 @@ p19 = URI.open('http://1.bp.blogspot.com/-2ZtIdQSrBWs/UCHORXhBA1I/AAAAAAAAA88/r-
 recipe_19.photo.attach(io: p19, filename: 'benes-yfryed', content_type: 'image/jpg')
 p20 = URI.open('https://historydollop.files.wordpress.com/2019/11/847df68c-8b77-444c-b674-8ad631f2541a.jpg')
 recipe_20.photo.attach(io: p20, filename: 'blancmanger', content_type: 'image/jpg')
-p21 = URI.open('https://i.redd.it/wsscoqzikaj81.jpg')
+p21 = URI.open('https://i.pinimg.com/originals/65/f3/8c/65f38cf79e1eed3caed68b14882806e9.jpg')
 recipe_21.photo.attach(io: p21, filename: 'grave-of-small-birds', content_type: 'image/jpg')
 p22 = URI.open('https://lotien.files.wordpress.com/2011/06/p11708572.jpg')
 recipe_22.photo.attach(io: p22, filename: 'cinnamon-soup', content_type: 'image/jpg')

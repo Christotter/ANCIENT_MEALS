@@ -2,15 +2,12 @@
   <div class="row mt-0">
     <div class="col-6" data-controller="search">
         <div class="centerbar">
-            <form action="/recipes" method="get"
-                  data-search-target="form"
-                  data-action="submit->search#searchRecipes">
+            <form action="/recipes" method="get">
             <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
                   <% Ingredient.all.each do |ing|  %>
                     <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
                   <% end %>
             </select>
-              <button type="submit" class="btn btn-primary">🔎</button>
             </form>
         </div>
         <%= render "recipe_list" %>
