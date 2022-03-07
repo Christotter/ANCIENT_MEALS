@@ -51,6 +51,8 @@ recipe_22 = Recipe.new
 recipe_23 = Recipe.new
 recipe_24 = Recipe.new
 recipe_25 = Recipe.new
+recipe_26 = Recipe.new
+
 
 puts "recipes created"
 
@@ -470,6 +472,20 @@ recipe_25.latitude = 12.5674
 recipe_25.country_code = "ITA"
 recipe_25.save!
 
+# recipe 26
+recipe_26.name = "Inca Salad"
+recipe_26.era = "1438 - 1533 AD"
+recipe_26.country = "Incan"
+recipe_26.instructions = "Combine all ingredients.
+Serve with the bottle of hot sauce on the side, so each diner can add more heat to his or her taste."
+recipe_26.rating = 4.1
+recipe_26.prep_time = "8 min"
+recipe_26.user = users[4]
+recipe_26.longitude = 9.1900
+recipe_26.latitude = 75.0152
+recipe_26.country_code = "PER"
+recipe_26.save!
+
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
 puts recipe_1.name
@@ -497,6 +513,7 @@ puts recipe_22.name
 puts recipe_23.name
 puts recipe_24.name
 puts recipe_25.name
+puts recipe_26.name
 
 
 puts " "
@@ -578,6 +595,15 @@ parmesan = Ingredient.create!(name: "parmesan")
 chervil = Ingredient.create!(name: "chervil")
 powder_fine = Ingredient.create!(name: "powder fine")
 pepper = Ingredient.create!(name: "pepper")
+quinoa = Ingredient.create!(name: "quinoa")
+frozen_corn = Ingredient.create!(name: "frozen corn")
+pink_beans = Ingredient.create!(name: "pink beans")
+tomatoes = Ingredient.create!(name: "tomato")
+green_onion = Ingredient.create!(name: "green onion")
+cilantro = Ingredient.create!(name: "cilantro")
+lemon_juice = Ingredient.create!(name: "lemon juice")
+cumin = Ingredient.create!(name: "cumin")
+
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
@@ -744,6 +770,16 @@ RecipesIngredient.create!(recipe: recipe_25, ingredient: milk)
 RecipesIngredient.create!(recipe: recipe_25, ingredient: olive_oil)
 RecipesIngredient.create!(recipe: recipe_25, ingredient: honey)
 RecipesIngredient.create!(recipe: recipe_25, ingredient: black_pepper)
+
+RecipesIngredient.create!(recipe: recipe_26, ingredient: quinoa)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: frozen_corn)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: pink_beans)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: tomatoes)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: green_onion)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: cilantro)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: lemon_juice)
+RecipesIngredient.create!(recipe: recipe_26, ingredient: cumin)
+
 puts RecipesIngredient.all
 
 # User favorites
@@ -780,6 +816,7 @@ UserFavorite.create!(user: users[4], recipe: recipe_6)
 UserFavorite.create!(user: users[4], recipe: recipe_10)
 UserFavorite.create!(user: users[4], recipe: recipe_13)
 UserFavorite.create!(user: users[4], recipe: recipe_21)
+UserFavorite.create!(user: users[4], recipe: recipe_26)
 
 UserFavorite.create!(user: users[5], recipe: recipe_5)
 UserFavorite.create!(user: users[5], recipe: recipe_6)
@@ -841,3 +878,5 @@ p24 = URI.open('https://i.pinimg.com/564x/3e/50/2f/3e502fe4136fc314940826fb054b0
 recipe_24.photo.attach(io: p24, filename: 'powder-fine', content_type: 'image/jpg')
 p25 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2020/05/ova-spongia-piatto.jpg')
 recipe_25.photo.attach(io: p25, filename: 'ova-spongia-ex-lacte', content_type: 'image/jpg')
+p26 = URI.open('https://img.sndimg.com/food/image/upload/c_thumb,q_80,w_562,h_316/v1/img/recipes/40/56/picB5Wkvh.jpg')
+recipe_26.photo.attach(io: p26, filename: 'inca-salad', content_type: 'image/jpg')
