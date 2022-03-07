@@ -53,6 +53,7 @@ recipe_24 = Recipe.new
 recipe_25 = Recipe.new
 recipe_26 = Recipe.new
 recipe_27 = Recipe.new
+recipe_28 = Recipe.new
 
 
 puts "recipes created"
@@ -503,6 +504,19 @@ recipe_27.latitude = 12.5674
 recipe_27.country_code = "ITA"
 recipe_27.save!
 
+# recipe 28
+recipe_28.name = "Cominee"
+recipe_28.era = "13th century AD"
+recipe_28.country = "Medieval - French"
+recipe_28.instructions = "Whisk ingredients together and cook over a low heat until it's just ready to boil. Serve hot."
+recipe_28.rating = 4.5
+recipe_28.prep_time = "10 min"
+recipe_28.user = users[0]
+recipe_28.longitude = 46.2276
+recipe_28.latitude = 2.2137
+recipe_28.country_code = "FRA"
+recipe_28.save!
+
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
 puts recipe_1.name
@@ -532,7 +546,7 @@ puts recipe_24.name
 puts recipe_25.name
 puts recipe_26.name
 puts recipe_27.name
-
+puts recipe_28.name
 
 puts " "
 puts "Users: "
@@ -626,6 +640,7 @@ leek = Ingredient.create!(name: "leek")
 savory = Ingredient.create!(name: "savory")
 dry_white_wine = Ingredient.create!(name: "dry white wine")
 passito = Ingredient.create!(name: "passito")
+
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage)
 RecipesIngredient.create!(recipe: recipe_1, ingredient: coriander)
@@ -808,6 +823,11 @@ RecipesIngredient.create!(recipe: recipe_27, ingredient: cumin)
 RecipesIngredient.create!(recipe: recipe_27, ingredient: dry_white_wine)
 RecipesIngredient.create!(recipe: recipe_27, ingredient: passito)
 
+RecipesIngredient.create!(recipe: recipe_28, ingredient: chicken_broth)
+RecipesIngredient.create!(recipe: recipe_28, ingredient: egg_yolks)
+RecipesIngredient.create!(recipe: recipe_28, ingredient: ginger)
+RecipesIngredient.create!(recipe: recipe_28, ingredient: cumin)
+
 puts RecipesIngredient.all
 
 # User favorites
@@ -816,6 +836,7 @@ UserFavorite.create!(user: users[0], recipe: recipe_3)
 UserFavorite.create!(user: users[0], recipe: recipe_5)
 UserFavorite.create!(user: users[0], recipe: recipe_17)
 UserFavorite.create!(user: users[0], recipe: recipe_22)
+UserFavorite.create!(user: users[0], recipe: recipe_28)
 
 UserFavorite.create!(user: users[1], recipe: recipe_1)
 UserFavorite.create!(user: users[1], recipe: recipe_2)
@@ -911,3 +932,5 @@ p26 = URI.open('https://img.sndimg.com/food/image/upload/c_thumb,q_80,w_562,h_31
 recipe_26.photo.attach(io: p26, filename: 'inca-salad', content_type: 'image/jpg')
 p27 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2018/12/Cozze-2.jpg')
 recipe_27.photo.attach(io: p27, filename: 'inca-salad', content_type: 'image/jpg')
+p28 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2018/12/Cozze-2.jpg')
+recipe_28.photo.attach(io: p28, filename: 'inca-salad', content_type: 'image/jpg')
