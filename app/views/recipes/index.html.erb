@@ -1,35 +1,33 @@
-<div class="container-fluid">
-  <div class="row mt-0">
-    <div class="col-6" data-controller="search">
-        <div class="centerbar">
-            <form action="/recipes" method="get">
-            <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
-                  <% Ingredient.all.each do |ing|  %>
-                    <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
-                  <% end %>
-            </select>
-            </form>
-        </div>
-        <%= render "recipe_list" %>
-    </div>
-    <div class="col-6 ml-3 recipe-container">
-      <div class="background-rectangle">
-      </div>
-      <div class="background-class" >
-        <div>
-
-          <!--Lali function -->
-          <div id="box">
-            <img id="image" />
-          </div>
-          <!--Lali function -->
-
-          <%# <%= image_tag "2132321.svg" %>
-        </div>
-      </div>
+  <div class="recipe-text">recipes</div>
+  <div id="container-top">
+    <div class="centerbar">
+      <form action="/recipes" method="get">
+        <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
+          <% Ingredient.all.each do |ing|  %>
+            <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
+          <% end %>
+        </select>
+      </form>
     </div>
   </div>
-</div>
+
+
+  <div class="flex-container">
+    <div class="box-1" data-controller="search">
+        <%= render "recipe_list" %>
+    </div>
+      <div class="recipe-container">
+        <%= image_tag "Rectangle_9" , class: "bottom-image" %>
+        <%# <img id="image" /> %>
+
+      </div>
+  </div>
+
+
+
+
+
+
 
 <script>
 
