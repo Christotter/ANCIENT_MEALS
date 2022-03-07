@@ -158,3 +158,15 @@ p {
 .recipe-rate a:hover {
   color: $ancient-brown;
 }
+
+.mywidth{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#image{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}

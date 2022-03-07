@@ -23,12 +23,12 @@ export default class extends Controller {
       let lat  = this.latitudeValue;
       let code  = this.codeValue;
 
-      console.log(lon, lat)
+      console.log(lat, lon)
 
     this.map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/light-v10",
-      center: [lon, lat],
+      center: [lat, lon],
       //center: [23.727539, 37.983810],
       zoom: 4
     })

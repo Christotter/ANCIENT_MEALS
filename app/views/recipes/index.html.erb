@@ -36,9 +36,36 @@
       </div>
       <div class="background-class" >
         <div>
-          <%= image_tag "2132321.svg" %>
+
+          <!--Lali function -->
+          <div id="box">
+            <img id="image" />
+          </div>
+          <!--Lali function -->
+
+          <%# <%= image_tag "2132321.svg" %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+
+//This script is changing photos
+var images = [
+   'https://user-images.githubusercontent.com/31392942/156794680-314e4839-4fe3-46d0-bcd2-e62a893b6471.jpg',
+    "https://user-images.githubusercontent.com/31392942/156794847-626867f0-fdc1-40f2-813a-a2efda2705a3.jpg",
+    "https://user-images.githubusercontent.com/31392942/156794779-a91a9757-d639-49eb-9bcf-3c61ce441574.jpg"
+   ];
+
+function randImg() {
+    var size = images.length
+    var x = Math.floor(size * Math.random())
+    document.getElementById('image').src= images[x];
+}
+
+randImg();
+
+
+</script>
