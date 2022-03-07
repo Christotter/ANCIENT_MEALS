@@ -10,6 +10,10 @@ export default class extends Controller {
     console.log(this.formTarget)
     this.select2Input = $(this.inputTarget)
     // Add jquery event listener to select2 input to call search recipes on change event
+
+    $(this.listTarget).on("click", function(){
+      return listTarget.outerHTML.getElementById(ingredient_id)
+    });
   }
 
   searchRecipes(event) {
