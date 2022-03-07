@@ -8,11 +8,13 @@ export default class extends Controller {
      $(this.element).select2({
        containerCssClass: "filter-ingredient-select",
        selectionCssClass: "custom-class",
-       placeholder: "Search by ingredient..."
+       placeholder: "Search by ingredient...",
      });
   }
 
   disconnect() {
     $(this.element).select2('destroy');
   }
+
+// add search
 }

@@ -1,44 +1,52 @@
 <div class="container-fluid">
   <div class="row mt-0">
-    <div class="col-6">
+    <div class="col-6" data-controller="search">
         <div class="centerbar">
             <form action="/recipes" method="get">
-            <select multiple name="ingredients[]" data-controller="select2">
+            <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
                   <% Ingredient.all.each do |ing|  %>
                     <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
                   <% end %>
             </select>
-              <button type="submit" class="btn btn-primary">🔎</button>
             </form>
         </div>
-      <div class="recipe-list mt-1">
-        <% if @recipes.empty? %>
-          <p>No results match this search</p>
-        <% end %>
-        <% @recipes.each do |recipe|%>
-          <%= link_to recipe_path(recipe), class: "recipe-link" do %>
-          <hr />
-          <div class="alignment-container mb-1 mt-2">
-            <div class="my-auto">
-              <h5><%= recipe.name %></h5>
-              <p class="m-0"><%= recipe.user.name %></p>
-            </div>
-              <p class="m-0"><%= recipe.country %></p>
-          </div>
-          <div class="mb-1 mt-2 text-end">
-          </div>
-          <% end %>
-        <% end %>
-      </div>
+        <%= render "recipe_list" %>
     </div>
     <div class="col-6 ml-3 recipe-container">
       <div class="background-rectangle">
       </div>
       <div class="background-class" >
         <div>
-          <%= image_tag "2132321.svg" %>
+
+          <!--Lali function -->
+          <div id="box">
+            <img id="image" />
+          </div>
+          <!--Lali function -->
+
+          <%# <%= image_tag "2132321.svg" %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+
+//This script is changing photos
+var images = [
+   'https://user-images.githubusercontent.com/31392942/156794680-314e4839-4fe3-46d0-bcd2-e62a893b6471.jpg',
+    "https://user-images.githubusercontent.com/31392942/156794847-626867f0-fdc1-40f2-813a-a2efda2705a3.jpg",
+    "https://user-images.githubusercontent.com/31392942/156794779-a91a9757-d639-49eb-9bcf-3c61ce441574.jpg"
+   ];
+
+function randImg() {
+    var size = images.length
+    var x = Math.floor(size * Math.random())
+    document.getElementById('image').src= images[x];
+}
+
+randImg();
+
+
+</script>
