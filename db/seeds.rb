@@ -640,6 +640,7 @@ leek = Ingredient.create!(name: "leek")
 savory = Ingredient.create!(name: "savory")
 dry_white_wine = Ingredient.create!(name: "dry white wine")
 passito = Ingredient.create!(name: "passito")
+oregano = Ingredient.create!(name: "oregano")
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage, quantity: "1 small")
