@@ -1,16 +1,17 @@
   <div class="recipe-text">recipes</div>
-  <div id="container-top">
-    <div class="centerbar">
-      <form action="/recipes" method="get">
-        <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
-          <% Ingredient.all.each do |ing|  %>
-            <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
-          <% end %>
-        </select>
-      </form>
-    </div>
-  </div>
+  <div class="container-99">
 
+    <div id="container-top">
+      <div class="centerbar">
+        <form action="/recipes" method="get">
+          <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
+            <% Ingredient.all.each do |ing|  %>
+              <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
+            <% end %>
+          </select>
+        </form>
+      </div>
+    </div>
 
   <div class="flex-container">
     <div class="box-1" data-controller="search">
@@ -19,10 +20,10 @@
       <div class="recipe-container">
         <%= image_tag "Rectangle_9" , class: "bottom-image" %>
         <%# <img id="image" /> %>
-
       </div>
   </div>
 
+</div>
 
 
 
