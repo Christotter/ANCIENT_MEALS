@@ -54,7 +54,18 @@ recipe_25 = Recipe.new
 recipe_26 = Recipe.new
 recipe_27 = Recipe.new
 recipe_28 = Recipe.new
-
+recipe_29 = Recipe.new
+recipe_30 = Recipe.new
+recipe_31 = Recipe.new
+recipe_32 = Recipe.new
+recipe_33 = Recipe.new
+recipe_34 = Recipe.new
+recipe_35 = Recipe.new
+recipe_36 = Recipe.new
+recipe_37 = Recipe.new
+recipe_38 = Recipe.new
+recipe_39 = Recipe.new
+recipe_40 = Recipe.new
 
 puts "recipes created"
 
@@ -507,7 +518,7 @@ recipe_27.save!
 # recipe 28
 recipe_28.name = "Cominee"
 recipe_28.era = "13th century AD"
-recipe_28.country = "Medieval - French"
+recipe_28.country = "Medieval - France"
 recipe_28.instructions = "Whisk ingredients together and cook over a low heat until it's just ready to boil. Serve hot."
 recipe_28.rating = 4.5
 recipe_28.prep_time = "10 min"
@@ -516,6 +527,196 @@ recipe_28.longitude = 46.2276
 recipe_28.latitude = 2.2137
 recipe_28.country_code = "FRA"
 recipe_28.save!
+
+# recipe 29
+recipe_29.name = "White Mush - Bread Pudding"
+recipe_29.era = "13th century AD"
+recipe_29.country = "Medieval - Germany"
+recipe_29.instructions = "Take milk and butter put them into a sauce pan. Cook on medium heat until butter has melted.
+Take beaten eggs and add the sugar, cinnamon, and salt to them, mix well. Cube the bread slices. Then fold the bread slices into the egg and spice mixture.
+Mix the egg mixture and the milk mixture in a casserole dish. Bake at 350 for 45 minutes."
+recipe_29.rating = 4.2
+recipe_29.prep_time = "1 hour"
+recipe_29.user = users[1]
+recipe_29.longitude = 51.1657
+recipe_29.latitude = 10.4515
+recipe_29.country_code = "DEU"
+recipe_29.save!
+
+# recipe 30
+recipe_30.name = "Koken wan honer - Chicken Pie"
+recipe_30.era = "13th century AD"
+recipe_30.country = "Medieval - Germany"
+recipe_30.instructions = "Boil chicken for 30 min in chicken base with one small onion. Allow chicken to cool. Meanwhile, cook and crumble bacon. Place prepared pie crust into pie pan. Shred chicken removing bones and skin. Then beat eggs and mix the spices into the beaten eggs. Then mix the chicken, bacon and egg mixture.
+Place into the pie pan. Preheat oven to 425°F. Bake the pie at 425°F for 15 minutes.
+Then reduce the oven temperature to 300°F. Bake for another 30 minutes."
+recipe_30.rating = 4.1
+recipe_30.prep_time = "1h 20min"
+recipe_30.user = users[2]
+recipe_30.longitude = 51.1657
+recipe_30.latitude = 10.4515
+recipe_30.country_code = "DEU"
+recipe_30.save!
+
+# recipe 31
+recipe_31.name = "Brat Ruben - Fried Root Vegetables"
+recipe_31.era = "16th century AD"
+recipe_31.country = "Medieval - Germany"
+recipe_31.instructions = "Peel and slice carrots and parsnips. Saute carrots and parsnips in olive oil over medium heat until tender. Place in serving bowl and sprinkle with sugar.
+Author note: Since the recipe did not specify the types of root vegetables, I choose carrots and parsnips for this recipe as they lend themselves quite well to this cooking technique."
+recipe_31.rating = 4.6
+recipe_31.prep_time = "7 min"
+recipe_31.user = users[3]
+recipe_31.longitude = 51.1657
+recipe_31.latitude = 10.4515
+recipe_31.country_code = "DEU"
+recipe_31.save!
+
+# recipe 32
+recipe_32.name = "Mersu"
+recipe_32.era = "1750 BCE"
+recipe_32.country = "Mesopotamia"
+recipe_32.instructions = "Mash the dates into a smooth paste. You can use a mortar and pestle, a food processor, or just chop them with a knife. Separately, grind or pound the pistachio nuts.
+Combine half the ground pistachio nuts with the date paste and mix well. Roll the mixture into small, uniform balls (wet your fingers to make them easier to smooth and handle).
+Then, take the remaining pistachio nuts and spread them out on a dish or piece of wax paper. Roll each mersu in the ground nuts, patting gently all around to ensure the nuts stick."
+recipe_32.rating = 4.0
+recipe_32.prep_time = "10 min"
+recipe_32.user = users[4]
+recipe_32.longitude = 43.483738
+recipe_32.latitude = 34.5337527
+recipe_32.country_code = "IRN"
+recipe_32.save!
+
+# recipe 33
+recipe_33.name = "Babylonian Gazelle (Lamb) Stew with Beets"
+recipe_33.era = "2000 BC"
+recipe_33.country = "Babylonia"
+recipe_33.instructions = "Heat the fat in a pot wide enough for the diced lamb to spread in one layer.
+Add lamb and sear on high heat until all moisture evaporates.
+Fold in the onion, and keep cooking until it is almost transparent.
+Fold in red beet, arugula, cilantro, Persian shallots and cumin. Keep on folding until the moisture evaporates and ingredients emit a pleasant aroma.
+Pour in the beer. Add water. Give the pot a light stir. Bring the pot to a boil.
+Reduce heat and add leek and garlic that you crush in a mortar.
+Let the stew simmer until the sauce thickens after about an hour.
+Chop kurrat and fresh cilantro and pound it into a paste using a mortar.
+Ladle the stew into plates and sprinkle with dry coriander seed and the kurrat and cilantro paste. The dish can be served with steamed bulgur and naan-bread."
+recipe_33.rating = 5
+recipe_33.prep_time = "1h 10 min"
+recipe_33.user = users[5]
+recipe_33.longitude = 33.2232
+recipe_33.latitude = 43.6793
+recipe_33.country_code = "IRQ"
+recipe_33.save!
+
+# recipe 34
+recipe_34.name = "Roman Columella Salad"
+recipe_34.era = "1st Century AD"
+recipe_34.country = "Roman"
+recipe_34.instructions = "Put savory in the mortar with mint, rue, coriander, parsley, sliced leek, or, if it is not available, onion, lettuce and rocket leaves, green thyme, or catmint.
+Also pennyroyal and salted fresh cheese. This is all crushed together. Stir in a little peppered vinegar.
+Put this mixture on a plate and pour oil over it. "
+recipe_34.rating = 4.5
+recipe_34.prep_time = "1h 10 min"
+recipe_34.user = users[0]
+recipe_34.longitude = 41.8719
+recipe_34.latitude = 12.5674
+recipe_34.country_code = "ITA"
+recipe_34.save!
+
+# recipe 35
+recipe_35.name = "Soft-Boiled Eggs in Pine-Nut Sauce"
+recipe_35.era = "1st Century AD"
+recipe_35.country = "Roman"
+recipe_35.instructions = "Soak the pine nuts overnight in water. Then drain and grind them finely in the blender or pound them in a large mortar.
+Add the pepper, honey and garum. Heat the sauce in a bain-marie. Meanwhile put the eggs into a pan of cold water and bring to the boil. Let them cook for 3½ minutes, then take them off the heat, plunge them into cold water and peel them carefully. The outer edge of the egg white must be firm, but it must be soft inside.
+Put the eggs, left whole, into a deep serving bowl and pour over the sauce. Serve."
+recipe_35.rating = 4.8
+recipe_35.prep_time = "20 min"
+recipe_35.user = users[1]
+recipe_35.longitude = 41.8719
+recipe_35.latitude = 12.5674
+recipe_35.country_code = "ITA"
+recipe_35.save!
+
+# recipe 36
+recipe_36.name = "Ostrich Ragout"
+recipe_36.era = "1st Century AD"
+recipe_36.country = "Roman"
+recipe_36.instructions = "Make a roux with the flour and 1 tablespoon of the olive oil, add the passum, and continue to stir until the sauce is smooth.
+Pound together in the following order: the cumin, celery seeds, dates, garum or anchovies, peppercorns, chopped mint, the remaining olive oil, the honey, and vinegar. Add this to the thickened wine sauce.
+Then stir in the ostrich pieces and let them heat through in the sauce."
+recipe_36.rating = 4.8
+recipe_36.prep_time = "30 to 45 min"
+recipe_36.user = users[2]
+recipe_36.longitude = 41.8719
+recipe_36.latitude = 12.5674
+recipe_36.country_code = "ITA"
+recipe_36.save!
+
+# recipe 37
+recipe_37.name = "Roast Tuna"
+recipe_37.era = "1st Century AD"
+recipe_37.country = "Roman"
+recipe_37.instructions = "Put all of the vinaigrette ingredients into a jar and shake well to blend them together.
+Brush your tuna fillets with oil, pepper and salt, then grill them on one side over a hot barbecue.
+Turn them and brush the roasted side with the vinaigrette. Repeat.
+The tuna flesh should be pink inside so don't let it overcook. Serve with the remains of the vinaigrette."
+recipe_37.rating = 3.2
+recipe_37.prep_time = "30 min"
+recipe_37.user = users[3]
+recipe_37.longitude = 41.8719
+recipe_37.latitude = 12.5674
+recipe_37.country_code = "ITA"
+recipe_37.save!
+
+# recipe 38
+recipe_38.name = "Agraz - Verjuice Sauce"
+recipe_38.era = "14th century AD"
+recipe_38.country = "Medieval - Germany"
+recipe_38.instructions = "Combine wine and juices together. Use for marinading meats or as a sauce.
+Author Note: The lemon juice is recommended if verjuice (juice from unripened 'sour' grapes) or sour apple juice is unavailable."
+recipe_38.rating = 4.9
+recipe_38.prep_time = "5 min"
+recipe_38.user = users[4]
+recipe_38.longitude = 51.1657
+recipe_38.latitude = 10.4515
+recipe_38.country_code = "DEU"
+recipe_38.save!
+
+# recipe 39
+recipe_39.name = "Gebraten Milch - Roasted Milk"
+recipe_39.era = "14th century AD"
+recipe_39.country = "Medieval - Germany"
+recipe_39.instructions = "Slice farmers cheese thin and sprinkle it with salt.
+Grill lightly until soft, sprinkle with pepper and melted butter and serve.
+Author's Note: The trick with this recipe is just to lightly grill the cheese, otherwise you may have a melted gooey mess."
+recipe_39.rating = 4.2
+recipe_39.prep_time = "10 min"
+recipe_39.user = users[5]
+recipe_39.longitude = 51.1657
+recipe_39.latitude = 10.4515
+recipe_39.country_code = "DEU"
+recipe_39.save!
+
+# recipe 40
+recipe_40.name = "Badhinjan Mahshi - Dressed Eggplant"
+recipe_40.era = "10th century AD"
+recipe_40.country = "Baghdad"
+recipe_40.instructions = "Cut eggplant into 4 pieces per eggplant.
+Bring salted water to the boil
+Boil eggplant for 10 or so minutes. Eggplant should be soft.
+Drain off water and finely dice eggplant.  Because of how soft they are, they should virtually turn into a paste.
+In a frypan, add some oil and gently fry diced onions.
+Mix the spices and flaky salt and vinegar together, add sugar and almond meal to thicken sauce.
+Mix the sauce through the eggplant.
+Sprinkle onions over the top , florish with a swirl of Olive Oil and Serve."
+recipe_40.rating = 4.2
+recipe_40.prep_time = "30 min"
+recipe_40.user = users[0]
+recipe_40.longitude = 33.3152
+recipe_40.latitude = 44.3661
+recipe_40.country_code = "IRQ"
+recipe_40.save!
 
 # recipe = name, era, country, instructions, rating, prep_time
 puts "Recipes: "
@@ -547,6 +748,18 @@ puts recipe_25.name
 puts recipe_26.name
 puts recipe_27.name
 puts recipe_28.name
+puts recipe_29.name
+puts recipe_30.name
+puts recipe_31.name
+puts recipe_32.name
+puts recipe_33.name
+puts recipe_34.name
+puts recipe_35.name
+puts recipe_36.name
+puts recipe_37.name
+puts recipe_38.name
+puts recipe_39.name
+puts recipe_40.name
 
 puts " "
 puts "Users: "
@@ -641,6 +854,41 @@ savory = Ingredient.create!(name: "savory")
 dry_white_wine = Ingredient.create!(name: "dry white wine")
 passito = Ingredient.create!(name: "passito")
 oregano = Ingredient.create!(name: "oregano")
+bread = Ingredient.create!(name: "bread")
+saffron = Ingredient.create!(name: "saffron")
+pie_crust = Ingredient.create!(name: "pie crust")
+chicken_stock = Ingredient.create!(name: "chicken stock")
+parsnip = Ingredient.create!(name: "parsnip")
+pistachio = Ingredient.create!(name: "pistachio")
+lamb_leg = Ingredient.create!(name: "lamb leg")
+rendered_sheep_fat = Ingredient.create!(name: "rendered sheep fat")
+beer = Ingredient.create!(name: "beer")
+aragula = Ingredient.create!(name: "aragula")
+spring_onion = Ingredient.create!(name: "spring onion")
+red_beets = Ingredient.create!(name: "red beets")
+dry_coriander_seed = Ingredient.create!(name: "dry coriander seed")
+kurrat = Ingredient.create!(name: "kurrat")
+mint = Ingredient.create!(name: "mint")
+fresh_cheese = Ingredient.create!(name: "fresh cheese")
+vinegar = Ingredient.create!(name: "vinegar")
+pine_nuts = Ingredient.create!(name: "pine_nuts")
+ostrich = Ingredient.create!(name: "ostrich")
+passum_dessert_wine = Ingredient.create!(name: "passum dessert wine")
+celery_seeds = Ingredient.create!(name: "celery seeds")
+candied_dates = Ingredient.create!(name: "candied dates")
+roasted_cumin_seeds = Ingredient.create!(name: "roasted cumin seeds")
+peppercorn = Ingredient.create!(name:"peppercorn")
+tuna_fillet = Ingredient.create!(name:"tuna fillet")
+shallots = Ingredient.create!(name:"shallots")
+lovage_seeds = Ingredient.create!(name:"lovage seeds")
+verjuice_juice = Ingredient.create!(name:"verjuice juice")
+sour_apple_juice = Ingredient.create!(name:"sour apple juice")
+farmer_cheese = Ingredient.create!(name:"farmer cheese")
+eggplant = Ingredient.create!(name:"eggplant")
+caraway_seed = Ingredient.create!(name:"caraway seed")
+ground_cassia = Ingredient.create!(name:"ground cassia")
+almond_meal = Ingredient.create!(name:"almond meal")
+red_wine_vinegar = Ingredient.create!(name:"red wine vinegar")
 
 # Let's create Recipes Ingredients
 RecipesIngredient.create!(recipe: recipe_1, ingredient: cabbage, quantity: "1 small")
@@ -832,6 +1080,108 @@ RecipesIngredient.create!(recipe: recipe_28, ingredient: egg_yolks, quantity: "2
 RecipesIngredient.create!(recipe: recipe_28, ingredient: ginger, quantity: "1/2 tsp")
 RecipesIngredient.create!(recipe: recipe_28, ingredient: cumin, quantity: "1/4 tsp")
 
+RecipesIngredient.create!(recipe: recipe_29, ingredient: milk, quantity: "2 cups")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: butter, quantity: "1/4 cup")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: egg, quantity: "2 slightly beaten")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: sugar, quantity: "1/2 cup")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: cinnamon, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: salt, quantity: "1/4 tsp")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: bread, quantity: "8 slices")
+RecipesIngredient.create!(recipe: recipe_29, ingredient: saffron, quantity: "a pinch")
+
+RecipesIngredient.create!(recipe: recipe_30, ingredient: chicken, quantity: "1 lb")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: cumin, quantity: "1/2 tsp")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: saffron, quantity: "20 threads")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: chicken_stock, quantity: "2 quarts")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: pie_crust, quantity: "1")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: onion, quantity: "small")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: egg, quantity: "6")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: black_pepper, quantity: "1/2 tsp")
+RecipesIngredient.create!(recipe: recipe_30, ingredient: bacon_pieces, quantity: "2 oz cooked and rumbled")
+
+RecipesIngredient.create!(recipe: recipe_31, ingredient: carrot, quantity: "1/2 pound")
+RecipesIngredient.create!(recipe: recipe_31, ingredient: parsnip, quantity: "1/2 pound")
+RecipesIngredient.create!(recipe: recipe_31, ingredient: olive_oil, quantity: "2 tsp")
+RecipesIngredient.create!(recipe: recipe_31, ingredient: sugar, quantity: "1 tsp")
+
+RecipesIngredient.create!(recipe: recipe_32, ingredient: date, quantity: "2 cups, pitted")
+RecipesIngredient.create!(recipe: recipe_32, ingredient: pistachio, quantity: "2 cups, shelled")
+
+RecipesIngredient.create!(recipe: recipe_33, ingredient: lamb_leg, quantity: "1 pound, diced")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: rendered_sheep_fat, quantity: "1/2 cup")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: salt, quantity: "1/2 tsp")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: beer, quantity: "1 cup")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: water, quantity: "1/2 cup")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: onion, quantity: "1 small, chopped")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: aragula, quantity: "1, chopped")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: spring_onion, quantity: "1 cup")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: cilantro, quantity: "1/2 fresh and chopped")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: cumin, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: red_beets, quantity: "1 pound, peeled and diced")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: leek, quantity: "1/2 cup, chopped")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: garlic, quantity: "2 cloves")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: dry_coriander_seed, quantity: "2 tsp")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: cilantro, quantity: "1/2 cup, finely chopped")
+RecipesIngredient.create!(recipe: recipe_33, ingredient: kurrat, quantity: "1/2 cup, finely chopped")
+
+RecipesIngredient.create!(recipe: recipe_34, ingredient: mint, quantity: "100 g")
+RecipesIngredient.create!(recipe: recipe_34, ingredient: coriander, quantity: "50 g")
+RecipesIngredient.create!(recipe: recipe_34, ingredient: parsley, quantity: "50 g")
+RecipesIngredient.create!(recipe: recipe_34, ingredient: leek, quantity: "1, small")
+RecipesIngredient.create!(recipe: recipe_34, ingredient: thyme, quantity: "a sprig")
+RecipesIngredient.create!(recipe: recipe_34, ingredient: fresh_cheese, quantity: "200 g, salted")
+RecipesIngredient.create!(recipe: recipe_34, ingredient: vinegar)
+RecipesIngredient.create!(recipe: recipe_34, ingredient: pepper)
+RecipesIngredient.create!(recipe: recipe_34, ingredient: olive_oil)
+
+RecipesIngredient.create!(recipe: recipe_35, ingredient: pine_nuts, quantity: "20 g")
+RecipesIngredient.create!(recipe: recipe_35, ingredient: pepper, quantity: "2 tbsp")
+RecipesIngredient.create!(recipe: recipe_35, ingredient: honey, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_35, ingredient: fish_sauce, quantity: "4 tbsp")
+
+RecipesIngredient.create!(recipe: recipe_36, ingredient: ostrich, quantity: "500g")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: flour, quantity: "2 tsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: olive_oil, quantity: "2 tsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: passum_dessert_wine, quantity: "300 ml")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: roasted_cumin_seeds, quantity: "1 tbsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: celery_seeds, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: candied_dates, quantity: "3, pitted")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: fish_sauce, quantity: "3 tbsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: peppercorn, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: mint, quantity: "2 tsp, chopped")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: honey, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_36, ingredient: vinegar, quantity: "3 tsp, strong")
+
+RecipesIngredient.create!(recipe: recipe_37, ingredient: vinegar, quantity: "3 tsp, strong")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: fish_sauce, quantity: "2 tsp")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: olive_oil, quantity: "9 tsp")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: shallots, quantity: "4, finely chopped")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: pepper, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: lovage_seeds, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: mint, quantity: "25 g, fresh")
+RecipesIngredient.create!(recipe: recipe_37, ingredient: tuna_fillet)
+
+RecipesIngredient.create!(recipe: recipe_38, ingredient: verjuice_juice, quantity: "1/4 cup")
+RecipesIngredient.create!(recipe: recipe_38, ingredient: sour_apple_juice, quantity: "1/4 cup")
+RecipesIngredient.create!(recipe: recipe_38, ingredient: lemon_juice, quantity: "1/4 cup")
+RecipesIngredient.create!(recipe: recipe_38, ingredient: white_wine, quantity: "1/4 cup")
+
+RecipesIngredient.create!(recipe: recipe_39, ingredient: farmer_cheese, quantity: "1 pound")
+RecipesIngredient.create!(recipe: recipe_39, ingredient: black_pepper, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_39, ingredient: salt, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_39, ingredient: butter, quantity: "2 tbsp")
+
+RecipesIngredient.create!(recipe: recipe_40, ingredient: eggplant, quantity: "1 kg")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: caraway_seed, quantity: "1 tsp")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: ground_cassia, quantity: "4 tsp")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: black_pepper, quantity: "1/4 tsp")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: salt, quantity: "a pinch")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: sugar, quantity: "1/8 cup")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: almond_meal, quantity: "1/2 cup")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: onion, quantity: "2")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: red_wine_vinegar, quantity: "150 ml")
+RecipesIngredient.create!(recipe: recipe_40, ingredient: olive_oil)
+
 puts RecipesIngredient.all
 
 # User favorites
@@ -841,12 +1191,16 @@ UserFavorite.create!(user: users[0], recipe: recipe_5)
 UserFavorite.create!(user: users[0], recipe: recipe_17)
 UserFavorite.create!(user: users[0], recipe: recipe_22)
 UserFavorite.create!(user: users[0], recipe: recipe_28)
+UserFavorite.create!(user: users[0], recipe: recipe_34)
+UserFavorite.create!(user: users[0], recipe: recipe_40)
 
 UserFavorite.create!(user: users[1], recipe: recipe_1)
 UserFavorite.create!(user: users[1], recipe: recipe_2)
 UserFavorite.create!(user: users[1], recipe: recipe_9)
 UserFavorite.create!(user: users[1], recipe: recipe_16)
 UserFavorite.create!(user: users[1], recipe: recipe_23)
+UserFavorite.create!(user: users[1], recipe: recipe_29)
+UserFavorite.create!(user: users[1], recipe: recipe_35)
 
 UserFavorite.create!(user: users[2], recipe: recipe_2)
 UserFavorite.create!(user: users[2], recipe: recipe_4)
@@ -855,13 +1209,16 @@ UserFavorite.create!(user: users[2], recipe: recipe_8)
 UserFavorite.create!(user: users[2], recipe: recipe_14)
 UserFavorite.create!(user: users[2], recipe: recipe_18)
 UserFavorite.create!(user: users[2], recipe: recipe_24)
-
+UserFavorite.create!(user: users[2], recipe: recipe_30)
+UserFavorite.create!(user: users[2], recipe: recipe_36)
 
 UserFavorite.create!(user: users[3], recipe: recipe_4)
 UserFavorite.create!(user: users[3], recipe: recipe_7)
 UserFavorite.create!(user: users[3], recipe: recipe_12)
 UserFavorite.create!(user: users[3], recipe: recipe_20)
 UserFavorite.create!(user: users[3], recipe: recipe_25)
+UserFavorite.create!(user: users[3], recipe: recipe_31)
+UserFavorite.create!(user: users[3], recipe: recipe_37)
 
 UserFavorite.create!(user: users[4], recipe: recipe_1)
 UserFavorite.create!(user: users[4], recipe: recipe_3)
@@ -870,6 +1227,8 @@ UserFavorite.create!(user: users[4], recipe: recipe_10)
 UserFavorite.create!(user: users[4], recipe: recipe_13)
 UserFavorite.create!(user: users[4], recipe: recipe_21)
 UserFavorite.create!(user: users[4], recipe: recipe_26)
+UserFavorite.create!(user: users[4], recipe: recipe_32)
+UserFavorite.create!(user: users[4], recipe: recipe_38)
 
 UserFavorite.create!(user: users[5], recipe: recipe_5)
 UserFavorite.create!(user: users[5], recipe: recipe_6)
@@ -877,7 +1236,8 @@ UserFavorite.create!(user: users[5], recipe: recipe_11)
 UserFavorite.create!(user: users[5], recipe: recipe_15)
 UserFavorite.create!(user: users[5], recipe: recipe_19)
 UserFavorite.create!(user: users[5], recipe: recipe_27)
-
+UserFavorite.create!(user: users[5], recipe: recipe_33)
+UserFavorite.create!(user: users[5], recipe: recipe_39)
 
 puts UserFavorite.all
 
@@ -935,6 +1295,30 @@ recipe_25.photo.attach(io: p25, filename: 'ova-spongia-ex-lacte', content_type: 
 p26 = URI.open('https://img.sndimg.com/food/image/upload/c_thumb,q_80,w_562,h_316/v1/img/recipes/40/56/picB5Wkvh.jpg')
 recipe_26.photo.attach(io: p26, filename: 'inca-salad', content_type: 'image/jpg')
 p27 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2018/12/Cozze-2.jpg')
-recipe_27.photo.attach(io: p27, filename: 'inca-salad', content_type: 'image/jpg')
+recipe_27.photo.attach(io: p27, filename: 'mussels', content_type: 'image/jpg')
 p28 = URI.open('https://historicalitaliancookinghome.files.wordpress.com/2018/12/Cozze-2.jpg')
-recipe_28.photo.attach(io: p28, filename: 'inca-salad', content_type: 'image/jpg')
+recipe_28.photo.attach(io: p28, filename: 'cominee', content_type: 'image/jpg')
+p29 = URI.open('https://3.bp.blogspot.com/_lzwNfWkvJnM/Sy4rLqa4lpI/AAAAAAAAAh0/6mYqyGs0fbQ/s400/breadpudding-crop4.jpg')
+recipe_29.photo.attach(io: p29, filename: 'white-mush', content_type: 'image/jpg')
+p30 = URI.open('https://i0.wp.com/www.bookofdaystales.com/wp-content/uploads/2018/11/ea9.jpg')
+recipe_30.photo.attach(io: p30, filename: 'chicken-pie', content_type: 'image/jpg')
+p31 = URI.open('https://i.pinimg.com/736x/7d/42/a8/7d42a8cfa3c6cf2a7564137ecce846a1--root-vegetable-fries-veggie-fries.jpg')
+recipe_31.photo.attach(io: p31, filename: 'brat-ruben', content_type: 'image/jpg')
+p32 = URI.open('https://i.imgur.com/ToKXM4Q.jpg')
+recipe_32.photo.attach(io: p32, filename: 'mersu', content_type: 'image/jpg')
+p33 = URI.open('https://www.177milkstreet.com/imager/local/199547/babylonian-lamb-beef-turnip-stew-with-bulgur_cd6645a57be4bc0eda67664063bfe352.jpg')
+recipe_33.photo.attach(io: p33, filename: 'lamb-stew-babylonian', content_type: 'image/jpg')
+p34 = URI.open('https://img.haikudeck.com/mi/C9176604-82FC-46D9-893D-9E8CFA47FF28.jpg')
+recipe_34.photo.attach(io: p34, filename: 'columella-salad', content_type: 'image/jpg')
+p35 = URI.open('https://fabulousfaresisters.files.wordpress.com/2016/04/img_9581.jpg')
+recipe_35.photo.attach(io: p35, filename: 'soft-bolied-eggs', content_type: 'image/jpg')
+p36 = URI.open('https://i.pinimg.com/736x/e4/ea/14/e4ea146a80effd246d57bd40ba471a4b--ostriches-south-african-recipes.jpg')
+recipe_36.photo.attach(io: p36, filename: 'ostrich-ragout', content_type: 'image/jpg')
+p37 = URI.open('https://thefoodtimemachine.files.wordpress.com/2016/03/apicius-roast-tuna.jpg')
+recipe_37.photo.attach(io: p37, filename: 'roast-tuna', content_type: 'image/jpg')
+p38 = URI.open('https://honest-food.net/wp-content/uploads/2015/07/verjus-in-jar-300x320.jpg')
+recipe_38.photo.attach(io: p38, filename: 'verjuice-sauce', content_type: 'image/jpg')
+p39 = URI.open('https://tostpost.com/images/2018-Mar/18/717d050a834db5925f13afe9938e9a36/2.jpg')
+recipe_39.photo.attach(io: p39, filename: 'gebraten-milch', content_type: 'image/jpg')
+p40 = URI.open('http://www.jollyduke.com/uploads/7/0/7/4/7074977/img-20161229-135356_orig.jpg')
+recipe_40.photo.attach(io: p40, filename: 'dressed-eggplant', content_type: 'image/jpg')
