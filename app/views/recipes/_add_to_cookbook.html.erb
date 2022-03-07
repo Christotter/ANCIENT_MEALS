@@ -1,9 +1,7 @@
 
 <% if @user_favorite.persisted? %>
   <%# Link to delete user favorite %>
-
  <%= link_to("Remove from cookbook", user_favorite_path(@user_favorite), method: :delete) %>
-
 
 <% else %>
   <%= simple_form_for([@recipe, @user_favorite]) do |f| %>
