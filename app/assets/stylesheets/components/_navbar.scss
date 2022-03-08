@@ -7,6 +7,7 @@
   background-color: transparent;
   padding: 0;
   margin-bottom: 2.3rem;
+  z-index: 1;
   }
 
   .nav-link {
@@ -18,17 +19,31 @@
 
 
   .sign-in-btn {
-    color: blue;
+    color: $gray;
+    text-decoration: none;
+    font-style: oblique;
   }
 
+
   .sign-out-btn {
-    color: blue;
+    color: $gray;
+    text-decoration: none;
+    font-style: oblique;
   }
 
 
 
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 1 / 4 / 2 / 5; }
-.div3 { grid-area: 1 / 6 / 2 / 7; }
-.div4 { grid-area: 1 / 12 / 2 / 13; }
+.div2 { grid-area: 1 / 4 / 2 / 6; }
+.div3 { grid-area: 1 / 6 / 2 / 6; }
+.div4 { grid-area: 1 / 12 / 2 / 8; }
+
+
+
+
+
+// .div1 { grid-area: 1 / 1 / 2 / 2; }
+// .div2 { grid-area: 1 / 4 / 2 / 5; }
+// .div3 { grid-area: 1 / 6 / 2 / 7; }
+// .div4 { grid-area: 1 / 12 / 2 / 13; }
