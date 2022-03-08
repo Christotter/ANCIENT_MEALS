@@ -9,7 +9,7 @@ hr {
 
 #container-home {
   width: 100vw;
-  min-height: calc(100vh - 77px);
+  max-height: calc(100vh - 77px);
   font-size: 1.2rem;
   overflow: hidden;
   display: flex;
@@ -24,8 +24,6 @@ hr {
   padding-left: 1rem;
   padding-top: 2rem;
 }
-
-
 
 
 #left {
@@ -85,12 +83,14 @@ hr {
 }
 
 .cocktail-container-bottom {
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-right: 1rem;
   padding-left: 1rem;
   justify-content: space-between;
+  flex-grow: 1;
+  flex-shrink: 1;
+
 
 }
 
