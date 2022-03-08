@@ -6,12 +6,12 @@ hr {
   margin: 0rem;
 }
 
-#container {
+#container-home {
   width: 100vw;
-  height: calc(100vh - 77px);
-  display: flex;
+  min-height: calc(100vh - 77px);
   font-size: 1.2rem;
   overflow: hidden;
+  display: flex;
 }
 
 
