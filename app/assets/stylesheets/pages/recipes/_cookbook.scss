@@ -1,0 +1,40 @@
+.container-100 {
+  height: calc(100vh - 77px);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.recipe-text-2 {
+  position: absolute;
+  width: 300px;
+  top: 8px;
+  right: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 90px;
+  line-height: 104%;
+  color: rgba(232, 232, 237, 1);
+  }
+
+.flex-container {
+  height: 40vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: stretch;
+  align-content: stretch;
+
+  }
+
+.box-1 {
+  flex: 1 0 auto;
+  // border-right: 1px solid rgba(0, 0, 0, 0.4);
+  overflow: scroll;
+}
+
+
+.bottom-image {
+  width: 100%;
+}
