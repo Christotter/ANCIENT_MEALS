@@ -1,0 +1,9 @@
+<div class="centerbar">
+  <form action="/recipes" method="get">
+    <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
+      <% Ingredient.all.each do |ing|  %>
+        <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
+      <% end %>
+    </select>
+  </form>
+</div>

@@ -11,28 +11,6 @@
             </form>
         </div>
         <%=render "recipe_list" %>
-      <div class="recipe-list mt-1">
-        <% if @recipes.empty? %>
-          <p>No results match this search</p>
-        <% end %>
-        <% @recipes.each do |recipe|%>
-          <%= link_to recipe_path(recipe), class: "recipe-link" do %>
-          <hr />
-          <div class="alignment-container mb-1 mt-2">
-            <div class="my-auto">
-              <h5><%= recipe.name %></h5>
-              <p class="m-0"><%= recipe.user.name %></p>
-            </div>
-              <p class="m-0"><%= recipe.country %></p>
-          </div>
-          <div class="mb-1 mt-2 text-end">
-          </div>
-          <% end %>
-        <% end %>
-         <!--printing window-->
-      <button onclick="window.print()" class="print justify-content-end">Print this page</button>
-      <!--printing window end-->
-      </div>
     </div>
 
     <%# <div class="background-rectangle">
