@@ -1,49 +1,25 @@
 <div class="container">
-  <%# Row for recipe title %>
-  <div class="row justify-content-center pt-5 pb-5">
-      <div class="col-9">
-        <%= simple_form_for(@recipe) do |f| %>
-          <h1 class="recipe-name"><%= f.input :name, label: "Name of the recipe" %></h1>
-    <%# Row for column categories %>
-          <div class="row">
-            <div class="col-lg-3">
-              <p class="recipe-by">By <%= current_user.name %></p>
-            </div>
-            <div class="col-lg-3">
-              <h3 class="recipe-ingredients text-uppercase">Ingredients: </h3>
-            </div>
-            <div class="col-lg-6">
-              <h3 class="recipe-prep">Preparation: </h3>
-            </div>
-          </div>
-        <%# Row for content %>
-        <div class="row">
-          <div class="col-3 recipe-information">
-            <p class="recipe-prep-time"><%= f.input :prep_time %></p>
-            <p class="recipe-era"><%= f.input :era %></p>
-            <p class="recipe-country"><%= f.input :country, as: :string %></p>
-
-            <%= f.input :image, as: :file, label: "Select an image" %>
-
+  <div class="row">
+    <div class="col-5 border-end">
+      <%= simple_form_for(@recipe) do |f| %>
+          <%= f.input :name, label: "Name of the recipe" %>
+          <p>By <%= current_user.name %></p>
+          <%= f.input :prep_time, class:"recipe-prep-time" %>
+          <%= f.input :era, class:"recipe-era" %>
+          <%= f.input :country, as: :string, class:"recipe-country" %>
+          <%= f.input :instructions %>
+          <%= f.input :image, as: :file, label: "Select an image" %>
+          <%= f.simple_fields_for :recipes_ingredients do |recipes_ingredients_form| %>
+            <%= render "recipes_ingredient_fields", f: recipes_ingredients_form %>
+          <% end %>
+          <%= link_to_add_association "Add ingredient", f, :recipes_ingredients, class: "btn btn-default add-button" %>
+          <div class="text-center">
             <%= f.submit %>
           </div>
-
-          <div class="col-3 recipe-ingredients">
-
-            <%= f.simple_fields_for :recipes_ingredients do |recipes_ingredients_form| %>
-              <%= render "recipes_ingredient_fields", f: recipes_ingredients_form %>
-            <% end %>
-              <div class="links">
-                <%= link_to_add_association "Add ingredient", f, :recipes_ingredients, class: "btn btn-default add-button" %>
-              </div>
-
-          </div>
-
-          <div class="col-6 recipe-preparation">
-            <%= f.input :instructions %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    <div class="col-7">
+<h1 class="text-center">lali</h1>
+    </div>
   </div>
 </div>

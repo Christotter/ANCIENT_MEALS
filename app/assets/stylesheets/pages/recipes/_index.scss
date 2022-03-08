@@ -22,6 +22,8 @@ font-weight: normal;
 font-size: 90px;
 line-height: 104%;
 color: rgba(232, 232, 237, 1);
+z-index: -1;
+
 }
 
 // .centerbar {
@@ -49,6 +51,7 @@ color: rgba(232, 232, 237, 1);
   .box-1 {
     flex: 1 0 auto;
     // border-right: 1px solid rgba(0, 0, 0, 0.4);
+    overflow: scroll;
   }
 
 
@@ -100,15 +103,10 @@ color: rgba(232, 232, 237, 1);
   height: 200px;
 } */
 
-  form {
-    flex-grow: 1;
-    display: flex;
-  }
-
-  .select2 {
+ /* .select2 {
     flex-grow: 1;
     border-radius: 11px;
-  }
+  }*/
 
 .editing-seachbar {
   display: flex;
