@@ -1,0 +1,17 @@
+<div class="rate_form" data-controller="rate">
+    <p class="recipe-rating"><strong>Rating</strong> <% @recipe.rating.to_i.times do |number|  %>
+        <i class="fas fa-carrot"data-action="click->rate#goToForm" data-number="<%= number+1 %>"></i>
+      <% end %>
+      <% @blank_stars.times do |number|%>
+        <i id="empty-carrot" class="fas fa-carrot empty"data-action="click->rate#goToForm" data-number="<%= number+1+@recipe.rating.to_i %>"></i>
+      <% end %>
+</p>
+<% if user_signed_in? %>
+    <div class="hidden">
+      <%= simple_form_for([@recipe, @user_rating], remote: true) do |f| %>
+        <%= f.input :vote,  as: :radio_buttons,  collection: [1,2,3,4,5], class: 'rate', input_html: { data: { action: "change->rate#rateThis" } } %>
+        <%= f.button :submit, 'rate this recipe', class: 'hidden', data: { rate_target: "button" } %>
+      <% end %>
+    </div>
+<% end %>
+</div>

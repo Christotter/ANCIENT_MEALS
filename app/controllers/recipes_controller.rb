@@ -11,11 +11,14 @@ class RecipesController < ApplicationController
     if user_signed_in?
       @user_favorite = current_user.user_favorites.find_by(recipe: @recipe)
       @user_favorite = UserFavorite.new if @user_favorite.nil?
+      @user_rating = current_user.user_ratings.find_by(recipe: @recipe)
+      @user_rating = UserRating.new if @user_rating.nil?
     end
   end
 
   def new
     @recipe = Recipe.new
+    @recipe.user = current_user
     @recipe.recipes_ingredients.build
   end
 
