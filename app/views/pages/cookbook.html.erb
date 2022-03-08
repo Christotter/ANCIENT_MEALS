@@ -1,41 +1,23 @@
-<div class="container">
-  <div class="row">
-      <div class="col-lg-12 d-flex justify-content-around">
-          <h1>Cookbook</h1>
+<div class="recipe-text-2">cookbook</div>
+<div class="container-100">
 
-          <img src="https://ohmydish.com/wp-content/uploads/2020/01/Greek-cabbage-salad.jpg" alt="" class="mywidth">
-          <img src="https://vikalinka.com/wp-content/uploads/2021/05/Honey-Garlic-Shrimp-5-Edit.jpg" alt="" class="mywidth">
-          <img src="https://www.mygreekdish.com/wp-content/uploads/2020/05/Greek-Bread-recipe-Village-bread-Horiatiko-Psomi-1536x1154.jpeg" alt="" class="mywidth">
-          <img src="http://cookingantiquity.weebly.com/uploads/2/3/9/6/23964588/9952635.jpeg" alt="" class="mywidth">
-
+  <div class="flex-container-2">
+    <div class="box-1" data-controller="search">
+        <%= render "recipes/recipe_list" %>
+    </div>
+      <div class="recipe-container">
+        <%= image_tag "Rectangle_9" , class: "bottom-image" %>
+        <%# <img id="image" /> %>
       </div>
-
-          <div id="box">
-              <img id="image" />
-              <%# <% image_tag "ancient_meals_art_2.jpg", class: "new_images" %>
-              <%# <% image_tag "ancient_meals_art_3.jpg", class: "new_images" %>
-          </div>
-
   </div>
-  <<%= current_user.UserFavorite.all %>
+
+
+
+
+
+
+
+
+
+
 </div>
-<script>
-  var images = [
-    'https://res.cloudinary.com/dovkjoayy/image/upload/v1646408323/ancient%20meals/ancient_meals_art_3_hvleyj.jpg',
-    "https://res.cloudinary.com/dovkjoayy/image/upload/v1646408321/ancient%20meals/ancient_meals_art_2_xwhm14.jpg",
-    "https://vikalinka.com/wp-content/uploads/2021/05/Honey-Garlic-Shrimp-5-Edit.jpg",
-    "https://www.mygreekdish.com/wp-content/uploads/2020/05/Greek-Bread-recipe-Village-bread-Horiatiko-Psomi-1536x1154.jpeg",
-    "http://cookingantiquity.weebly.com/uploads/2/3/9/6/23964588/9952635.jpeg" ];
-
-  //let images = document.querySelectorAll(".new_images")
-  console.log(images);
-
-function randImg() {
-    var size = images.length
-    var x = Math.floor(size * Math.random())
-    document.getElementById('image').src= images[x];
-}
-
-randImg();
-
-</script>
