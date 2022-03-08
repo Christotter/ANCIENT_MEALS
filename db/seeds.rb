@@ -168,8 +168,8 @@ garnish with a little warmed honey over the fritters and sprinkle them with eith
 recipe_6.rating = 4.4
 recipe_6.prep_time = 0
 recipe_6.user = users[5]
-recipe_6.longitude = 23.727539
-recipe_6.latitude = 37.983810
+recipe_6.longitude = 39.0742
+recipe_6.latitude = 21.8243
 recipe_6.country_code = "GRC"
 recipe_6.save!
 
