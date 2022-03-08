@@ -1,12 +1,31 @@
 <div class="recipe-text-2">cookbook</div>
 <div class="container-100">
 
+
+<div class="user-container">
+
+<div class="avatar">
+<%= image_tag "avatar_placeholder.jpg", class: "avatar-large", alt: "avatar-large" %>
+
+</div>
+
+<div class="user-info">
+<p>Username: <%= current_user.name %></p>
+<p> Total recipes: <%= current_user.recipes.count %></p>
+
+
+</div>
+
+</div>
+
+
+
   <div class="flex-container-2">
-    <div class="box-1" data-controller="search">
+    <div class="box-2" data-controller="search">
         <%= render "recipes/recipe_list" %>
     </div>
       <div class="recipe-container">
-        <%= image_tag "Rectangle_9" , class: "bottom-image" %>
+        <%= image_tag "Rectangle_10.jpg" , class: "bottom-image-2" %>
         <%# <img id="image" /> %>
       </div>
   </div>

@@ -17,7 +17,7 @@
   color: rgba(232, 232, 237, 1);
   }
 
-.flex-container {
+.flex-container-2 {
   height: 40vh;
   display: flex;
   flex-wrap: nowrap;
@@ -28,13 +28,32 @@
 
   }
 
-.box-1 {
+.box-2 {
   flex: 1 0 auto;
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   overflow: scroll;
 }
 
 
-.bottom-image {
+.bottom-image-2 {
   width: 100%;
+}
+
+.user-info {
+  display: flex;
+  min-width: 400px;
+  flex-direction: column;
+  align-content: space-between;
+  margin-left: 1rem;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.avatar-large {
+  min-width: 200px;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
 }
