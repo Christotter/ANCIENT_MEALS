@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_one_attached :photo
   has_many :user_favorites
+  has_many :user_ratings
 
   validates :email, presence: true
 end

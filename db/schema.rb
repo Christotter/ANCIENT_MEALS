@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_07_145335) do
+ActiveRecord::Schema.define(version: 2022_03_07_173729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,16 @@ ActiveRecord::Schema.define(version: 2022_03_07_145335) do
     t.index ["user_id"], name: "index_user_favorites_on_user_id"
   end
 
+  create_table "user_ratings", force: :cascade do |t|
+    t.float "vote"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.bigint "recipe_id", null: false
+    t.index ["recipe_id"], name: "index_user_ratings_on_recipe_id"
+    t.index ["user_id"], name: "index_user_ratings_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -104,4 +114,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_145335) do
   add_foreign_key "recipes_ingredients", "recipes"
   add_foreign_key "user_favorites", "recipes"
   add_foreign_key "user_favorites", "users"
+  add_foreign_key "user_ratings", "recipes"
+  add_foreign_key "user_ratings", "users"
 end

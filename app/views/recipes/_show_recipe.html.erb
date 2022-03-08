@@ -24,14 +24,8 @@
       <p class="recipe-prep-time"><strong>Preptime</strong> <%= @recipe.prep_time %></p>
       <p class="recipe-era"><strong>Era</strong> <%= @recipe.era %></p>
       <p class="recipe-country"><strong>Country</strong> <%= @recipe.country %></p>
-      <p class="recipe-rating"><strong>Rating</strong> <% @recipe.rating.to_i.times do  %>
-        <i class="fas fa-carrot"></i>
-      <% end %>
-      <% @blank_stars.times do %>
-        <i id="empty-carrot" class="fas fa-carrot empty"></i>
-      <% end %>
-      </p>
-      <p class="recipe-rate"><strong><a href="#">Rate this recipe</a></strong></p>
+
+      <div class="recipe-rate"><%= render "rate" %></div>
       <p class="recipe-add-cookbook"><strong><%= render "add_to_cookbook" %></strong></p>
       <div class="recipe-image">
         <% if @recipe.photo.attached? %>
