@@ -2,60 +2,76 @@
   <%# Row for recipe title %>
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="recipe-name"><%= @recipe.name %></h1>
+      <p class="recipe-country"><%= @recipe.country %></p>
     </div>
   </div>
-  <%# Row for column categories %>
-  <div class="row">
 
-    <!--Buttons ...Lali-->
-    <div class="m-3">
-
-      <!--printing window-->
-      <button onclick="window.print()" class="print">Print this page</button>
-      <!--printing window end-->
+  <div class="row info-line">
+    <div class="col-lg-4">
+      <h1 class="recipe-name"><%= @recipe.name %></h1>
     </div>
-    <!--Buttons end-->
+    <div class="col-lg-3">
+      <p class="recipe-by">By <%= @recipe.user.name %></p>
+    </div>
 
-
-    <p class="recipe-by">By <%= @recipe.user.name %></p>
-    <div class="col-lg-6 recipe-information">
-
-      <p class="recipe-prep-time"><strong>Preptime</strong> <%= @recipe.prep_time %></p>
-      <p class="recipe-era"><strong>Era</strong> <%= @recipe.era %></p>
-      <p class="recipe-country"><strong>Country</strong> <%= @recipe.country %></p>
-      <p class="recipe-rating"><strong>Rating</strong> <% @recipe.rating.to_i.times do  %>
+    <div class="col-lg-5 info-right">
+      <p class="recipe-prep-time"><%= @recipe.prep_time %> prep / </p>
+      <p class="recipe-era"><%= @recipe.era %> / </p>
+      <p class="recipe-rating"><% @recipe.rating.to_i.times do  %>
         <i class="fas fa-carrot"></i>
       <% end %>
       <% @blank_stars.times do %>
         <i id="empty-carrot" class="fas fa-carrot empty"></i>
       <% end %>
       </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12 recipe-links">
+
       <p class="recipe-rate"><strong><a href="#">Rate this recipe</a></strong></p>
       <p class="recipe-add-cookbook"><strong><%= render "add_to_cookbook" %></strong></p>
-      <div class="recipe-image">
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!--Buttons ...Lali-->
+    <%# <div class="m-3">
+
+      <!--printing window-->
+      <button onclick="window.print()" class="print">Print this page</button>
+      <!--printing window end-->
+    </div> %>
+    <!--Buttons end-->
+    <div class="col-lg-3 recipe-image">
+      <div class="recipe-image image-effect">
         <% if @recipe.photo.attached? %>
             <p class="recipe-image"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
         <% else %>
-            <%# <img class="recipe-image" src="http://res.cloudinary.com/dspxgnggq/image/upload/v1/development/ob2a4mn5xf2jfbtq0p56d8ewewbt" alt="Food"> %>
             <img class="recipe-image" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
         <% end %>
       </div>
     </div>
 
-
-    <div class="col-lg-6 recipe-ingredients">
-      <h4 class="recipe-ingredients">Ingredients</h4>
+    <div class="col-lg-3 recipe-ingredients">
+      <h4 class="recipe-ingredients">Ingredients:</h4>
       <p class="recipe-ingredients-list"><% @recipe.recipes_ingredients.each do |recipe_ingredient| %>
         <li><%= recipe_ingredient.ingredient.name.capitalize  %> | <%= recipe_ingredient.quantity %></li>
       <% end %></p>
-
     </div>
-    <div class="col-lg-12 recipe-prep">
+
+    <div class="col-lg-6 recipe-prep">
       <h3>Preparation: </h3>
-      <p><%= @recipe.instructions %></p>
+      <div class="page">
+        <p><span class="caps"><%= @recipe.instructions[0] %></span>
+        <%= @recipe.instructions[1..] %></p>
+      </div>
     </div>
   </div>
+
   <%# Row for content %>
   <br>
 
