@@ -1,52 +1,42 @@
-<div class="container-fluid">
-  <div class="row mt-0">
-    <div class="col-6" data-controller="search">
-        <div class="centerbar">
-            <form action="/recipes" method="get">
-            <select multiple name="ingredients[]" data-controller="select2" data-search-target="input">
-                  <% Ingredient.all.each do |ing|  %>
-                    <option value="<%= ing.id %>"><%= ing.name.capitalize %></option>
-                  <% end %>
-            </select>
-            </form>
-        </div>
+  <div class="recipe-text">recipes</div>
+  <div class="container-99" data-controller="search">
+
+    <div id="container-top">
+      <%= render "search_form" %>
+    </div>
+
+  <div class="flex-container">
+    <div class="box-1">
         <%= render "recipe_list" %>
     </div>
-    <div class="col-6 ml-3 recipe-container">
-      <%# <div class="background-rectangle">
-      </div> %>
-      <%# <div class="background-class" >
-        <div> %>
-
-          <!--Lali function -->
-          <div id="box">
-            <img id="image" />
-          </div>
-          <!--Lali function -->
-
-          <%# <%= image_tag "2132321.svg" %>
-        </div>
+      <div class="recipe-container">
+        <%= image_tag "Rectangle_9.jpg" , class: "bottom-image" %>
+        <%# <img id="image" /> %>
       </div>
-    </div>
   </div>
 </div>
+
+
+
+
+
 
 <script>
 
 //This script is changing photos
-var images = [
-   'https://user-images.githubusercontent.com/31392942/156794680-314e4839-4fe3-46d0-bcd2-e62a893b6471.jpg',
-    "https://user-images.githubusercontent.com/31392942/156794847-626867f0-fdc1-40f2-813a-a2efda2705a3.jpg",
-    "https://user-images.githubusercontent.com/31392942/156794779-a91a9757-d639-49eb-9bcf-3c61ce441574.jpg"
-   ];
+// var images = [
+//    'https://user-images.githubusercontent.com/31392942/156794680-314e4839-4fe3-46d0-bcd2-e62a893b6471.jpg',
+//     "https://user-images.githubusercontent.com/31392942/156794847-626867f0-fdc1-40f2-813a-a2efda2705a3.jpg",
+//     "https://user-images.githubusercontent.com/31392942/156794779-a91a9757-d639-49eb-9bcf-3c61ce441574.jpg"
+//    ];
 
-function randImg() {
-    var size = images.length
-    var x = Math.floor(size * Math.random())
-    document.getElementById('image').src= images[x];
-}
+// function randImg() {
+//     var size = images.length
+//     var x = Math.floor(size * Math.random())
+//     document.getElementById('image').src= images[x];
+// }
 
-randImg();
+// randImg();
 
 
-</script>
+// </script>

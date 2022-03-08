@@ -5,9 +5,9 @@
   <div class="div3"> <%= link_to "Add a recipe", new_recipe_path, class: "nav-link text-nowrap" %></div>
   <div class="div4 nav-link" style="text-decoration: none;">
     <% if user_signed_in? %>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <%= link_to 'Sign out', destroy_user_session_path, class: "sign-out-btn", method: :delete %>
     <% else %>
-      <%= link_to 'Sign in', new_user_session_path %>
+      <%= link_to 'Sign in', new_user_session_path, class: "sign-in-btn" %>
     <% end %>
   </div>
 </div>

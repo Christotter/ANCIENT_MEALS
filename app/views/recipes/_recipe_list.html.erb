@@ -1,18 +1,18 @@
-<div class="recipe-list mt-1" data-search-target="list">
+<div class="recipe-list" data-search-target="list">
   <% if @recipes.empty? %>
     <p>No results match this search</p>
   <% end %>
   <% @recipes.each do |recipe|%>
     <%= link_to recipe_path(recipe), class: "recipe-link" do %>
     <hr />
-    <div class="alignment-container mb-1 mt-2">
-      <div class="my-auto">
-        <h5><%= recipe.name %></h5>
-        <p class="m-0"><%= recipe.user.name %></p>
+    <div class="alignment-container mb-0 mt-2">
+      <div class="mr-2">
+        <h5 class=""><%= recipe.name %></h5>
+        <p class=""><%= recipe.user.name %></p>
       </div>
-        <p class="m-0"><%= recipe.country %></p>
+        <p class="p-3"><%= recipe.country %></p>
     </div>
-    <div class="mb-1 mt-2 text-end">
+    <div class="mb-1 mt-2 mr-1 text-end">
     </div>
     <% end %>
   <% end %>
