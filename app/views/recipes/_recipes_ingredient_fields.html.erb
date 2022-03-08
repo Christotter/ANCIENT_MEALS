@@ -1,3 +1,4 @@
 <div class='nested-fields'>
-    <%= f.input :ingredient_id, collection: Ingredient.all, label: false %>
+    <%= f.input :ingredient_id, collection: Ingredient.all, label: false,
+        input_html: { data: { recipe_form_target: "ingredientInput", action: "change->recipe-form#updateIngredients" } } %>
 </div>
