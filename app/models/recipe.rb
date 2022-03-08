@@ -10,6 +10,8 @@ class Recipe < ApplicationRecord
   validates :era, presence: true
 
   has_one_attached :photo
+
+  has_many :user_ratings
   # geocoded_by :country_code
   # after_validation :geocode, if: :will_save_change_to_country_code?
 
