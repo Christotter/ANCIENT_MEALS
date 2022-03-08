@@ -1,5 +1,4 @@
 <div class="container-recipe-info container-fluid">
-  <%# Row for recipe title %>
   <div class="row">
     <div class="col-lg-12">
       <p class="recipe-country"><%= @recipe.country %></p>
@@ -27,12 +26,9 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-lg-12 recipe-links">
-
-      <p class="recipe-rate"><strong><a href="#">Rate this recipe</a></strong></p>
       <p class="recipe-add-cookbook"><strong><%= render "add_to_cookbook" %></strong></p>
-
     </div>
   </div>
 
@@ -49,9 +45,9 @@
     <div class="col-lg-3 recipe-image">
       <div class="recipe-image image-effect">
         <% if @recipe.photo.attached? %>
-            <p class="recipe-image"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
+            <p class="recipe-image fancy-border"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
         <% else %>
-            <img class="recipe-image" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
+            <img class="recipe-image fancy-border" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
         <% end %>
       </div>
     </div>
@@ -72,28 +68,18 @@
     </div>
   </div>
 
-  <%# Row for content %>
   <br>
 
   <div class="row">
-    <%# <div class="adjusting-padding-h3"> %>
-    <div class="recipe-origin">
-      <h3>Origin: </h3>
-    </div>
-    </div>
-
-      <%# MAP %>
-      <div class="container-map-centering">
-        <div id="map" style="height: 300px; width: 600px" class="map-centering"
-        data-mapbox-longitude-value="<%=@recipe.longitude %>"
-        data-mapbox-latitude-value="<%=@recipe.latitude %>"
-        data-mapbox-code-value="<%=@recipe.country_code %>"
-        data-controller="mapbox" data-action="click->mapbox#map"></div>
-        </div>
+    <%# MAP %>
+    <div class="container-map-centering">
+      <div id="map" style="height: 300px; width: 600px" class="map-centering"
+      data-mapbox-longitude-value="<%=@recipe.longitude %>"
+      data-mapbox-latitude-value="<%=@recipe.latitude %>"
+      data-mapbox-code-value="<%=@recipe.country_code %>"
+      data-controller="mapbox" data-action="click->mapbox#map">
       </div>
-      <%# map-end %>
-      </div>
-
-
-
+    </div>
+    <%# map-end %>
+  </div>
 </div>
