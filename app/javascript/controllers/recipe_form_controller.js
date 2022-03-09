@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus";
 
 
 export default class extends Controller {
-  static targets = ["nameField", "prepTimeField", "eraField", "countryField", "instructionsField", "imgField", "ingredientInput", "ingredientField"]
+  static targets = ["nameField", "prepTimeField", "eraField", "countryField", "instructionsField", "imgField", "ingredientInput", "ingredientField", "ingredientQuantityInput", "ingredientQuantityField"]
 
   connect() {
     // 1. Create new partials for each div(field) that we want to put: name, prep_time, era, country, instructions, ingredients, photo
@@ -17,37 +17,44 @@ export default class extends Controller {
   }
 
   updatePrepTime(event) {
-    const prepTimeHTML = `<strong>Preptime -</strong> ${event.currentTarget.value}`
+    const prepTimeHTML = `<h5>Preptime -</h5> ${event.currentTarget.value}`
     this.prepTimeFieldTarget.innerHTML = prepTimeHTML
   }
 
   updateEra(event) {
-    const eraHTML = `<strong>Era -</strong> ${event.currentTarget.value}`
+    const eraHTML = `<h5>Era -</h5> ${event.currentTarget.value}`
     this.eraFieldTarget.innerHTML = eraHTML
   }
 
   updateCountry(event) {
-    const countryHTML = `<strong>Country -</strong> ${event.currentTarget.value}`
+    const countryHTML = `${event.currentTarget.value}`
     this.countryFieldTarget.innerHTML = countryHTML
   }
 
   updateInstructions(event) {
-    const instructionsHTML = `<strong>Instructions -</strong> ${event.currentTarget.value}`
+    const instructionsHTML = `<h5>Instructions -</h5>${event.currentTarget.value}`
     this.instructionsFieldTarget.innerHTML = instructionsHTML
   }
 
   updateIngredients() {
     console.log(this.ingredientInputTargets);
     // Vaciar el HTML donde se display los ingredienten en el show
-    this.ingredientFieldTarget.innerHTML = "<h3>Ingredients</h3>"
+    this.ingredientFieldTarget.innerHTML = "<h5>Ingredients</h5>"
     // Iteras sobre los ingredientInputs
 
     this.ingredientInputTargets.forEach((ingredient)=> {
-      this.ingredientFieldTarget.insertAdjacentHTML("beforeend",`<li>${ingredient.selectedOptions[0].innerHTML}</li>`)
+      console.log(ingredient)
+      this.ingredientFieldTarget.insertAdjacentHTML("beforeend",`<li class="added-ingredient">${ingredient.selectedOptions[0].innerHTML} | <span data-recipe-form-target="ingredientQuantityField"></span></li>`)
+
+    })
+
+    this.ingredientQuantityInputTargets.forEach((quantity, index) => {
+     const field = this.ingredientQuantityFieldTargets[index]
+     field.innerHTML = quantity.value
+
     })
     // y para cada uno, insertar el value en el ingredientField
   }
-
 
   readURL(event) {
     const input = event.currentTarget;
@@ -57,7 +64,7 @@ export default class extends Controller {
       var reader = new FileReader();
 
       reader.onload = () => {
-       this.imgFieldTarget.innerHTML = `<img class="recipe-image" src="${reader.result}" alt="Food">`
+       this.imgFieldTarget.innerHTML = `<img class="recipe-image-new" src="${reader.result}" alt="Food">`
      }
 
      reader.readAsDataURL(input.files[0]);

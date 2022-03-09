@@ -37,11 +37,11 @@
     </div> %>
     <!--Buttons end-->
     <div class="col-lg-3 recipe-image">
-      <div class="recipe-image image-effect">
+      <div class="img-food image-effect">
         <% if @recipe.photo.attached? %>
-            <p class="recipe-image fancy-border"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
+            <p class="img-food"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
         <% else %>
-            <img class="recipe-image fancy-border" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
+            <img class="img-food" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
         <% end %>
       </div>
     </div>
