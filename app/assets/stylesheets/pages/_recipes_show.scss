@@ -9,7 +9,7 @@ margin-top: 3rem;
 
 .recipe-list {
   border-right: 1px solid silver;
-  height: calc(100vh - 72px);
+  max-height: calc(100vh - 72px);
   overflow: scroll;
 }
 
