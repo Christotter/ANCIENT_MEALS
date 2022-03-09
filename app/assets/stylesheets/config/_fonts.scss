@@ -20,10 +20,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Ancient Medium";
+  src: font-url('AncientMedium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
 
 // Custom site fonts:
 $AG-normal: "Xerox Serif Wide";
 $AG-country: "Public Sans";
+$AG-ancient: "Ancient Medium";
 
 
 // Define fonts for body and headers

@@ -1,13 +1,24 @@
-<% if user_signed_in? %>
-  <% if @user_favorite.persisted? %>
+
+
+<%# <div class="placement"> %>
+      <%# <div class="heart"> %>
+
+  <% if user_signed_in? %>
+    <% if @user_favorite.persisted? %>
     <%# Link to delete user favorite %>
 
-  <%= link_to("Remove from cookbook", user_favorite_path(@user_favorite), method: :delete) %>
-
-  <% else %>
-    <%= simple_form_for([@recipe, @user_favorite]) do |f| %>
-      <%# <%= f.input :recipe %>
-      <%= f.button :submit, 'Add to cookbook', class: 'add-favorites' %>
+      <%= link_to(user_favorite_path(@user_favorite), method: :delete) do %>
+        <div class="heart is-active"></div>
       <% end %>
+
+    <% else %>
+
+      <%= simple_form_for([@recipe, @user_favorite]) do |f| %>
+        <% f.input :recipe %>
+        <%= f.button :submit, class: 'heart', value: "", data: { disable_with: "" } %>
+      <% end %>
+    <% end %>
   <% end %>
-<% end %>
+
+      <%# </div> %>
+<%# </div> %>
