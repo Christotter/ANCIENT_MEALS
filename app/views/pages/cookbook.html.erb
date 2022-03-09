@@ -6,7 +6,13 @@
 <div class="container-100">
   <div class="user-container">
     <div class="avatar">
-    <%= image_tag "avatar_placeholder.jpg", class: "avatar-large", alt: "avatar-large" %>
+
+    <% if current_user.photo.attached? %>
+
+      <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "avatar-large" %>
+    <% else %>
+      <%= image_tag "avatar_placeholder.jpg", class: "avatar-large", alt: "avatar-large" %>
+    <% end %>
     </div>
     <div class="user-info">
       <%# <p><strong>Username:</strong> <%= current_user.name %></p>
