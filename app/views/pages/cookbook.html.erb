@@ -1,5 +1,5 @@
-<div class="recipe-text-2">cookbook</div>
-
+<%# <div class="recipe-text-2">cookbook</div> %>
+<hr>
 <div class="user-info">
 
 <div id="bg-image">
@@ -13,8 +13,8 @@
       <%# <p> <strong> Total recipes:</strong>  <%= current_user.recipes.count </p> %>
       <p><strong>Username:</strong> <%= current_user.name %></p>
 <%# <p> Total created recipes: <%= current_user.recipes.count </p> %>
-<p><strong>Recipes In Total:</strong> <%= current_user.user_favorites.count %></p>
-<p class="last-child"><strong>Total Favorite Recipes:</strong> <%= current_user.recipes.count %></p>
+<p><strong>Recipes In Total:</strong> <%= current_user.user_favorites.count + current_user.recipes.count%></p>
+<p class="last-child"><strong>Total Favorite Recipes:</strong> <%= current_user.user_favorites.count %></p>
 
 
     </div>
