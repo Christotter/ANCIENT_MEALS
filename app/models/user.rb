@@ -11,4 +11,5 @@ class User < ApplicationRecord
   has_many :recipes
 
   validates :email, presence: true
+  validates :name, presence: true
 end

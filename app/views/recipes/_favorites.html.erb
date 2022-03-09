@@ -1,0 +1,20 @@
+<%# User Favorites List %>
+<div class="recipe-list" data-search-target="list">
+  <% if @recipes.empty? && current_user.user_favorites.empty? %>
+    <p>No results match this search</p>
+  <% end %>
+  <% current_user.user_favorites.each do |fav|%>
+    <%= link_to recipe_path(fav), class: "recipe-link" do %>
+    <hr />
+    <div class="alignment-container mb-0 mt-2">
+      <div class="mr-2">
+        <h5 class=""><%= fav.recipe.name %></h5>
+        <p class=""><%= fav.recipe.user.name %></p>
+      </div>
+        <p class="p-3"><%= fav.recipe.country %></p>
+    </div>
+    <div class="mb-1 mt-2 mr-1 text-end">
+    </div>
+    <% end %>
+  <% end %>
+</div>

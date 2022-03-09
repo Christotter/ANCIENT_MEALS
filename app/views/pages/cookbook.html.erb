@@ -11,32 +11,29 @@
 
 <div class="user-info">
 <p>Username: <%= current_user.name %></p>
-<p> Total recipes: <%= current_user.recipes.count %></p>
+<%# <p> Total created recipes: <%= current_user.recipes.count </p> %>
+<p> Total recipes: <%= current_user.user_favorites.count + current_user.recipes.count %></p>
 
 
 </div>
 
 </div>
-
 
 
   <div class="flex-container-2">
     <div class="box-2" data-controller="search">
         <%= render "recipes/recipe_list" %>
+        <!-- USER FAVORITES LIST -->
+        <%= render "recipes/favorites" %>
+        <!-- USER FAVORITES LIST END-->
     </div>
+
+
       <div class="recipe-container">
         <%= image_tag "Rectangle_10.jpg" , class: "bottom-image-2" %>
         <%# <img id="image" /> %>
       </div>
   </div>
-
-
-
-
-
-
-
-
 
 
 </div>
