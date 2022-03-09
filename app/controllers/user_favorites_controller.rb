@@ -28,6 +28,6 @@ class UserFavoritesController < ApplicationController
     @user_favorite = UserFavorite.find(params[:id])
     #@recipe = Recipe.find(params[:id])
     @user_favorite.destroy
-    redirect_to recipe_path(@user_favorite.recipe),  notice: 'Removed from favorites'
+    redirect_to recipe_path(@user_favorite.recipe), notice: 'Removed from favorites'
   end
 end
