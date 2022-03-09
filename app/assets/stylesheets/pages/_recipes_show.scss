@@ -75,6 +75,7 @@ p {
 
 .recipe-prep {
 
+
   h3 {
     font-family: $AG-normal;
     font-weight: 400;
@@ -251,7 +252,6 @@ p {
 
 .recipe-country-new {
   display: flex;
-  justify-content: flex-end;
   font-family: "Public Sans";
   font-weight: 400;
   font-size: 90px;
@@ -261,7 +261,18 @@ p {
 
 .recipe-name-new {
     font-family: "Xerox Serif Wide";
-    font-weight: 400;
-    font-size: 24px;
-    margin-left: 20px;
+}
+
+.recipe-prep-new {
+  padding-top: 15px;
+  padding-left: 70px;
+}
+
+.added-ingredient {
+  font-size: 1.25rem;
+  padding-left: 0;
+}
+
+.recipe-prep-time {
+  margin-top: 25px;
 }

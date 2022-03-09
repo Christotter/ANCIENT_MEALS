@@ -12,16 +12,19 @@
               input_html: { data: { action: "blur->recipe-form#updateEra" } }  %>
           <%= f.input :country, as: :string, class:"recipe-country",
               input_html: { data: { action: "blur->recipe-form#updateCountry" } } %>
-          <%= f.input :instructions,
-              input_html: { data: { action: "blur->recipe-form#updateInstructions" } }%>
-          <%= f.input :image, as: :file, label: "Select an image",
-              input_html: { data: {  action: "change->recipe-form#readURL" } } %>
+          <%= f.label "ingredients", required: true %>
           <div>
             <%= f.simple_fields_for :recipes_ingredients do |recipes_ingredients_form| %>
               <%= render "recipes_ingredient_fields", f: recipes_ingredients_form %>
             <% end %>
-            <%= link_to_add_association "Add ingredient", f, :recipes_ingredients, class: "btn btn-default add-button" %>
+            <div>
+              <%= link_to_add_association "Add ingredient", f, :recipes_ingredients, class: "btn btn-default add-button" %>
+            </div>
           </div>
+          <%= f.input :instructions,
+              input_html: { data: { action: "blur->recipe-form#updateInstructions" } }%>
+          <%= f.input :photo, as: :file, label: "Select an image",
+              input_html: { data: {  action: "change->recipe-form#readURL" } } %>
           <div class="text-center">
             <%= f.submit %>
           </div>
@@ -29,55 +32,37 @@
     </div>
     <div class="col-7">
       <div class="row">
-        <h2 class="text-center">Recipe Preview</h2>
-        <div class="container-recipe-info container-fluid">
-          <%# Row for recipe title %>
-          <div class="row">
-          <div class="col-lg-12">
-            <h4 class="recipe-name-new text-center mt-4" data-recipe-form-target="nameField"></h4>
-          </div>
+      <div class="col-12">
+          <h2 class="text-center">Recipe Preview</h2>
         </div>
-          <%# Row for column categories %>
-          <div class="row">
-
-            <!--Buttons end-->
-
-
-          <!-- <p class="recipe-by">By <%= @recipe.user.name %></p> -->
-            <div class="col-lg-6 recipe-information">
-              <p class="recipe-prep-time" data-recipe-form-target="prepTimeField"></p>
+        <h3 class="recipe-name-new text-center mt-4" data-recipe-form-target="nameField"></h3>
+        <div class="col-7">
+            <div class="col-lg-6 recipe-information d-flex justify-content-evenly mb-3">
+              <div data-recipe-form-target="imgField" class="text-center">
+              </div>
+              <h5 class="recipe-prep-time" data-recipe-form-target="prepTimeField"></h5>
               <br>
-              <p class="recipe-era" data-recipe-form-target="eraField"></p>
+              <h5 class="recipe-era" data-recipe-form-target="eraField"></h5>
+
+            </div>
+          </div>
+            <div class="col-5 recipe-ingredients-new">
               <div>
-                <p class="recipe-country-new text-end" data-recipe-form-target="countryField"></p>
+                <h5 class="recipe-country-new" data-recipe-form-target="countryField"></h5>
+                <label class="form-label text required" for="recipe-ingredients">
+                  <div class="recipe-ingredients-new" data-recipe-form-target="ingredientField">
+                  <abbr title="required"></abbr>
+                </div>
+                </label>
               </div>
-
-              </p>
-              <div data-recipe-form-target="imgField">
-              </div>
-            </div>
-
-
-            <div class="col-lg-6 recipe-ingredients">
-              <p class="recipe-ingredients" data-recipe-form-target="ingredientField"></p>
-
-            </div>
-            <div class="col-lg-12 recipe-prep">
-              <p data-recipe-form-target="instructionsField"></p>
-            </div>
-          </div>
-          <%# Row for content %>
           <br>
-
-          <div class="row">
-            <%# <div class="adjusting-padding-h3"> %>
-          <!-- <div class="recipe-origin">
-              <h3>Origin: </h3>
-            </div>-->
-          </div>
         </div>
-
       </div>
+          <div class="recipe-prep-new">
+            <h5 data-recipe-form-target="instructionsField"></h5>
+          </div>
+          <div data-recipe-form-target="imgField" class="text-center">
+          </div>
     </div>
   </div>
 </div>

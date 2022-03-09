@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus";
 
 
 export default class extends Controller {
-  static targets = ["nameField", "prepTimeField", "eraField", "countryField", "instructionsField", "imgField", "ingredientInput", "ingredientField"]
+  static targets = ["nameField", "prepTimeField", "eraField", "countryField", "instructionsField", "imgField", "ingredientInput", "ingredientField", "ingredientQuantityInput", "ingredientQuantityField"]
 
   connect() {
     // 1. Create new partials for each div(field) that we want to put: name, prep_time, era, country, instructions, ingredients, photo
@@ -39,15 +39,22 @@ export default class extends Controller {
   updateIngredients() {
     console.log(this.ingredientInputTargets);
     // Vaciar el HTML donde se display los ingredienten en el show
-    this.ingredientFieldTarget.innerHTML = "<h3>Ingredients</h3>"
+    this.ingredientFieldTarget.innerHTML = "<h5><strong>Ingredients</strong></h5>"
     // Iteras sobre los ingredientInputs
 
     this.ingredientInputTargets.forEach((ingredient)=> {
-      this.ingredientFieldTarget.insertAdjacentHTML("beforeend",`<li>${ingredient.selectedOptions[0].innerHTML}</li>`)
+      console.log(ingredient)
+      this.ingredientFieldTarget.insertAdjacentHTML("beforeend",`<li class="added-ingredient">${ingredient.selectedOptions[0].innerHTML} | <span data-recipe-form-target="ingredientQuantityField"></span></li>`)
+
+    })
+
+    this.ingredientQuantityInputTargets.forEach((quantity, index) => {
+     const field = this.ingredientQuantityFieldTargets[index]
+     field.innerHTML = quantity.value
+
     })
     // y para cada uno, insertar el value en el ingredientField
   }
-
 
   readURL(event) {
     const input = event.currentTarget;
