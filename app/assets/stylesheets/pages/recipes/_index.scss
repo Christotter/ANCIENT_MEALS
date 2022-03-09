@@ -46,6 +46,14 @@ color: #e8e8ed;
   margin: 40px 0 ;
 }
 
+#centerbar-recipe{
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  flex-grow: 1;
+  margin: 40px 0 ;
+}
+
 .searchbar {
   width: 80%;
 }
@@ -225,9 +233,9 @@ color: #e8e8ed;
 }
 
 .select2-selection.select2-selection--multiple.custom-class {
-  width: 700px;
+  // width: 700px;
 }
 
-.recipe-list p {
+.no-results-notice {
   text-align: center;
 }
