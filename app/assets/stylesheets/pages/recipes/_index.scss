@@ -186,6 +186,8 @@ color: #e8e8ed;
   // margin: -10px 20px 10px 20px;
   background-color: #f2f2f2;
   position: sticky;
+  min-height: calc(100vh - 72px);
+  overflow: scroll;
 
   // p {
   //   padding-left: 20px;
@@ -202,6 +204,7 @@ color: #e8e8ed;
 
 .recipe-container {
   padding-right: 0px;
+
 }
 
 .recipe-prep {

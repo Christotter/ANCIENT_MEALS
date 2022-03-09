@@ -1,3 +1,17 @@
+.container-controller {
+margin-top: 3rem;
+}
+
+.left-part {
+  border-right: 1px solid silver;
+  padding-right: 0px;
+}
+
+.recipe-list {
+  border-right: 1px solid silver;
+  height: calc(100vh - 72px);
+  overflow: scroll;
+}
 
 i {
   color: $orange;
@@ -6,7 +20,6 @@ i {
 .empty {
   color: $silver;
 }
-
 
 .image-food {
   width: 300px;
@@ -184,14 +197,7 @@ p {
   display: none;
 }
 
-.left-part {
-  border-right: 1px solid silver;
-  padding-right: 0px;
-}
 
-.recipe-list {
-  border-right: 1px solid silver;
-}
 
 .info-line {
   border-bottom: 2px solid silver;
