@@ -1,42 +1,42 @@
 <div class="recipe-text-2">cookbook</div>
-<div class="container-100">
-
-
-<div class="user-container">
-
-<div class="avatar">
-<%= image_tag "avatar_placeholder.jpg", class: "avatar-large", alt: "avatar-large" %>
-
-</div>
 
 <div class="user-info">
 <p>Username: <%= current_user.name %></p>
-<p> Total recipes: <%= current_user.recipes.count %></p>
+<%# <p> Total created recipes: <%= current_user.recipes.count </p> %>
+<p> Total recipes: <%= current_user.user_favorites.count + current_user.recipes.count %></p>
 
-
-</div>
-
-</div>
-
-
-
-  <div class="flex-container-2">
-    <div class="box-2" data-controller="search">
-        <%= render "recipes/recipe_list" %>
+<div id="bg-image">
+<div class="container-100">
+  <div class="user-container">
+    <div class="avatar">
+    <%= image_tag "avatar_placeholder.jpg", class: "avatar-large", alt: "avatar-large" %>
     </div>
-      <div class="recipe-container">
-        <%= image_tag "Rectangle_10.jpg" , class: "bottom-image-2" %>
-        <%# <img id="image" /> %>
-      </div>
+    <div class="user-info">
+      <p><strong>Username:</strong> <%= current_user.name %></p>
+      <p> <strong> Total recipes:</strong>  <%= current_user.recipes.count %></p>
+    </div>
+  </div>
+
+  <div class="image-container">
+   <%# <%= image_tag "cookbook_img2.jpg" , class: "bottom-image-3" %>
   </div>
 
 
 
+  <div class="flex-container-">
 
+    <div class="box-2" data-controller="search">
+        <%= render "recipes/recipe_list" %>
+        <!-- USER FAVORITES LIST -->
+        <%= render "recipes/favorites" %>
+        <!-- USER FAVORITES LIST END-->
+    </div>
 
-
-
-
-
+  </div>
+    <div class="recipe-container">
+        <%# <%= image_tag "Cookbook_img1.jpeg" , class: "bottom-image-2" %>
+        <%# <img id="image" /> %>
+    </div>
+</div>
 
 </div>

@@ -1,5 +1,5 @@
 <div class="rate_form" data-controller="rate">
-    <p class="recipe-rating"><strong>Rating</strong> <% @recipe.rating.to_i.times do |number|  %>
+    <p class="recipe-rating"><% @recipe.rating.to_i.times do |number|  %>
         <i class="fas fa-carrot"data-action="click->rate#goToForm" data-number="<%= number+1 %>"></i>
       <% end %>
       <% @blank_stars.times do |number|%>

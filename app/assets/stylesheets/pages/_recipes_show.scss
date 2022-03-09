@@ -7,6 +7,7 @@ i {
   color: $silver;
 }
 
+
 .image-food {
   width: 300px;
   max-height: 300px;
@@ -19,6 +20,7 @@ i {
 }
 
 /*.recipe-image {
+.recipe-image {
   display:inline-block;
   // width:100%;
   padding-bottom: 25px;
@@ -36,17 +38,14 @@ p {
 .recipe-name {
   font-family: $AG-normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 26px;
   margin-left: 20px;
-  // margin-top: 30px;
 }
 
 .recipe-by {
   font-family: $AG-normal;
   font-size: 13px;
   font-weight: 400;
-  // padding-left: 40px;
-  // margin-top: -15px;
 }
 
 .recipe-information {
@@ -61,7 +60,6 @@ p {
   font-weight: 400;
   padding-left: 15px;
   font-size: 14px;
-  // margin-bottom: 10px;
 }
 
 .recipe-ingredients-list, li {
@@ -92,16 +90,6 @@ p {
   }
 }
 
-.recipe-origin {
-
-  h3 {
-    font-family: $AG-normal;
-    font-weight: 200;
-    font-size: 18px;
-    margin-left: 20px;
-  }
-}
-
 .recipe-map {
   font-family: $AG-normal;
   font-weight: 400;
@@ -125,6 +113,7 @@ p {
 
 .map-centering {
   margin-bottom: 20px;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #C0C0C0 0px 0px 0px 3px;
 }
 
 .adjusting-padding-h3 {
@@ -148,19 +137,25 @@ p {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  // box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #C0C0C0 0px 0px 0px 3px;
+  // box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-.recipe-add-cookbook a{
-  color: blue;
-}
+// .recipe-add-cookbook a{
+//   color: blue;
+// }
 
 .recipe-rate a {
   color: blue;
 }
 
-.recipe-add-cookbook a:hover{
-  color: $ancient-brown;
-}
+// .recipe-add-cookbook a:hover{
+//   color: $ancient-brown;
+// }
 
 .recipe-rate a:hover {
   color: $ancient-brown;
@@ -193,12 +188,10 @@ p {
 .left-part {
   border-right: 1px solid silver;
   padding-right: 0px;
-  // border-top: 2px solid silver;
 }
 
 .recipe-list {
   border-right: 1px solid silver;
-  // border-top: 2px solid silver;
 }
 
 .info-line {
@@ -220,7 +213,6 @@ p {
   font-family: $AG-normal;
   font-size: 13px;
   font-weight: 400;
-  // display: inline-block;
 }
 
 // For paper effect
@@ -243,8 +235,8 @@ p {
   padding-right: 12px;
   position:relative;
   top:8px;
+  font-family: $AG-ancient;
 }
-
 .recipe-image-new {
   max-width: 300px;
   object-fit: cover;
@@ -289,4 +281,23 @@ p {
 
 .form-label {
   margin-top: -15px;
+// Uncomment to add fancy border to pictures
+// .fancy-border {
+//   border: 25px solid #B88846;
+//   border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+// }
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
 }

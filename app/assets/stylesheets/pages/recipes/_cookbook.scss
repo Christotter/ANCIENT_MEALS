@@ -2,7 +2,18 @@
   height: calc(100vh - 77px);
   display: grid;
   grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  color: $gray;
+  overflow: scroll;
 }
+
+#bg-image {
+  background-image: url("backgrounds/background_2");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  }
 
 .recipe-text-2 {
   position: absolute;
@@ -39,12 +50,17 @@
   width: 100%;
 }
 
+.bottom-image-3 {
+  width: 100%;
+}
+
 .user-info {
   display: flex;
   min-width: 400px;
   flex-direction: column;
   align-content: space-between;
   margin-left: 1rem;
+
 
   p {
     margin-bottom: 1rem;

@@ -6,13 +6,23 @@ hr {
   margin: 0rem;
 }
 
-
 #container-home {
   width: 100vw;
-  max-height: calc(100vh - 77px);
   font-size: 1.2rem;
   overflow: hidden;
   display: flex;
+
+}
+
+
+#container-home, #left, #right {
+  max-height: calc(100vh - 77px);
+  overflow-y: auto;
+
+}
+
+#left {
+  overflow-y: hidden;
 }
 
 
@@ -26,6 +36,7 @@ hr {
 }
 
 
+
 #left {
   border-right: 1px solid rgba(0, 0, 0, 0.4);
   letter-spacing: -1px;
@@ -36,6 +47,8 @@ hr {
 }
 
 #right {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
 }
@@ -80,6 +93,16 @@ hr {
   text-align: right;
   font-size: 15px;
   padding-top: 0.5rem;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+
+  }
+
+  a:hover {
+    color: blue;
+  }
 }
 
 .cocktail-container-bottom {
@@ -95,16 +118,35 @@ hr {
 }
 
 .cocktail-bottom-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
-  padding: 4rem 1.5rem;
+  padding: 1.5rem;
   font-size: 16px;
   line-height: 22px;
+  flex-grow: 1;
+  display: inline;
+
 }
 
+.caps-2 {
+
+  color: rgba(0,0,0,0.7);
+  float:left;
+  font-size: 5em;
+  line-height: 60px;
+  padding-right: 12px;
+  position:relative;
+  top:8px;
+}
+
+
 .btn-search-by {
-height: 100%;
-text-align: center;
-border: 1px solid rgba(0, 0, 0, 0.4);
-padding: 15px 32px;
-flex-grow: 0;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 15px 32px;
+  flex-grow: 0;
+  margin-bottom: 5%;
+
 }
