@@ -184,9 +184,9 @@ color: #e8e8ed;
 
 .container-recipe-info {
   // margin: -10px 20px 10px 20px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   position: sticky;
-  min-height: calc(100vh - 72px);
+  max-height: calc(100vh - 72px);
   overflow: scroll;
 
   // p {
