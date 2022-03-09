@@ -1,9 +1,10 @@
 
 <div class="nav-bar">
   <div class="div1"> <%= link_to "Ancient Meals", root_path, class: "nav-link text-nowrap" %> </div>
+  <div class="div3"> <%= link_to "Create", new_recipe_path, class: "nav-link text-nowrap" %></div>
   <div class="div2"> <%= link_to "Recipes", recipes_path, class: "nav-link" %></div>
-  <div class="div3"> <%= link_to "Add a recipe", new_recipe_path, class: "nav-link text-nowrap" %></div>
-  <div class="div4 nav-link" style="text-decoration: none;">
+  <div class="div4"> <%= link_to "Cookbook", cookbook_path, class: "nav-link text-nowrap" %></div>
+  <div class="div5 nav-link" style="text-decoration: none;">
     <% if user_signed_in? %>
       <%= link_to 'Sign out', destroy_user_session_path, class: "sign-out-btn", method: :delete %>
     <% else %>
