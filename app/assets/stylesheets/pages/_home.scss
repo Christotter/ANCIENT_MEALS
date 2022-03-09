@@ -93,6 +93,16 @@ hr {
   text-align: right;
   font-size: 15px;
   padding-top: 0.5rem;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+
+  }
+
+  a:hover {
+    color: blue;
+  }
 }
 
 .cocktail-container-bottom {
@@ -116,7 +126,19 @@ hr {
   font-size: 16px;
   line-height: 22px;
   flex-grow: 1;
+  display: inline;
 
+}
+
+.caps-2 {
+
+  color: rgba(0,0,0,0.7);
+  float:left;
+  font-size: 5em;
+  line-height: 60px;
+  padding-right: 12px;
+  position:relative;
+  top:8px;
 }
 
 
@@ -125,5 +147,6 @@ hr {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 15px 32px;
   flex-grow: 0;
+  margin-bottom: 5%;
 
 }
