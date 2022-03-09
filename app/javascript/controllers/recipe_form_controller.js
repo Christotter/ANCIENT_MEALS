@@ -27,7 +27,7 @@ export default class extends Controller {
   }
 
   updateCountry(event) {
-    const countryHTML = `<strong>Country -</strong> ${event.currentTarget.value}`
+    const countryHTML = `${event.currentTarget.value}`
     this.countryFieldTarget.innerHTML = countryHTML
   }
 
@@ -57,7 +57,7 @@ export default class extends Controller {
       var reader = new FileReader();
 
       reader.onload = () => {
-       this.imgFieldTarget.innerHTML = `<img class="recipe-image" src="${reader.result}" alt="Food">`
+       this.imgFieldTarget.innerHTML = `<img class="recipe-image-new" src="${reader.result}" alt="Food">`
      }
 
      reader.readAsDataURL(input.files[0]);

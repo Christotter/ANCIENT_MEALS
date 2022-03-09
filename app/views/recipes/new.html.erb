@@ -28,54 +28,56 @@
       <% end %>
     </div>
     <div class="col-7">
-      <h2 class="text-center">Recipe Preview</h2>
-      <div class="container-recipe-info container-fluid">
-        <%# Row for recipe title %>
-        <div class="row">
-        <div class="col-lg-12">
-          <h1 class="recipe-name" data-recipe-form-target="nameField"></h1>
+      <div class="row">
+        <h2 class="text-center">Recipe Preview</h2>
+        <div class="container-recipe-info container-fluid">
+          <%# Row for recipe title %>
+          <div class="row">
+          <div class="col-lg-12">
+            <h4 class="recipe-name-new text-center mt-4" data-recipe-form-target="nameField"></h4>
+          </div>
         </div>
-      </div>
-        <%# Row for column categories %>
-        <div class="row">
+          <%# Row for column categories %>
+          <div class="row">
 
-          <!--Buttons end-->
+            <!--Buttons end-->
 
 
-         <!-- <p class="recipe-by">By <%= @recipe.user.name %></p> -->
-          <div class="col-lg-6 recipe-information">
-            <p class="recipe-prep-time" data-recipe-form-target="prepTimeField">
-            </p>
-            <p class="recipe-era" data-recipe-form-target="eraField"></p>
-            <p class="recipe-country" data-recipe-form-target="countryField"></p>
+          <!-- <p class="recipe-by">By <%= @recipe.user.name %></p> -->
+            <div class="col-lg-6 recipe-information">
+              <p class="recipe-prep-time" data-recipe-form-target="prepTimeField"></p>
+              <br>
+              <p class="recipe-era" data-recipe-form-target="eraField"></p>
+              <div>
+                <p class="recipe-country-new text-end" data-recipe-form-target="countryField"></p>
+              </div>
 
-            </p>
-            <div class="recipe-image"  data-recipe-form-target="imgField">
-                  <%# <img class="recipe-image" src="http://res.cloudinary.com/dspxgnggq/image/upload/v1/development/ob2a4mn5xf2jfbtq0p56d8ewewbt" alt="Food"> %>
+              </p>
+              <div data-recipe-form-target="imgField">
+              </div>
+            </div>
+
+
+            <div class="col-lg-6 recipe-ingredients">
+              <p class="recipe-ingredients" data-recipe-form-target="ingredientField"></p>
 
             </div>
+            <div class="col-lg-12 recipe-prep">
+              <p data-recipe-form-target="instructionsField"></p>
+            </div>
           </div>
+          <%# Row for content %>
+          <br>
 
-
-          <div class="col-lg-6 recipe-ingredients">
-            <p class="recipe-ingredients" data-recipe-form-target="ingredientField"></p>
-
-          </div>
-          <div class="col-lg-12 recipe-prep">
-            <p data-recipe-form-target="instructionsField"></p>
+          <div class="row">
+            <%# <div class="adjusting-padding-h3"> %>
+          <!-- <div class="recipe-origin">
+              <h3>Origin: </h3>
+            </div>-->
           </div>
         </div>
-        <%# Row for content %>
-        <br>
 
-        <div class="row">
-          <%# <div class="adjusting-padding-h3"> %>
-         <!-- <div class="recipe-origin">
-            <h3>Origin: </h3>
-          </div>-->
-          </div>
       </div>
-
     </div>
   </div>
 </div>

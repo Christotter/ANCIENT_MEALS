@@ -18,14 +18,14 @@ i {
   flex-shrink: 0;
 }
 
-.recipe-image {
+/*.recipe-image {
   display:inline-block;
   // width:100%;
   padding-bottom: 25px;
   padding-top: 15px;
   padding-left: 5px;
   opacity: 90%;
-}
+}*/
 
 p {
   margin-bottom: 1px;
@@ -244,7 +244,24 @@ p {
   top:8px;
 }
 
-.image-effect {
+.recipe-image-new {
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.recipe-country-new {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Public Sans";
+  font-weight: 400;
+  font-size: 90px;
+  color: #E8E8ED;
+}
 
 
+.recipe-name-new {
+    font-family: "Xerox Serif Wide";
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 20px;
 }
