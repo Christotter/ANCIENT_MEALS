@@ -9,6 +9,7 @@ export default class extends Controller {
        containerCssClass: "filter-ingredient-select",
        selectionCssClass: "custom-class",
        placeholder: "Search by ingredient...",
+       width: '100%'
      });
   }
 
