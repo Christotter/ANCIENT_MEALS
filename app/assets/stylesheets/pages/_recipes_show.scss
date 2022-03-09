@@ -51,7 +51,7 @@ p {
 
 .recipe-information {
   padding-left: 70px;
-  padding-top: 30px;
+  padding-top: 10px;
   font-size: 14px;
   display:block !important;
 }
@@ -248,6 +248,7 @@ p {
 .recipe-image-new {
   max-width: 300px;
   object-fit: cover;
+  margin-bottom: 25px ;
 }
 
 .recipe-country-new {
@@ -271,8 +272,21 @@ p {
 .added-ingredient {
   font-size: 1.25rem;
   padding-left: 0;
+  font-size: 16px;
 }
 
 .recipe-prep-time {
   margin-top: 25px;
+}
+
+.recipe-ingredients-new {
+  margin-top: 30px;
+}
+
+.recipe-name-new {
+  margin-left: 70px;
+}
+
+.form-label {
+  margin-top: -15px;
 }
