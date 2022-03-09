@@ -1,6 +1,6 @@
 <div class="recipe-list" data-search-target="list">
   <% if @recipes.empty? %>
-    <p>No results match this search</p>
+    <p class="no-results-notice">No results match this search</p>
   <% end %>
   <% @recipes.each do |recipe|%>
     <%= link_to recipe_path(recipe), class: "recipe-link" do %>
