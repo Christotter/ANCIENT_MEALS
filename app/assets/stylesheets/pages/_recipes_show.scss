@@ -1,3 +1,9 @@
+.container-recipe-info {
+  margin-right: 50px;
+  max-height: calc(100vh - 72px);
+}
+
+
 .container-controller {
 margin-top: 3rem;
 }
@@ -8,7 +14,7 @@ margin-top: 3rem;
 }
 
 .recipe-list {
-  max-height: calc(100vh - 170px);
+  max-height: calc(100vh - 72px);
   overflow: scroll;
 }
 
@@ -304,10 +310,7 @@ p {
   }
 }
 
-.container-recipe-info {
-  margin-right: 50px;
-  height: 100%;
-}
+
 
 .img-food-lg {
   width:100%;
