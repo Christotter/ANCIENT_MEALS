@@ -27,7 +27,7 @@
   </div>
 
   <div class="image-container">
-   <%# <%= image_tag "cookbook_img2.jpg" , class: "bottom-image-3" %>
+    <%# <%= image_tag "cookbook_img2.jpg" , class: "bottom-image-3" %>
   </div>
 
 
@@ -35,10 +35,14 @@
   <div class="flex-container-">
 
     <div class="box-2" data-controller="search">
-        <%= render "recipes/recipe_list" %>
-        <!-- USER FAVORITES LIST -->
-        <%= render "recipes/favorites" %>
-        <!-- USER FAVORITES LIST END-->
+    <br>
+      <h3>My own recipes</h3>
+      <%= render "recipes/recipe_list" %>
+      <!-- USER FAVORITES LIST -->
+      <br>
+      <h3>My favorites recipes</h3>
+      <%= render "recipes/favorites" %>
+      <!-- USER FAVORITES LIST END-->
     </div>
 
   </div>
