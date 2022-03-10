@@ -87,6 +87,7 @@ color: #e8e8ed;
   width: 500px;
   flex-grow: 1;
   margin: 40px 0 ;
+
 }
 
 .searchbar {
@@ -197,9 +198,17 @@ color: #e8e8ed;
 */
 .select2-selection.select2-selection--multiple.custom-class {
   border-right: 1px solid rgba(0, 0, 0, 0.4);
-  background-color: #F4F4F4;
+  background-color: #ffffff;
   font-family: $AG-normal;
+  font-size: 15px;
+
 }
+// .select2-container .select2-search--inline .select2-search__field {
+//   font-family: $headers-font;
+//   font-size: 15px;
+// }
+
+
 
 .btn-primary:hover {
   background-color: #F4F4F4;
