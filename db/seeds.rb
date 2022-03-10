@@ -53,6 +53,30 @@ def create_seed
       password:"123456", password_confirmation: "123456")
     puts "user +#{i}"
   end
+  users << User.create!(email: "miquelespinosa2@gmail.com", name: "Miquel Espinosa Brey",
+    password:"123456", password_confirmation: "123456")
+  puts "Miquel Esponosa is here! "
+
+  u1 = URI.open('https://artincontext.org/wp-content/uploads/2021/10/Famous-Portrait-Paintings-848x530.jpg')
+  users[0].photo.attach(io: u1, filename: 'pearl.jpg', content_type: 'image/jpg')
+  p "Computers are fast; programmers keep it slow."
+  u2 = URI.open('https://w0.peakpx.com/wallpaper/517/463/HD-wallpaper-mona-liza-hot-woman.jpg')
+  users[1].photo.attach(io: u2, filename: 'mona.jpg', content_type: 'image/jpg')
+  p "Copy-and-Paste was programmed by programmers for programmers actually."
+  u3 = URI.open('https://d32dm0rphc51dk.cloudfront.net/-qPyT6fbu9-2pfT0XTqXEQ/larger.jpg')
+  users[2].photo.attach(io: u3, filename: 'vangog.jpg', content_type: 'image/jpg')
+  p "The computer was born to solve problems that did not exist before."
+  u4 = URI.open('https://miro.medium.com/max/626/0*Qwye6igE4b0j_Pay.jpg')
+  users[3].photo.attach(io: u4, filename: 'frida.jpg', content_type: 'image/jpg')
+  p "There is no Ctrl-Z in life."
+  u5 = URI.open('https://images.saatchiart.com/saatchi/395617/art/3903674/2973553-HSC00001-7.jpg')
+  users[4].photo.attach(io: u5, filename: 'cleopatra.jpg', content_type: 'image/jpg')
+  p "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job."
+  u6 = URI.open('https://shotkit.com/wp-content/uploads/2021/06/Famous-portrait-CT_2860.jpeg')
+  users[5].photo.attach(io: u6, filename: 'avatar.jpg', content_type: 'image/jpg')
+  p "Algorithm: Word used by programmers when they don’t want to explain what they did."
+  u7 = URI.open('https://avatars.githubusercontent.com/u/95764425?v=4')
+  users[6].photo.attach(io: u7, filename: 'miquel.jpg', content_type: 'image/jpg')
 
   puts " "
   puts "Users: "
