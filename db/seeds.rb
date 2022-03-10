@@ -177,7 +177,7 @@ def create_seed
   recipe_3.user = users[2]
   recipe_3.longitude = 43.483738
   recipe_3.latitude = 34.5337527
-  recipe_3.country_code = "IRN"
+  recipe_3.country_code = "IRQ"
   recipe_3.save!
 
   # recipe 4
@@ -259,7 +259,7 @@ def create_seed
   recipe_8.user = users[2]
   recipe_8.longitude = 43.483738
   recipe_8.latitude = 34.5337527
-  recipe_8.country_code = "IRN"
+  recipe_8.country_code = "IRQ"
   recipe_8.save!
 
   # recipe 9
@@ -275,7 +275,7 @@ def create_seed
   recipe_9.user = users[1]
   recipe_9.longitude = 43.483738
   recipe_9.latitude = 34.5337527
-  recipe_9.country_code = "IRN"
+  recipe_9.country_code = "IRQ"
   recipe_9.save!
 
   # recipe 10
@@ -641,7 +641,7 @@ def create_seed
   recipe_32.user = users[4]
   recipe_32.longitude = 43.483738
   recipe_32.latitude = 34.5337527
-  recipe_32.country_code = "IRN"
+  recipe_32.country_code = "IRQ"
   recipe_32.save!
 
   # recipe 33
