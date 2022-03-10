@@ -1,16 +1,22 @@
 .container-100 {
   display: grid;
+  max-height: calc(100vh - 85px);
   grid-template-columns: 1fr 1fr;
   color: $gray;
   overflow: scroll;
 }
 
+.user-container {
+  max-height: calc(100vh -85px);
+}
+
 #bg-image {
-  background-image: url("backgrounds/background_2");
+  background-image: url("backgrounds/background_3001.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  min-height: calc(100vh);
+
   }
 
 .recipe-text-2 {
@@ -24,6 +30,7 @@
   font-size: 90px;
   line-height: 104%;
   color: rgba(232, 232, 237, 1);
+  z-index: 1;
   }
 
 .flex-container-2 {
@@ -48,6 +55,7 @@
   flex: 1 0 auto;
   // border-right: 1px solid rgba(0, 0, 0, 0.4);
   overflow: scroll;
+  max-height: calc(100vh -85px);
 }
 
 
@@ -90,6 +98,9 @@ margin-bottom: 2rem;
 
 .h3-margin-titles {
   margin-left: 13px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 .padding-p {
@@ -97,6 +108,7 @@ margin-bottom: 2rem;
 }
 
 .padding-info-user {
-  padding-left: 250px;
   padding-top: 25px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+
 }
