@@ -68,3 +68,5 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 gem 'cloudinary', '~> 1.16.0'
 gem "geocoder"
 gem "cocoon"
+gem 'progress_bar'
+gem 'ruby-progressbar'

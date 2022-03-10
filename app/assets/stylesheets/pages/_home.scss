@@ -42,6 +42,7 @@ hr {
   letter-spacing: -1px;
   font-size: 1rem;
   width: 66vw;
+  width: auto;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -51,6 +52,7 @@ hr {
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
+  // height: 60vw;
 }
 
 .title-container {

@@ -30,7 +30,7 @@ export default class extends Controller {
       style: "mapbox://styles/mapbox/light-v10",
       center: [lat, lon],
       //center: [23.727539, 37.983810],
-      zoom: 3
+      zoom: 0.3
     })
 
 
@@ -47,8 +47,8 @@ export default class extends Controller {
         'source-layer': 'country_boundaries',
         type: 'fill',
         paint: {
-          'fill-color': '#46261E',
-          'fill-opacity': 0.5,
+          'fill-color': '#8B008B',
+          'fill-opacity': 0.8,
         },
       },
       'country-label'
