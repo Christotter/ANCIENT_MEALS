@@ -1,10 +1,10 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = [ "popup" ]
 
   connect() {
-
+    console.log('connected')
   }
 
   alert() {
@@ -13,8 +13,7 @@ export default class extends Controller {
 
 
   resize() {
-    var popup = document.getElementByClass("img-food");
-    popup.classList.toggle("img-food-popup");
+    this.popupTarget.classList.toggle("d-none");
 
   }
 }
