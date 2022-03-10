@@ -3,6 +3,7 @@
 <div class="user-info">
 
 <div id="bg-image">
+<div class="row">
 <div class="container-100">
   <div class="user-container">
     <div class="avatar">
@@ -15,16 +16,26 @@
     <% end %>
     </div>
     <div class="user-info">
-      <%# <p><strong>Username:</strong> <%= current_user.name %></p>
-      <%# <p> <strong> Total recipes:</strong>  <%= current_user.recipes.count </p> %>
-      <p id="user_name"><%= current_user.name %></p>
-<%# <p> Total created recipes: <%= current_user.recipes.count </p> %>
-<p><strong>Recipes In Total:</strong> <%= current_user.user_favorites.count + current_user.recipes.count%></p>
-<p class="last-child"><strong>Total Favorite Recipes:</strong> <%= current_user.user_favorites.count %></p>
+      <h6 class="user_name"><strong><%= current_user.name %></strong></h6>
+      <h6 class="user_name"><strong>Recipes In Total:</strong> <%= current_user.user_favorites.count + current_user.recipes.count%></h6>
+      <h6 class="last-child"><strong>Total Favorite Recipes:</strong> <%= current_user.user_favorites.count %></h6>
 
 
+  <div class="flex-container-">
+
+    <div class="box-2" data-controller="search">
+    <br>
+      <h3 class="h3-margin-titles"> Own recipes</h3>
+      <%= render "recipes/recipe_list" %>
+      <!-- USER FAVORITES LIST -->
+      <br>
+      <h3 class="h3-margin-titles">Favorite recipes</h3>
+      <%= render "recipes/favorites" %>
+      <!-- USER FAVORITES LIST END-->
+    </div>
     </div>
   </div>
+</div>
 
   <div class="image-container">
     <%# <%= image_tag "cookbook_img2.jpg" , class: "bottom-image-3" %>
@@ -32,18 +43,6 @@
 
 
 
-  <div class="flex-container-">
-
-    <div class="box-2" data-controller="search">
-    <br>
-      <h3>My own recipes</h3>
-      <%= render "recipes/recipe_list" %>
-      <!-- USER FAVORITES LIST -->
-      <br>
-      <h3>My favorites recipes</h3>
-      <%= render "recipes/favorites" %>
-      <!-- USER FAVORITES LIST END-->
-    </div>
 
   </div>
     <div class="recipe-container">

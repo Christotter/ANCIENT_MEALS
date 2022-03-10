@@ -1,7 +1,5 @@
 .container-100 {
-  height: calc(100vh - 77px);
   display: grid;
-  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   color: $gray;
   overflow: scroll;
@@ -62,15 +60,15 @@
 }
 
 .user-info {
-  display: flex;
   min-width: 400px;
   flex-direction: column;
   align-content: space-between;
   margin-left: 1rem;
-
+  margin-right: 10px;
 
   p {
     margin-bottom: 1rem;
+
   }
 }
 
@@ -84,5 +82,14 @@
 
 
 .last-child {
+  margin-left: 13px;
 margin-bottom: 2rem;
+}
+
+.h3-margin-titles {
+  margin-left: 13px;
+}
+
+.user_name {
+  margin-left: 13px;
 }
