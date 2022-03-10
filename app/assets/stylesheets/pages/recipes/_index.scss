@@ -232,10 +232,22 @@ color: #e8e8ed;
   margin-top: 40px;
 }
 
-.select2-selection.select2-selection--multiple.custom-class {
-  // width: 700px;
-}
+/*.max-display-width {
+  width: 300px;
+  max-width: 300px;
+  display: inline-block;
 
+}*/
 .no-results-notice {
   text-align: center;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: white !important;
+  border: 0 !important;
+  border-radius: 0px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  border-right: 0 !important;
 }
