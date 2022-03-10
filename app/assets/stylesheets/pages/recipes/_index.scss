@@ -199,17 +199,18 @@ color: #e8e8ed;
   max-height: calc(100vh - 72px);
   overflow: scroll;
   border-top: 1px solid #c0bfbf;
-  // background-color: #EDEDED;
+  background-color: #fcfcfc;
+  // background:url("blurb_07.png"), #3b3e9b88;
+  // background: url(11_1.png), #d5e2d54b;
 
-  background-image: url("bg-bg12.png");
-  // filter: blur(8px);
-  // -webkit-filter: blur(8px);
-  background-position: center;
+
+  // background-image: url("tigernuts.png");
+  // // filter: blur(8px);
+  // // -webkit-filter: blur(8px);
+  // background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-
-
+  // position: relative;
   // p {
   //   padding-left: 20px;
   // }
