@@ -13,6 +13,7 @@
               input_html: { data: { action: "blur->recipe-form#updateEra" } }  %>
           <%= f.input :country, as: :string, class:"recipe-country",
               input_html: { data: { action: "blur->recipe-form#updateCountry" } } %>
+          <%= f.input :country_code, as: :string %>
           <%= f.label "ingredients", required: true %>
           <div>
             <%= f.simple_fields_for :recipes_ingredients do |recipes_ingredients_form| %>
