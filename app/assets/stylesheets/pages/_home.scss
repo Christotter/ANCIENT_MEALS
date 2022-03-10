@@ -7,7 +7,7 @@ hr {
 }
 
 #container-home {
-  width: 100vw;
+  max-height: calc(100vh - 85px);
   font-size: 1.2rem;
   overflow: hidden;
   display: flex;
@@ -16,13 +16,14 @@ hr {
 
 
 #container-home, #left, #right {
-  max-height: calc(100vh - 77px);
+  max-height: calc(100vh -85px);
   overflow-y: auto;
 
 }
 
 #left {
   overflow-y: hidden;
+
 }
 
 
@@ -41,7 +42,7 @@ hr {
   border-right: 1px solid rgba(0, 0, 0, 0.4);
   letter-spacing: -1px;
   font-size: 1rem;
-  width: 66vw;
+  // width: 66vw;
   width: auto;
   flex-grow: 0;
   flex-shrink: 0;
@@ -52,8 +53,11 @@ hr {
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
-  // height: 60vw;
+  min-width: 34vh;
+
 }
+
+
 
 .title-container {
   height: 25vh;
@@ -71,6 +75,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .cocktail-container {
@@ -80,7 +85,7 @@ hr {
   justify-content: flex-end;
   height: 25vh;
   padding-right: 1rem;
-  padding-left: 1rem;
+
 }
 
 .cocktail-img {
@@ -89,12 +94,42 @@ hr {
   margin-top: 2rem;
   display: block;
   margin-left: auto;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-top: 0.5rem;
 }
+
+
+
+.crap-img {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding-top: 2rem;
+}
+
+.cocktail-container-bottom {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
+}
+
+
 
 .cocktail-title {
   text-align: right;
   font-size: 15px;
   padding-top: 0.5rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
 
   a {
     text-decoration: none;
@@ -107,17 +142,6 @@ hr {
   }
 }
 
-.cocktail-container-bottom {
-  display: flex;
-  flex-direction: column;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  justify-content: space-between;
-  flex-grow: 1;
-  flex-shrink: 1;
-
-
-}
 
 .cocktail-bottom-title {
   display: flex;
@@ -150,5 +174,7 @@ hr {
   padding: 15px 32px;
   flex-grow: 0;
   margin-bottom: 5%;
+  flex-shrink: 1;
+  flex-grow: 1;
 
 }
