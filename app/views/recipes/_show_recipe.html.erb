@@ -37,11 +37,11 @@
     </div> %>
     <!--Buttons end-->
     <div class="col-lg-3 recipe-image">
-      <div class="img-food image-effect">
+      <div class="img-food image-effect" data-controller="image_popup">
         <% if @recipe.photo.attached? %>
-            <p class="img-food"><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
+            <p class="img-food" data-action="click->image_popup#resize" ><%= cl_image_tag @recipe.photo.key, class: "img-food" %></p>
         <% else %>
-            <img class="img-food" src="https://res.cloudinary.com/dspxgnggq/image/upload/v1646321626/development/dragne-marius-EdzsUFqHbaY-unsplash_1_xcg5mc.jpg" alt="Food">
+            <img class="img-food" data-action="click->image_popup#resize" src="https://d16kd6gzalkogb.cloudfront.net/magazine_images/Floris-Van-Dyck-Painting-Still-life-With-Fruit-Nuts-And-Cheese-via-flickr-com.jpg" alt="Food">
         <% end %>
       </div>
     </div>
