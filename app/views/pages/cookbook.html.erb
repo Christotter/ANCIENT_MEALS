@@ -6,6 +6,7 @@
 <div class="row">
 <div class="container-100">
   <div class="user-container">
+  <div class="padding-info-user">
     <div class="avatar">
 
     <% if current_user.photo.attached? %>
@@ -15,11 +16,13 @@
       <%= image_tag "avatar_placeholder.jpg", class: "avatar-large", alt: "avatar-large" %>
     <% end %>
     </div>
-    <div class="user-info">
+    <div class="padding-p">
       <h6 class="user_name"><strong><%= current_user.name %></strong></h6>
       <h6 class="user_name"><strong>Recipes In Total:</strong> <%= current_user.user_favorites.count + current_user.recipes.count%></h6>
       <h6 class="last-child"><strong>Total Favorite Recipes:</strong> <%= current_user.user_favorites.count %></h6>
-
+    </div>
+  </div>
+    <div class="user-info">
 
   <div class="flex-container-">
 
