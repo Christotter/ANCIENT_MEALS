@@ -17,12 +17,12 @@ export default class extends Controller {
   }
 
   updatePrepTime(event) {
-    const prepTimeHTML = `<h5>Preptime -</h5> ${event.currentTarget.value}`
+    const prepTimeHTML = `<h5>Preptime</h5> ${event.currentTarget.value}`
     this.prepTimeFieldTarget.innerHTML = prepTimeHTML
   }
 
   updateEra(event) {
-    const eraHTML = `<h5>Era -</h5> ${event.currentTarget.value}`
+    const eraHTML = `<h5>Era</h5> ${event.currentTarget.value}`
     this.eraFieldTarget.innerHTML = eraHTML
   }
 
@@ -32,7 +32,7 @@ export default class extends Controller {
   }
 
   updateInstructions(event) {
-    const instructionsHTML = `<h5>Instructions -</h5>${event.currentTarget.value}`
+    const instructionsHTML = `<h5>Instructions</h5>${event.currentTarget.value}`
     this.instructionsFieldTarget.innerHTML = instructionsHTML
   }
 
