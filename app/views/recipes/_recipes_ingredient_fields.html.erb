@@ -1,7 +1,7 @@
 <div class='nested-fields'>
   <div class="row">
     <div class="col-6">
-      <%= f.input :ingredient_id, collection: Ingredient.all, label: false,
+      <%= f.input :ingredient_id, collection: Ingredient.all.map { |ingredient| [ingredient.name.capitalize, ingredient.id] }, label: false,
         input_html: { data: { recipe_form_target: "ingredientInput", action: "change->recipe-form#updateIngredients" } } %>
     </div>
     <div class="col-6">
