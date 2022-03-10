@@ -199,6 +199,16 @@ color: #e8e8ed;
   max-height: calc(100vh - 72px);
   overflow: scroll;
   border-top: 1px solid #c0bfbf;
+  // background-color: #EDEDED;
+
+  background-image: url("bg-bg4.png");
+  // filter: blur(8px);
+  // -webkit-filter: blur(8px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
 
   // p {
   //   padding-left: 20px;
@@ -212,6 +222,9 @@ color: #e8e8ed;
   //   padding-left: 20px;
   // }
 }
+
+
+
 
 .recipe-container {
   padding: 0;
