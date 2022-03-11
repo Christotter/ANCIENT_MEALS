@@ -49,7 +49,7 @@ def create_seed
   puts "creating users"
   users = []
   (1..6).each do |i|
-    users << User.create!(email: Faker::Internet.email, name: Faker::Name.name,
+    users << User.create!(email: Faker::Internet.email, name: Faker::FunnyName.name,
       password:"123456", password_confirmation: "123456")
     puts "user +#{i}"
   end
