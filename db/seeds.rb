@@ -1319,7 +1319,7 @@ def create_seed
   p7 = URI.open('https://i.pinimg.com/564x/d9/d1/e9/d9d1e988c60de87c3c69a18975acffce.jpg')
   recipe_7.photo.attach(io: p7, filename: 'sasqu.jpg', content_type: 'image/jpg')
   progressbar.increment
-  p8 = URI.open('https://www.iraqicookbook.com/yahoo_site_admin/assets/images/fruit_cake_website.24134745_std.jpg')
+  p8 = URI.open('https://user-images.githubusercontent.com/31392942/157868591-daf3a305-4fda-429a-9a5f-97c4aa1cd7d9.png')
   recipe_8.photo.attach(io: p8, filename: 'palace-cake.jpg', content_type: 'image/jpg')
   progressbar.increment
   p9 = URI.open('https://www.thespruceeats.com/thmb/wsC6kWSrTCa7gbx75I5wEMt58hE=/2125x1195/smart/filters:no_upscale()/GettyImages-559151961-56a57c915f9b58b7d0dd25bf.jpg')
