@@ -27,7 +27,8 @@ export default class extends Controller {
 
     this.map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/mapbox/light-v10",
+      //style: "mapbox://styles/mapbox/light-v10",
+      style: "mapbox://styles/laligb/cl0me8s6b00az14qb2kbp0r5v",
       center: [lat, lon],
       //center: [23.727539, 37.983810],
       zoom: 0.3
@@ -47,7 +48,7 @@ export default class extends Controller {
         'source-layer': 'country_boundaries',
         type: 'fill',
         paint: {
-          'fill-color': '#8B008B',
+          'fill-color': '#FFC65A',
           'fill-opacity': 0.8,
         },
       },
